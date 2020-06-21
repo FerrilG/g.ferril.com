@@ -1,8 +1,6 @@
-# Project Title
+# Geoffrey's Angular Portfolio
 
-One Paragraph of project description goes here
-
-Add additional notes about how to deploy this on a live system
+This is the file structure for Geoffrey's portfolio. This application cleans up and replaces his previous application written in php.
 
 ## Built With
 
