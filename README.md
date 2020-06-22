@@ -1,6 +1,6 @@
 # Geoffrey's Angular Portfolio
 
-This is the file structure for Geoffrey's portfolio. This application cleans up and replaces his previous application written in php.
+These are the files for Geoffrey's portfolio. This application cleans up and replaces his previous php application.
 
 ## Built With
 
