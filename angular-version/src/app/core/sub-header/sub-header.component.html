@@ -1,0 +1,41 @@
+<div class="gf-sidebar" id="navMainSidebar">
+    <a routerLink="/" class="gf-brand d-none d-lg-flex justify-content-center align-items-center" id="logo" aria-label="Portfolio home" style="
+    height: 48px;
+    width: 100%;
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none !important;">
+        <span>g.ferril.com</span>
+    </a>
+    <div class="d-none d-lg-block" id="gf-ply-card">
+        <img src="http://www.g.ferril.com/3.0/images/profile-img.jpg" alt="Image of Geoffrey Ferril" id="gf-ply-img">
+        <div id="gf-ply-name">Geoffrey Ferril</div>
+        <div id="gf-ply-title">UX / UI Designer</div>
+    </div>
+    <nav class="gf-links">
+        <div class="gf-nav-item no-gutters">
+            <!-- *ngFor= links -->
+            <a routerLink="/" class="gf-nav-link col" id="Home">
+                <i class="material-icons">home</i>
+                <span class="d-block">Portfolio homepage</span>
+                <div class="nav-link-sel">
+                    <!-- make component specific style-->
+                    <div class="mask-shadow">
+                        <div class="mask"></div>
+                    </div>
+                </div>
+            </a>
+            <a routerLink="/work" class="gf-nav-link col" id="Work">
+                <i class="material-icons">work</i>
+                <span class="d-block">Work examples</span>
+                <div class="nav-link-sel">
+                    <!-- make component specific style-->
+                    <div class="mask-shadow">
+                        <div class="mask"></div>
+                    </div>
+                </div>
+            </a>
+            <!-- *ngFor= links -->
+        </div>
+    </nav>
+</div>
