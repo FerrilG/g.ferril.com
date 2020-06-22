@@ -7,10 +7,17 @@ const appRoutes: Routes = [
   {
     path: '',
     component: HomeComponent,
+    data: {
+      breadcrumb: 'Homepage'
+    },
+    children: []
   },
   {
     path: 'work',
-    loadChildren: () => import('./modules/pages/projects/projects.module').then(m => m.ProjectsModule)
+    loadChildren: () => import('./modules/pages/projects/projects.module').then(m => m.ProjectsModule),
+    data: {
+      breadcrumb: 'Project'
+    }
   }
 ];
 

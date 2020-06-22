@@ -7,6 +7,7 @@ import { HomeComponent } from './modules/pages/home/home.component';
 import { HeaderComponent } from './core/header/header.component';
 import { FooterComponent } from './core/footer/footer.component';
 import { SubHeaderComponent } from './core/sub-header/sub-header.component';
+import { BreadcrumbComponent } from './modules/components/breadcrumb/breadcrumb.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { SubHeaderComponent } from './core/sub-header/sub-header.component';
     HomeComponent,
     HeaderComponent,
     FooterComponent,
-    SubHeaderComponent
+    SubHeaderComponent,
+    BreadcrumbComponent
   ],
   imports: [
     BrowserModule,
