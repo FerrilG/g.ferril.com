@@ -1,1 +1,555 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --light-blue: #077BBA;
+    --dark-blue: #0E2E49;
+    --light-red: #E71321;
+    --dark-red: #A32125;
+    --gray-light: #c0c0c0;
+    --gray-medium: #949494;
+    --gray-dark: #7F7F7F;
+    --gray-font: #262626;
+}
+
+.text-light-blue {
+    color: var(--light-blue);
+}
+
+.text-dark-blue {
+    color: var(--dark-blue);
+}
+
+.text-light-red {
+    color: var(--light-red);
+}
+
+.text-dark-red {
+    color: var(--dark-red);
+}
+
+.text-green {
+    color: green;
+}
+
+body {
+    font-family: 'muli', sans-serif;
+    color: var(--gray-font);
+    background: #f1f1f1;
+}
+
+.blowout-txt {
+    font-size: 1.5rem;
+}
+
+a {
+    color: var(--gray-font);
+}
+
+#navMainSidebar {
+    height: fit-content;
+    width: 100vw;
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    z-index: 1072;
+    background: var(--dark-blue);
+    box-shadow: 2px 0px 4px 0px rgba(0, 0, 0, 0.5);
+}
+
+#gf-ply-card {
+    padding: 2rem;
+    background: white;
+    text-align: center;
+}
+
+#gf-ply-name {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+#gf-ply-title {
+    font-size: 0.876rem;
+}
+
+header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1071;
+    background: white;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
+}
+
+main {
+    /* height: calc(100vh - 4rem);
+    overflow-y: scroll; */
+    /* background: #f1f1f1; */
+}
+
+#page-content {
+    padding-bottom: 5rem;
+}
+
+.pfolio-card {
+    background: white;
+    box-shadow: 1px 2px 4px 0px rgba(70, 70, 70, 0.5);
+    border-radius: 4px;
+    margin: 1.5rem auto;
+    height: fit-content;
+}
+
+.pfolio-card .pfolio-card-title {
+    font-size: 22px;
+    border-bottom: 1px solid var(--gray-light);
+    vertical-align: baseline;
+}
+
+.pfolio-card .pfolio-card-title i {
+    font-size: 30px;
+}
+
+.pfolio-card>* {
+    padding: 1rem;
+}
+
+.pfolio-card .pfolio-card-content #banner-img {
+    max-height: 20vw;
+    overflow: hidden;
+}
+
+.pfolio-card .pfolio-card-content #banner-img figure {
+    position: relative;
+    top: -4.8rem;
+}
+
+.gf-nav-item a.gf-nav-link:hover,
+.gf-nav-item a.gf-nav-link:focus {
+    text-decoration: none;
+    outline: none;
+    background: white;
+    color: var(--dark-blue);
+}
+
+.gf-nav-item a.gf-nav-link.active {
+    background: var(--light-blue);
+    color: white;
+}
+
+
+.gf-nav-item a.gf-nav-link {
+    display: inline-flex;
+    white-space: nowrap;
+    color: white;
+    font-weight: 600;
+    align-items: center;
+    padding: 1rem;
+    justify-content: center;
+}
+
+.gf-nav-link i.material-icons {
+    font-size: 1.5rem;
+}
+
+.gf-nav-item .gf-nav-link span {
+    padding-left: 0.5rem;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.gf-nav-item .gf-nav-link .nav-link-sel {
+    display: none;
+}
+
+
+/* Homepage Project Inspector */
+#proj-inspector figure,
+#proj-inspector img {
+    cursor: zoom-in !important;
+}
+
+#proj-inspector img {
+    width: 100%;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    align-self: center;
+}
+
+#proj-inspect-info {
+    flex-direction: column;
+    align-self: center;
+    padding-right: 1rem;
+}
+
+#proj-inspect-info #inspect-info-link:hover,
+#proj-inspect-info #inspect-info-link:focus,
+#proj-inspect-info #inspect-info-link.btn:hover span,
+#proj-inspect-info #inspect-info-link.btn:focus span {
+    text-decoration: none;
+}
+
+#proj-inspect-info #inspect-info-link:hover span,
+#proj-inspect-info #inspect-info-link:focus span {
+    text-decoration: underline;
+}
+
+#proj-inspect-info #inspect-info-name {
+    font-size: 1.2rem;
+}
+
+#proj-inspect-info #info-lock-label {
+    color: green;
+}
+
+#proj-inspect-info #info-lock-label.locked {
+    color: var(--light-red);
+}
+
+.locked {
+    color: var(--light-red);
+}
+
+.unlocked {
+    color: green;
+}
+
+tr.proj-table-row.clickable-row.selected i {
+    color: white;
+}
+
+.btn-outline-primary {
+    color: var(--dark-blue);
+    border-color: var(--dark-blue);
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+    color: #fff;
+    background-color: var(--light-blue);
+    border-color: var(--light-blue);
+}
+
+#proj-inspect-info #inspect-info-description {}
+
+/* Homepage Project Table */
+table#proj-table {
+    width: calc(100% + 2rem);
+    margin: auto -1rem;
+    margin-bottom: auto;
+    /* border-bottom: 1px solid var(--gray-light); */
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+#proj-table th {
+    text-align: inherit;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: var(--gray-dark);
+    color: white;
+    font-weight: 700;
+    -webkit-font-smoothing: antialiased;
+}
+
+#proj-table tr th:first-child,
+#proj-table tr td:first-child {
+    padding-left: 1rem;
+    text-indent: 1rem;
+}
+
+.proj-table-row td {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+}
+
+tr.proj-table-row.clickable-row {}
+
+tr.proj-table-row.clickable-row:hover,
+tr.proj-table-row.clickable-row:focus {
+    background: var(--gray-light);
+    outline: none;
+}
+
+tr.proj-table-row.clickable-row.selected {
+    background: var(--light-blue);
+    color: var(--white);
+    outline: none;
+}
+
+/* Hobbies */
+#hobbies .hobby-img {
+    height: 10rem;
+    width: 100%;
+    cursor: zoom-in !important;
+}
+
+#hobbies .hobby-img .hobby-rollover {
+    display: flex;
+    height: inherit;
+    background: rgba(0, 0, 0, 0.75);
+    cursor: inherit;
+}
+
+#hobbies .hobby-img .hobby-rollover .rollover-label {
+    width: 100%;
+    text-align: center;
+    align-self: center;
+    font-size: 1.125rem;
+    color: white;
+    cursor: inherit;
+}
+
+/* Homepage Experience Timeline */
+#exp-timeline {
+    border-left: 2px solid var(--gray-light);
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+#exp-timeline .exp-timeline-item {
+    margin-top: 2rem;
+}
+
+#exp-timeline .exp-timeline-item .timeline-marker {
+    width: 32px;
+    height: 32px;
+    background: white;
+    border-radius: 16px;
+    position: relative;
+    right: 1rem;
+    bottom: 1rem;
+    border: 4px solid var(--light-blue);
+}
+
+#exp-timeline .timeline-item-content {
+    margin-left: 2rem;
+    margin-top: -3rem;
+    margin-bottom: 3rem;
+}
+
+#exp-timeline .exp-timeline-item:last-child .timeline-item-content {
+    margin-bottom: auto;
+}
+
+#exp-timeline .timeline-item-content .timeline-item-head {
+    display: flex;
+    margin-bottom: 0.5rem;
+    margin-top: 0.125rem;
+    color: var(--light-red);
+    font-size: 1.125rem;
+}
+
+#exp-timeline .timeline-item-content .timeline-item-date {
+    margin-left: auto;
+}
+
+/* 
+#exp-timeline .timeline-item-content ul {
+margin-block-start: 0px;
+margin-inline-start: -3rem;
+font-size: 2.5rem;
+line-height: 2.5rem;
+}
+#exp-timeline .timeline-item-content ul li {
+line-height: 1.5rem;
+color: var(--light-blue);
+}
+
+#exp-timeline .timeline-item-content ul li span {
+position: relative;
+top: -0.3rem;
+left: 0.5rem;
+font-size: 1rem;
+color: var(--gray-font);
+} */
+
+
+
+/* Modal */
+.no-gutters>.col,
+.no-gutters>[class*=col-] {
+    height: fit-content;
+}
+
+#modal {
+    display: flex;
+    z-index: 1072;
+    position: fixed;
+    top: 4rem;
+    left: 0;
+    right: 0;
+    bottom: 3.5rem;
+    align-items: center;
+}
+
+#modal-background {
+    background: rgba(0, 0, 0, 0.75);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#modal .modal-close {
+    background: white;
+    position: absolute;
+    top: -1rem;
+    border-radius: 21rem;
+    right: -0.25rem;
+    zoom: 1.5;
+    user-select: none;
+}
+
+#img-modal {
+    text-align: center;
+    max-width: 60rem;
+}
+
+#img-modal #img-container {
+    max-height: 50rem;
+    overflow-y: scroll;
+}
+
+#img-modal img {
+    background: white;
+}
+
+/* Form Validation */
+.was-validated .form-control:valid,
+.was-validated .form-control:invalid {
+    background-image: none !important;
+}
+
+/* Large Phone */
+@media (min-width: 576px) {
+    .pfolio-card .pfolio-card-content #banner-img figure {
+        position: relative;
+        top: -13vw;
+    }
+}
+
+/* Tablet */
+@media (max-width: 767px) {
+
+    /* Homepage Project Inspector */
+    #proj-inspector img {
+        max-width: 75%;
+    }
+}
+
+@media (min-width: 768px) {
+    .pfolio-card {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}
+
+
+/* Desktop */
+@media (min-width: 992px) {
+    #navMainSidebar {
+        width: 240px;
+        min-width: 15rem;
+        height: 100vh;
+        /* position: sticky;
+        position: -webkit-sticky; */
+        top: 0;
+    }
+
+    #main-container {
+        margin-left: 15rem;
+    }
+
+    #gf-ply-card {
+        padding: 2rem;
+        background: white;
+        text-align: center;
+    }
+
+    #gf-ply-img {
+        height: 7rem;
+        width: 7rem;
+        border: 0.3rem solid var(--light-blue);
+        border-radius: 3.5rem;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: auto;
+        margin-bottom: 0.5rem;
+    }
+
+    #gf-ply-name {
+        margin-bottom: 0.5rem;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    #gf-ply-title {
+        font-size: 0.876rem;
+    }
+
+    .gf-nav-item {
+        margin-top: 1rem;
+    }
+
+    .gf-nav-item a.gf-nav-link {
+        display: flex;
+        justify-content: start;
+        padding: 1rem 2rem;
+        /* margin-top: 1rem; */
+    }
+
+    .gf-nav-link i.material-icons {
+        font-size: 1.25rem;
+    }
+
+    .gf-nav-item .gf-nav-link .nav-link-sel {
+        height: 40px;
+        width: 40px;
+        position: absolute;
+        right: -20px;
+    }
+
+    .gf-nav-item .gf-nav-link .nav-link-sel .mask-shadow {
+        background: #f1f1f1;
+        position: absolute;
+        top: 6px;
+        bottom: 6px;
+        left: 6px;
+        right: 6px;
+        transform: rotate(45deg);
+        box-shadow: inset 2px -2px 4px 0px rgba(0, 0, 0, 0.5);
+    }
+
+    .gf-nav-item .gf-nav-link .nav-link-sel .mask-container {
+        position: absolute;
+        left: 15px;
+        right: 0px;
+        top: 9px;
+        bottom: 6px;
+    }
+
+    .gf-nav-item .gf-nav-link .nav-link-sel .mask {
+        position: absolute;
+        top: -1px;
+        right: 4px;
+        height: 100%;
+        transform: rotate(45deg);
+        width: 100%;
+        background: #f1f1f1;
+    }
+
+    .gf-nav-item .gf-nav-link.active .nav-link-sel {
+        display: block;
+    }
+
+    .pfolio-card {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+
+    #modal {
+     bottom: 0;
+     left: 15rem;
+ }
+ }

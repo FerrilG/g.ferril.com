@@ -1,13 +1,14 @@
+import { HomeComponent } from './modules/pages/home/home.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './modules/pages/home/home.component';
 import { HeaderComponent } from './core/header/header.component';
 import { FooterComponent } from './core/footer/footer.component';
 import { SubHeaderComponent } from './core/sub-header/sub-header.component';
 import { BreadcrumbComponent } from './modules/components/breadcrumb/breadcrumb.component';
+import { CardComponent } from './modules/components/card/card.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { BreadcrumbComponent } from './modules/components/breadcrumb/breadcrumb.
     HeaderComponent,
     FooterComponent,
     SubHeaderComponent,
-    BreadcrumbComponent
+    BreadcrumbComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
