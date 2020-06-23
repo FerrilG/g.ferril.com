@@ -1,8 +1,11 @@
 <div class="pfolio-card">
-    <div class="pfolio-card-title d-flex align-content-center">
+    <!-- Title & Icon Bar -->
+    <div *ngIf="title" class="pfolio-card-title d-flex align-content-center">
         <i class="material-icons-outlined" [ngStyle]="{color: iconColor}">{{ icon }}</i>
         <span class="ml-2">{{ title }}</span>
     </div>
+
+    <!-- Basic Card -->
     <div class="pfolio-card-content">
         <ng-content></ng-content>
     </div>

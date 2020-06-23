@@ -3,8 +3,9 @@
     <a *ngIf="!breadcrumb.url" class="breadcrumbs">Homepage</a>
     <a *ngIf="isFirst && breadcrumb.url" routerLink="/" class="breadcrumbs">Homepage</a>
     <span *ngIf="breadcrumb.url">
-        <span>&nbsp;/&nbsp;</span>
-        <a *ngIf="isLast == false && items > 1" [routerLink]="breadcrumb.url" class="breadcrumbs">{{ breadcrumb.label }}</a>
+        <span>&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+        <a *ngIf="isLast == false && items > 1" [routerLink]="breadcrumb.url"
+            class="breadcrumbs">{{ breadcrumb.label }}</a>
         <a *ngIf="items == 1 || isLast" class="breadcrumbs">{{ breadcrumb.label }}</a>
     </span>
 </span>

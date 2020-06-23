@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
 import { HomeComponent } from './modules/pages/home/home.component';
 
 const appRoutes: Routes = [
@@ -9,14 +8,13 @@ const appRoutes: Routes = [
     component: HomeComponent,
     data: {
       breadcrumb: 'Homepage'
-    },
-    children: []
+    }
   },
   {
     path: 'work',
     loadChildren: () => import('./modules/pages/projects/projects.module').then(m => m.ProjectsModule),
     data: {
-      breadcrumb: 'Project'
+      breadcrumb: 'Projects'
     }
   }
 ];
