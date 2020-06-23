@@ -1,3 +1,4 @@
+import { CardComponent } from './../../components/card/card.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 

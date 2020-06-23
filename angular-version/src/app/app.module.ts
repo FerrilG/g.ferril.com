@@ -1,4 +1,3 @@
-
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -9,7 +8,7 @@ import { HeaderComponent } from './core/header/header.component';
 import { FooterComponent } from './core/footer/footer.component';
 import { SubHeaderComponent } from './core/sub-header/sub-header.component';
 import { BreadcrumbComponent } from './modules/components/breadcrumb/breadcrumb.component';
-import { CardComponent } from './modules/components/card/card.component';
+import { CardModule } from './modules/components/card/card.module';
 
 @NgModule({
   declarations: [
@@ -19,11 +18,13 @@ import { CardComponent } from './modules/components/card/card.component';
     FooterComponent,
     SubHeaderComponent,
     BreadcrumbComponent,
-    CardComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CardModule
+  ],
+  exports: [
   ],
   providers: [],
   bootstrap: [AppComponent]
