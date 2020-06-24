@@ -10,6 +10,27 @@
     --gray-font: #262626;
 }
 
+::-webkit-scrollbar {
+    width: 0.5em;
+    background: none;
+    display: none;
+}
+
+::-webkit-scrollbar-button {
+}
+
+::-webkit-scrollbar-track {
+    background: none;
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--dark-blue);
+    border-radius: 1rem;
+}
+::-webkit-scrollbar-thumb:hover {
+}
+
 .text-light-blue {
     color: var(--light-blue);
 }
