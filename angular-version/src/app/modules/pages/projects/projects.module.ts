@@ -1,3 +1,4 @@
+import { CardModule } from './../../components/card/card.module';
 import { CardComponent } from './../../components/card/card.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -20,7 +21,8 @@ import { TimeEntryComponent } from './time-entry/time-entry.component';
   ],
   imports: [
     CommonModule,
-    ProjectsRoutingModule
+    ProjectsRoutingModule,
+    CardModule
   ]
 })
 export class ProjectsModule { }

@@ -9,9 +9,9 @@ export const ProjectList: ProjectProp[] = [
         folder: 'folio-study',
         role: 'string',
         type: 'string',
-        company: 'string',
+        company: 'g.ferril.com',
         cover: 'string',
-        overview: 'string',
+        overview: '',
     },
     {
         name: 'eCommerce Rewards',
@@ -21,9 +21,9 @@ export const ProjectList: ProjectProp[] = [
         folder: 'ecommerce-rewards',
         role: 'string',
         type: 'string',
-        company: 'string',
+        company: 'CX Loyalty',
         cover: 'string',
-        overview: 'string'
+        overview: ''
     },
     {
         name: 'Billable Time Software',
@@ -33,9 +33,9 @@ export const ProjectList: ProjectProp[] = [
         folder: 'time-entry',
         role: 'string',
         type: 'string',
-        company: 'string',
+        company: 'C.H. Robinson',
         cover: 'string',
-        overview: 'string'
+        overview: ''
     },
     {
         name: 'Design System',
@@ -45,8 +45,8 @@ export const ProjectList: ProjectProp[] = [
         folder: 'design-system',
         role: 'string',
         type: 'string',
-        company: 'string',
+        company: 'CX Loyalty',
         cover: 'string',
-        overview: 'string'
+        overview: ''
     }
 ];
