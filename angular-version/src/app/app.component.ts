@@ -14,16 +14,16 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
-        this.newPage();
+        // this.newPage();
       }
     });
   }
 
-  newPage() {
-    const pageContent = document.getElementById('top');
-    const topPos = pageContent.offsetTop;
+  // newPage() {
+  //   const pageContent = document.getElementById('top');
+  //   const topPos = pageContent.offsetTop;
 
-    document.getElementById('page-content').scrollTop = 0;
-  }
+  //   document.getElementById('page-content').scrollTop = 0;
+  // }
 
 }

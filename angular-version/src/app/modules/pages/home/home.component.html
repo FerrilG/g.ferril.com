@@ -2,7 +2,60 @@
     <!-- Work Examples -->
     <div class="col-12 col-xl-8 order-2 order-xl-1">
         <app-card [title]="'Work Examples'" [icon]="'business'" [iconColor]="'var(--light-red)'">
-
+            <div class="row no-gutters" id="proj-inspector" style="
+                            margin-bottom: 1rem;
+                        ">
+                <figure class="col-12 col-md-5 d-flex">
+                    <img src="">
+                </figure>
+                <div class="col-12 col-md d-flex ml-md-3" id="proj-inspect-info">
+                    <div>
+                        <span id="inspect-info-name">No project selected</span>
+                        <span class="d-none" id="inspect-info-lock">
+                            <span class="mx-2">-</span>
+                            <span id="info-lock-label" class=""></span>
+                        </span>
+                    </div>
+                    <div id="inspect-info-description">
+                        Please select one from below.
+                    </div>
+                    <span class="mt-2">
+                        <a href="javascript:void(0)" id="inspect-info-link" class="d-inline-flex align-content-center"
+                            (click)="openProj()">
+                            <span></span>
+                            <i class="d-none material-icons">keyboard_arrow_right</i>
+                        </a>
+                    </span>
+                </div>
+            </div>
+            <table class="" id="proj-table">
+                <thead>
+                    <tr class="proj-table-header">
+                        <th>Access</th>
+                        <th>Name</th>
+                        <!-- <th>Type</th> -->
+                        <th class="d-none d-sm-table-cell">Employer</th>
+                        <th class="d-none d-xl-table-cell">Role</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr #rowEl *ngFor='let item of projects' class="proj-table-row clickable-row"
+                        id="proj_{{ item.number }}" attr.data-href="./work/{{ item.folder }}" tabindex="0"
+                        (click)="loadProj(rowEl)">
+                        <!-- If unocked -->
+                        <td *ngIf="item.lock == true" class="proj-row-number locked">
+                            <i class="material-icons-outlined">lock</i>
+                        </td>
+                        <!-- If unlocked -->
+                        <td *ngIf="item.lock == false" class="proj-row-number unlocked">
+                            <i class="material-icons">lock_open</i>
+                        </td>
+                        <td class="proj-row-name">{{ item.name }}</td>
+                        <td class="proj-row-company d-none d-sm-table-cell">{{ item.company }}</td>
+                        <td class="proj-row-role d-none d-xl-table-cell">{{ item.role }}</td>
+                    </tr>
+                </tbody>
+            </table>
         </app-card>
     </div>
     <!-- About Portfolio -->

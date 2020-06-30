@@ -12,22 +12,24 @@ export const ProjectList: ProjectProp[] = [
         company: 'g.ferril.com',
         cover: 'string',
         overview: '',
+        selected: '',
     },
     {
         name: 'eCommerce Rewards',
-        number: 1,
+        number: 2,
         enabled: true,
         lock: false,
         folder: 'ecommerce-rewards',
         role: 'string',
         type: 'string',
-        company: 'CX Loyalty',
+        company: 'cxLoyalty, Inc.',
         cover: 'string',
-        overview: ''
+        overview: '',
+        selected: ''
     },
     {
         name: 'Billable Time Software',
-        number: 1,
+        number: 3,
         enabled: true,
         lock: false,
         folder: 'time-entry',
@@ -35,18 +37,20 @@ export const ProjectList: ProjectProp[] = [
         type: 'string',
         company: 'C.H. Robinson',
         cover: 'string',
-        overview: ''
+        overview: '',
+        selected: ''
     },
     {
         name: 'Design System',
-        number: 1,
+        number: 4,
         enabled: true,
-        lock: false,
+        lock: true,
         folder: 'design-system',
         role: 'string',
         type: 'string',
-        company: 'CX Loyalty',
+        company: 'cxLoyalty, Inc.',
         cover: 'string',
-        overview: ''
+        overview: '',
+        selected: ''
     }
 ];
