@@ -4,43 +4,39 @@
         <div id="main-container" class="px-0">
             <app-header></app-header>
             <main class="px-3 px-lg-0">
-                
-                <!-- Modal -->
-                <div class="d-none" id="login-modal">
-                    <div id="modal-background"></div>
-                    
-                    <!-- Picture Modal -->
-                    <div id="img-modal" class="d-none mx-auto col-10">
-                        <i class="modal-close material-icons">close</i>
-                        <div id="img-container">
-                            <img class="w-100" src="" alt="">
-                        </div>
-                    </div>
-                    
-                    <!-- Login Modal -->
-                    <div class="col-auto mx-auto d-none" id="login-modal">
-                        <i class="modal-close material-icons">close</i>
-                        <div class="pfolio-card">
-                            <div class="pfolio-card-title d-flex align-content-center">
-                                <i class="material-icons-outlined text-light-blue">info</i>
-                                <span class="ml-2">Enter project password:</span>
-                            </div>
-                            <!-- Login Logic -->
-                            <div class="pfolio-card-content">
-                                <form action="" class="row no-gutters align-items-center" method="POST">
-                                    <span class="col-12 col-md-auto mr-2">Password</span>
-                                    <input type="text" name="access">
-                                    <input type="submit" class="col-auto px-2 ml-2" name="submit" value="Enter">
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <router-outlet id="page-content" class="row no-gutters mt-5 px-3">
-                    
-                </router-outlet>
+                <router-outlet></router-outlet>
             </main>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="d-none" id="login-modal">
+    <div id="modal-background"></div>
+
+    <!-- Picture Modal -->
+    <div id="img-modal" class="d-none mx-auto col-10">
+        <i class="modal-close material-icons">close</i>
+        <div id="img-container">
+            <img class="w-100" src="" alt="">
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="col-auto mx-auto d-none" id="login-modal">
+        <i class="modal-close material-icons">close</i>
+        <div class="pfolio-card">
+            <div class="pfolio-card-title d-flex align-content-center">
+                <i class="material-icons-outlined text-light-blue">info</i>
+                <span class="ml-2">Enter project password:</span>
+            </div>
+            <!-- Login Logic -->
+            <div class="pfolio-card-content">
+                <form action="" class="row no-gutters align-items-center" method="POST">
+                    <span class="col-12 col-md-auto mr-2">Password</span>
+                    <input type="text" name="access">
+                    <input type="submit" class="col-auto px-2 ml-2" name="submit" value="Enter">
+                </form>
+            </div>
         </div>
     </div>
 </div>

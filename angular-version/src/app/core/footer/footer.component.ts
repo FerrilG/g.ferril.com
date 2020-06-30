@@ -6,8 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
-  public show:boolean = false;
-  public buttonName:any = 'Show';
+  public show: boolean = false;
+  public buttonName: any = 'Show';
 
   constructor() { }
 
@@ -16,11 +16,12 @@ export class FooterComponent implements OnInit {
 
   toggleScroll() {
     this.show = !this.show;
-    
-    if(this.show)
+
+    if (this.show) {
       this.buttonName = 'Hide';
-    else
+    } else {
       this.buttonName = 'Show';
+    }
   }
 
 }
