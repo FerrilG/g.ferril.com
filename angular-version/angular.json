@@ -12,7 +12,7 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "g",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap",
               "src/styles.scss"
             ],
             "scripts": []
@@ -121,6 +122,41 @@
             "production": {
               "devServerTarget": "angular-version:serve:production"
             }
+          }
+        }
+      }
+    },
+    "gDesignLib": {
+      "projectType": "library",
+      "root": "projects/g-design-lib",
+      "sourceRoot": "projects/g-design-lib/src",
+      "prefix": "gdl",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/g-design-lib/tsconfig.lib.json",
+            "project": "projects/g-design-lib/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/g-design-lib/src/test.ts",
+            "tsConfig": "projects/g-design-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/g-design-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/g-design-lib/tsconfig.lib.json",
+              "projects/g-design-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         }
       }

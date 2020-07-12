@@ -1,0 +1,25 @@
+<header class="row no-gutters">
+    <div class="mr-auto d-inline-flex ml-3 ml-lg-4 py-3 align-items-center">
+        <app-breadcrumb></app-breadcrumb>
+    </div>
+    <div class="ml-auto d-inline-flex mr-3 mr-lg-4 my-2 py-2 pl-2" id="contact-dropdown" tabindex="0"
+        (click)="contactCard()">
+        <img src="http://www.g.ferril.com/3.0/images/profile-img.jpg" alt="Image of Geoffrey Ferril" id="profile-img">
+        <div class="d-flex ml-2 mr-1" id="dropdown-trigger">
+            <span class="pl-2">Contact Details</span>
+            <i class="material-icons">
+                keyboard_arrow_down
+            </i>
+        </div>
+
+        <span [class.d-none]="classApplied" id="contact-card">
+            <div>Phone: 952-221-6636</div>
+            <div>
+                <span>Email: </span>
+                <span>
+                    <a href="mailTo:geoffrey.ferril@gmail.com">geoffrey.ferril@gmail.com</a>
+                </span>
+            </div>
+        </span>
+    </div>
+</header>

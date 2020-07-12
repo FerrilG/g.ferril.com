@@ -9,6 +9,8 @@ import { HeaderComponent } from './core/header/header.component';
 import { SubHeaderComponent } from './core/sub-header/sub-header.component';
 import { BreadcrumbComponent } from './modules/components/breadcrumb/breadcrumb.component';
 import { CardModule } from './modules/components/card/card.module';
+import { GDesignLibModule } from 'g-design-lib';
+import { SidepanelComponent } from './core/sidepanel/sidepanel.component';
 
 @NgModule({
   declarations: [
@@ -17,9 +19,11 @@ import { CardModule } from './modules/components/card/card.module';
     HeaderComponent,
     SubHeaderComponent,
     BreadcrumbComponent,
+    SidepanelComponent,
   ],
   imports: [
     BrowserModule,
+    GDesignLibModule,
     AppRoutingModule,
     CardModule,
     FooterModule

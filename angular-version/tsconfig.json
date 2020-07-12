@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "g-design-lib": [
+        "dist/g-design-lib"
+      ],
+      "g-design-lib/*": [
+        "dist/g-design-lib/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

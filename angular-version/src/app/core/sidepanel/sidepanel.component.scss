@@ -1,0 +1,127 @@
+#gf-ply-card {
+    padding: 2rem 0;
+    background: white;
+    text-align: center;
+}
+
+#gf-ply-img {
+    height: 7rem;
+    width: 7rem;
+    border: 0.3rem solid;
+    border-color: blue;
+    border-radius: 3.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: 0.5rem;
+}
+
+#gf-ply-name {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+#gf-ply-title {
+    font-size: 0.876rem;
+}
+
+
+.gf-nav-item a.gf-nav-link:hover,
+.gf-nav-item a.gf-nav-link:focus {
+    text-decoration: none;
+    outline: none;
+    background: white;
+    color: var(--dark-blue);
+}
+
+.gf-nav-item a.gf-nav-link.active {
+    background: var(--light-blue);
+    color: white;
+}
+
+
+.gf-nav-item a.gf-nav-link {
+    display: inline-flex;
+    white-space: nowrap;
+    color: white;
+    font-weight: 600;
+    align-items: center;
+    padding: 1rem;
+    justify-content: center;
+}
+
+.gf-nav-link i.material-icons {
+    font-size: 1.5rem;
+}
+
+.gf-nav-item .gf-nav-link span {
+    padding-left: 0.5rem;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.gf-nav-item .gf-nav-link .nav-link-sel {
+    display: none;
+}
+
+
+.gf-nav-item {
+    margin-top: 1rem;
+}
+
+.gf-nav-item a.gf-nav-link {
+    display: flex;
+    justify-content: start;
+    // padding: 1rem 2rem;
+    /* margin-top: 1rem; */
+}
+
+.gf-nav-link i.material-icons {
+    font-size: 1.25rem;
+}
+
+.gf-nav-item .gf-nav-link .nav-link-sel {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    right: -20px;
+}
+
+.gf-nav-item .gf-nav-link .nav-link-sel .mask-shadow {
+    background: #f1f1f1;
+    position: absolute;
+    top: 6px;
+    bottom: 6px;
+    left: 6px;
+    right: 6px;
+    transform: rotate(45deg);
+    box-shadow: inset 2px -2px 4px 0px rgba(0, 0, 0, 0.5);
+}
+
+.gf-nav-item .gf-nav-link .nav-link-sel .mask-container {
+    position: absolute;
+    left: 15px;
+    right: 0px;
+    top: 9px;
+    bottom: 6px;
+}
+
+.gf-nav-item .gf-nav-link .nav-link-sel .mask {
+    position: absolute;
+    top: -1px;
+    right: 4px;
+    height: 100%;
+    transform: rotate(45deg);
+    width: 100%;
+    background: #f1f1f1;
+}
+
+.gf-nav-item .gf-nav-link.active .nav-link-sel {
+    display: block;
+}
+
+.pfolio-card {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
