@@ -10,7 +10,7 @@ export const headerLinks: HeaderLinks[] = [
     },
     {
         Type: NavigationLinks.Header,
-        Visible: false,
+        Visible: true,
         Main: false,
         Text: 'Projects',
         Path: 'projects',
@@ -19,7 +19,7 @@ export const headerLinks: HeaderLinks[] = [
         Type: NavigationLinks.Header,
         Visible: true,
         Main: false,
-        Text: 'Work',
-        Path: 'work',
+        Text: 'About Me',
+        Path: 'about-me',
     }
 ]

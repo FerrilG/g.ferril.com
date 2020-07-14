@@ -1,20 +1,20 @@
-div#siteContent div#mainContent {
+main#mainContent {
     padding-top: 60px;
     height: 100vh;
     overflow: auto;
 }
 
-div#siteContent div:last-child::-webkit-scrollbar {
+main#siteContent div:last-child::-webkit-scrollbar {
     width: 7px;
 }
 
-div#siteContent div:last-child::-webkit-scrollbar:hover {
+main#siteContent div:last-child::-webkit-scrollbar:hover {
     width: 15em;
 }
 
-div#siteContent div:last-child::-webkit-scrollbar-thumb {
+main#siteContent div:last-child::-webkit-scrollbar-thumb {
     background: var(--light-blue);
 }
-div#siteContent div:last-child::-webkit-scrollbar-thumb:hover {
+main#siteContent div:last-child::-webkit-scrollbar-thumb:hover {
     background: var(--dark-red);
 }
