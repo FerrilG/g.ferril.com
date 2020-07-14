@@ -29,6 +29,8 @@
 header {
     height: 60px;
     width: calc(100% - 7px);
+    padding: 0px 16px;
+    padding: 0 1rem;
     background-color: var(--dark-blue);
     color: white;
     position: fixed;

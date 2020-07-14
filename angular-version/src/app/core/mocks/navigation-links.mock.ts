@@ -3,8 +3,8 @@ import { NavigationLinks, HeaderLinks } from './../../config/navigation-links';
 export const headerLinks: HeaderLinks[] = [
     {
         Type: NavigationLinks.Header,
-        Visible: true,
-        Main: true,
+        Visible: false,
+        Main: false,
         Text: 'Home',
         Path: '',
     },

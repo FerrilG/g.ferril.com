@@ -1,6 +1,9 @@
 import { PageScrollerService, SectionInfo } from './../page-scroller/page-scroller.service';
-import { Router, NavigationEnd } from '@angular/router';
-import { Component, OnInit, AfterContentInit, AfterViewInit } from '@angular/core';
+import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
+import { Component, OnInit, AfterContentInit, AfterViewInit, Inject } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { NavigationService } from 'src/app/services/navigation.service';
+import { DOCUMENT } from '@angular/common';
 
 
 @Component({
@@ -8,46 +11,39 @@ import { Component, OnInit, AfterContentInit, AfterViewInit } from '@angular/cor
   templateUrl: './page-template.component.html',
   styleUrls: ['./page-template.component.scss']
 })
-export class PageTemplateComponent implements OnInit, AfterViewInit {
+export class PageTemplateComponent implements OnInit {
 
-  // public sectionInfo: SectionInfo[] = [];
-  // public selectedItem: any;
-  poop: SectionInfo[];
-  
-  constructor(private pageSections: PageScrollerService) { }
-  
-  ngOnInit() {
-    // console.log(this.pageSections.getSections());
+  private routeChangeListener$: Subscription;
+  private sidePanel = false;
+  private pageSectionScroller = false;
+
+  constructor(
+    public navigationService: NavigationService,
+    private route: ActivatedRoute,
+    private router: Router,
+    @Inject(DOCUMENT) private document: any
+    ) { }
+
+  ngOnInit(): void {
+    this.routeChangeListener$ = this.navigationService
+    .onRouteChange((data: any, path: string) => {
+      this.sidePanel = data.sidePanel;
+      this.pageSectionScroller = data.pageSectionScroller;
+    });
+
   }
 
-  ngAfterViewInit() {
-    // console.log('ass');
-    // this.getSections();
-    // let sections = [];
-    // sections = Array.prototype.slice.call(document.querySelectorAll("[section] span"));
-    // sections.map(item => {
-    //   this.sectionInfo.push({
-    //     name: item.innerHTML,
-    //     target: item.parentElement
-    //   });
-    // })
-    // console.log(sections);
+  ngOnDestroy(): void {
+    this.routeChangeListener$.unsubscribe();
   }
 
-  getSections(): void {
-    // this.poop = this.pageSections.getSections();
+  hideSidePanel(): boolean {
+    return this.sidePanel;
   }
-  // constructor(private router: Router, private pageScroller: PageScrollerComponent) { }
 
-  // ngOnInit() {
-  //   this.router.events.subscribe(
-  //     (event: Event) => {
-  //       if (event instanceof NavigationEnd) {
-  //         // alert('log');
-  //         // this.pageScroller.ngOnInit()
-  //       }
-  //     });
-  // }
+  hideSectionScroller(): boolean {
+    return this.pageSectionScroller;
+  }
 
 }
 

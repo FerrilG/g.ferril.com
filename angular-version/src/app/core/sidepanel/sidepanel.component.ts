@@ -12,7 +12,6 @@ import { DOCUMENT } from '@angular/common';
 export class SidepanelComponent implements OnInit, OnDestroy {
 
   private routeChangeListener$: Subscription;
-  private sidePanel = false;
   private sidePanelType = null;
 
   constructor(
@@ -25,17 +24,12 @@ export class SidepanelComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.routeChangeListener$ = this.navigationService
     .onRouteChange((data: any, path: string) => {
-      this.sidePanel = data.sidePanel;
       this.sidePanelType = data.sidePanelType;
     });
   }
 
   ngOnDestroy(): void {
     this.routeChangeListener$.unsubscribe();
-  }
-
-  hideSidePanel(): boolean {
-    return this.sidePanel;
   }
 
   setSidePanel(): Observable<string> {

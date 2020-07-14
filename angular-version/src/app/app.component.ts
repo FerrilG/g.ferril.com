@@ -6,7 +6,6 @@ import { Component, ElementRef } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-version';
 
   constructor (private el: ElementRef) {
     // Sets app-root attribute

@@ -4,25 +4,26 @@ import { SidepanelComponent } from './../../../core/sidepanel/sidepanel.componen
 import { PageScrollerModule } from './../page-scroller/page-scroller.module';
 import { AppRoutingModule } from './../../../app-routing.module';
 import { PageTemplateComponent } from './page-template.component';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 
 @NgModule({
     declarations: [
-    PageTemplateComponent,
-    SidepanelComponent,
-    SectionConstructorComponent
-],
-imports: [
-    AppRoutingModule,
-    CommonModule,
-    PageScrollerModule,
-],
-exports: [
-    PageTemplateComponent,
-    SidepanelComponent,
-    SectionConstructorComponent
+        PageTemplateComponent,
+        SidepanelComponent,
+        SectionConstructorComponent
     ],
+    imports: [
+        AppRoutingModule,
+        CommonModule,
+        PageScrollerModule,
+    ],
+    exports: [
+        PageTemplateComponent,
+        SidepanelComponent,
+        SectionConstructorComponent
+    ],
+    schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class PageTemplateModule { }

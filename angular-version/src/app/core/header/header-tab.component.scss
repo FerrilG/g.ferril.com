@@ -5,8 +5,9 @@
         >.header-nav-inner{
             font-size: 24px;
             font-size: 1.5rem;
-            padding: 0.5rem 1rem;
-            padding: 8px 16px;
+            // padding: 0.5rem 1rem;
+            // padding: 8px 16px;
+            // margin: auto;
         }
     }
 }
@@ -28,7 +29,7 @@
         }
 
         &:not([isLink='false']):focus >.header-nav-inner,&:not([isLink='false']):hover >.header-nav-inner {
-            background-color: navy;
+            background-color: #1f3f5a;
             border-radius: 5px;
         }
 

@@ -4,14 +4,16 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './modules/pages/home/home.component';
 
 import { SectionConstructorComponent } from './modules/components/section-constructor/section-constructor.component';
+import { HomepageComponent } from './core/components/homepage/homepage.component';
 
 const appRoutes: Routes = [
   {
     path: '',
-    component: HomeComponent,
+    component: HomepageComponent,
     data: {
       sidePanel: false,
       sidePanelType: null,
+      pageSectionScroller: false,
     }
   },
   {
@@ -20,6 +22,7 @@ const appRoutes: Routes = [
     data: {
       sidePanel: true,
       sidePanelType: 'overview',
+      pageSectionScroller: true,
     }
   }
   // {
