@@ -1,0 +1,5 @@
+<ul id="sectionContainer" class="sticky-top">
+    <li *ngFor='let item of sectionInfo; let index = index' [class.active]="selectedItem == item" (click)="scrollClick(item.target, item)">
+        <span>{{ item.name }}</span>
+    </li>
+</ul>

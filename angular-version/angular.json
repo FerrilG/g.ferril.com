@@ -28,10 +28,16 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap",
+              {
+                "input": "node_modules/bootstrap/dist/css/bootstrap.min.css"
+              },
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              {
+                "input": "node_modules/bootstrap/dist/js/bootstrap.min.js"
+              }
+            ]
           },
           "configurations": {
             "production": {

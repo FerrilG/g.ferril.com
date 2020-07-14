@@ -1,3 +1,30 @@
+:host {
+    // height: calc(100vh - 60px);
+    background-color: var(--dark-blue);
+    // height: inherit;
+    box-shadow: 6px 0 6px rgba(0,0,0,.2);
+}
+
+
+#sidePanel.collapse:not(.show) {
+    margin-left: -187px !important;
+    display: none !important;
+}
+
+#sidePanel.collapse.show {
+    // display: block !important;
+    margin-left: 0 !important;
+    left: 0;
+    transition: margin-left .15s linear;
+}
+
+#sidePanel.collapsing {
+    margin-left: -187px;
+    left: 0.05%;
+    transition: margin-left .15s linear;
+    position: relative !important;
+}
+
 #gf-ply-card {
     padding: 2rem 0;
     background: white;

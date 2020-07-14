@@ -1,15 +1,45 @@
-import { Component, OnInit } from '@angular/core';
+import { NavigationService } from './../../services/navigation.service';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Component, OnInit, OnDestroy, Inject } from '@angular/core';
+import { Subscription, Observable } from 'rxjs';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'g-sidepanel',
   templateUrl: './sidepanel.component.html',
   styleUrls: ['./sidepanel.component.scss']
 })
-export class SidepanelComponent implements OnInit {
+export class SidepanelComponent implements OnInit, OnDestroy {
 
-  constructor() { }
+  private routeChangeListener$: Subscription;
+  private sidePanel = false;
+  private sidePanelType = null;
 
-  ngOnInit() {
+  constructor(
+    public navigationService: NavigationService,
+    private route: ActivatedRoute,
+    private router: Router,
+    @Inject(DOCUMENT) private document: any
+    ) { }
+
+  ngOnInit(): void {
+    this.routeChangeListener$ = this.navigationService
+    .onRouteChange((data: any, path: string) => {
+      this.sidePanel = data.sidePanel;
+      this.sidePanelType = data.sidePanelType;
+    });
+  }
+
+  ngOnDestroy(): void {
+    this.routeChangeListener$.unsubscribe();
+  }
+
+  hideSidePanel(): boolean {
+    return this.sidePanel;
+  }
+
+  setSidePanel(): Observable<string> {
+    return this.sidePanelType;
   }
 
 }

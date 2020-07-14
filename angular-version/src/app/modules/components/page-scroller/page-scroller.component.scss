@@ -1,0 +1,55 @@
+:host {
+    // height: inherit;
+}
+
+ul#sectionContainer {
+    border-left: 1px solid #dbdbdb;
+    padding-left: 14px;
+    padding-right: 7px;
+    list-style-type: none;
+}
+
+ul#sectionContainer li {
+    position: relative;
+    padding: 7px 0;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--dark-blue);
+    user-select: none;
+}
+
+ul#sectionContainer li:first-child {
+    // border-bottom: 1px solid;
+    padding-top: 0;
+}
+
+ul#sectionContainer li:first-child::after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 60%;
+    margin: 14px 0 0;
+    background: #dbdbdb;
+    clear: both;
+}
+
+ul#sectionContainer li:hover ::before {
+    content: "";
+    border-radius: 50%;
+    left: -17px;
+    top: 14px;
+    background: #dbdbdb;
+    position: absolute;
+    width: 6px;
+    height: 6px;
+}
+ul#sectionContainer li.active ::before {
+    content: "";
+    border-radius: 50%;
+    left: -17px;
+    top: 14px;
+    background: var(--dark-blue);
+    position: absolute;
+    width: 6px;
+    height: 6px;
+}
