@@ -1,4 +1,6 @@
 :host {
+    margin-top: 32px;
+    margin-top: 2em;
     // height: inherit;
 }
 
@@ -7,6 +9,11 @@ ul#sectionContainer {
     padding-left: 14px;
     padding-right: 7px;
     list-style-type: none;
+}
+
+ul.sticky-top {
+    top: 32px;
+    top: 2em;
 }
 
 ul#sectionContainer li {
@@ -19,7 +26,6 @@ ul#sectionContainer li {
 }
 
 ul#sectionContainer li:first-child {
-    // border-bottom: 1px solid;
     padding-top: 0;
 }
 
@@ -43,6 +49,7 @@ ul#sectionContainer li:hover ::before {
     width: 6px;
     height: 6px;
 }
+
 ul#sectionContainer li.active ::before {
     content: "";
     border-radius: 50%;
@@ -52,4 +59,14 @@ ul#sectionContainer li.active ::before {
     position: absolute;
     width: 6px;
     height: 6px;
+}
+
+ul#sectionContainer li:first-child:hover ::before {
+    top: 8px;
+    top: 0.5rem;
+}
+
+ul#sectionContainer li:first-child.active ::before {
+    top: 8px;
+    top: 0.5rem;
 }
