@@ -13,7 +13,7 @@ import { Subscription } from 'rxjs';
 export class HeaderComponent implements OnInit, AfterViewInit, OnDestroy {
 
   // classApplied = true;
-  private currentRoute: string;
+  public currentRoute: string;
 
 
   // @ContentChildren(forwardRef(() => headerLinks))
