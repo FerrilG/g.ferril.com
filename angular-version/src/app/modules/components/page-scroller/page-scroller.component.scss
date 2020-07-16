@@ -1,11 +1,13 @@
 :host {
-    // height: inherit;
+    padding-top: 38.4px;
+    padding-top: 2.4rem;
+    height: calc(100vh - 60px);
 }
 
 ul#sectionContainer {
     border-left: 1px solid #dbdbdb;
     padding-left: 14px;
-    padding-right: 7px;
+    // padding-right: 7px;
     list-style-type: none;
 }
 
@@ -43,6 +45,7 @@ ul#sectionContainer li:hover ::before {
     width: 6px;
     height: 6px;
 }
+
 ul#sectionContainer li.active ::before {
     content: "";
     border-radius: 50%;

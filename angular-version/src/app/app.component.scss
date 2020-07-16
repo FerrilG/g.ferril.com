@@ -4,17 +4,18 @@ main#mainContent {
     overflow: auto;
 }
 
-main#siteContent div:last-child::-webkit-scrollbar {
-    width: 7px;
-}
+// main #siteContent::-webkit-scrollbar {
+//     width: 7px;
+// }
 
-main#siteContent div:last-child::-webkit-scrollbar:hover {
+main>#siteContent::-webkit-scrollbar:hover {
     width: 15em;
 }
 
-main#siteContent div:last-child::-webkit-scrollbar-thumb {
+main>#siteContent::-webkit-scrollbar-thumb {
     background: var(--light-blue);
 }
-main#siteContent div:last-child::-webkit-scrollbar-thumb:hover {
-    background: var(--dark-red);
-}
+
+// main #siteContent::-webkit-scrollbar-thumb:hover {
+//     background: var(--dark-red);
+// }

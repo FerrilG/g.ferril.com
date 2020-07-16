@@ -1,14 +1,10 @@
-
-
 <!-- <main id="mainContent" class="row no-gutters"> -->
-    <g-sidepanel *ngIf="hideSidePanel()"></g-sidepanel>
-    <div id="pageContent" class="col">
-        <!-- SCROLL BROKEN -->
-        <router-outlet></router-outlet>
-        <!-- SCROLL WORKS -->
-        <!-- <g-section-constructor></g-section-constructor> -->
-    </div>
-    <g-page-scroller *ngIf="hideSectionScroller()" class="d-none d-md-block col-md-3 col-lg-2 bean3"></g-page-scroller>
-
+<g-sidepanel *ngIf="hideSidePanel()" id="sidePanel" class="d-none d-lg-block sticky-top collapse show"></g-sidepanel>
+<div id="pageContent" class="col">
+    <router-outlet></router-outlet>
+</div>
+<ng-container *ngIf="hideSectionScroller()">
+    <g-page-scroller class="d-none d-md-block col-md-3 col-lg-2 sticky-top"></g-page-scroller>
+</ng-container>
 
 <!-- </main> -->
