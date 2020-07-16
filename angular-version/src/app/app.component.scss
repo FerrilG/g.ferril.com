@@ -1,21 +1,12 @@
 main#mainContent {
     padding-top: 60px;
+    height: 100vh;
     overflow: auto;
 }
 
-<<<<<<< HEAD
-g-page-template {
-    height: calc(100vh - 60px);
-}
-
-main#siteContent div:last-child::-webkit-scrollbar {
-    width: 7px;
-}
-=======
 // main #siteContent::-webkit-scrollbar {
 //     width: 7px;
 // }
->>>>>>> 00398de19b828fd594236cd21f3c21f354f6d4b3
 
 main>#siteContent::-webkit-scrollbar:hover {
     width: 15em;

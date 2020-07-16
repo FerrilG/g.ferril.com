@@ -1,4 +1,4 @@
-import { NavigationLinks, HeaderLinks } from '../../config/navigation-links';
+import { NavigationLinks, HeaderLinks } from './../../config/navigation-links';
 
 export const headerLinks: HeaderLinks[] = [
     {

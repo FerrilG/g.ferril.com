@@ -1,13 +1,7 @@
 :host {
-<<<<<<< HEAD
-    margin-top: 32px;
-    margin-top: 2em;
-    // height: inherit;
-=======
     padding-top: 38.4px;
     padding-top: 2.4rem;
     height: calc(100vh - 60px);
->>>>>>> 00398de19b828fd594236cd21f3c21f354f6d4b3
 }
 
 ul#sectionContainer {
@@ -15,11 +9,6 @@ ul#sectionContainer {
     padding-left: 14px;
     // padding-right: 7px;
     list-style-type: none;
-}
-
-ul.sticky-top {
-    top: 32px;
-    top: 2em;
 }
 
 ul#sectionContainer li {
@@ -32,6 +21,7 @@ ul#sectionContainer li {
 }
 
 ul#sectionContainer li:first-child {
+    // border-bottom: 1px solid;
     padding-top: 0;
 }
 
@@ -65,14 +55,4 @@ ul#sectionContainer li.active ::before {
     position: absolute;
     width: 6px;
     height: 6px;
-}
-
-ul#sectionContainer li:first-child:hover ::before {
-    top: 8px;
-    top: 0.5rem;
-}
-
-ul#sectionContainer li:first-child.active ::before {
-    top: 8px;
-    top: 0.5rem;
 }
