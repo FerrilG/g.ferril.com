@@ -3,6 +3,7 @@ main#mainContent {
     overflow: auto;
 }
 
+<<<<<<< HEAD
 g-page-template {
     height: calc(100vh - 60px);
 }
@@ -10,14 +11,20 @@ g-page-template {
 main#siteContent div:last-child::-webkit-scrollbar {
     width: 7px;
 }
+=======
+// main #siteContent::-webkit-scrollbar {
+//     width: 7px;
+// }
+>>>>>>> 00398de19b828fd594236cd21f3c21f354f6d4b3
 
-main#siteContent div:last-child::-webkit-scrollbar:hover {
+main>#siteContent::-webkit-scrollbar:hover {
     width: 15em;
 }
 
-main#siteContent div:last-child::-webkit-scrollbar-thumb {
+main>#siteContent::-webkit-scrollbar-thumb {
     background: var(--light-blue);
 }
-main#siteContent div:last-child::-webkit-scrollbar-thumb:hover {
-    background: var(--dark-red);
-}
+
+// main #siteContent::-webkit-scrollbar-thumb:hover {
+//     background: var(--dark-red);
+// }

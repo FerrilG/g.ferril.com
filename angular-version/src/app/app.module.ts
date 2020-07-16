@@ -11,11 +11,12 @@ import { HomeComponent } from './modules/pages/home/home.component';
 import { SubHeaderComponent } from './core/sub-header/sub-header.component';
 import { BreadcrumbComponent } from './modules/components/breadcrumb/breadcrumb.component';
 import { CardModule } from './modules/components/card/card.module';
-import { GDesignLibModule } from 'g-design-lib';
 // import { SidepanelComponent } from './core/sidepanel/sidepanel.component';
 // import { SectionConstructorComponent } from './modules/components/section-constructor/section-constructor.component';
 // import { PageTemplateComponent } from './modules/components/page-template/page-template.component';
 
+
+// import { GDesignLibModule } from 'g-design-lib';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +29,7 @@ import { GDesignLibModule } from 'g-design-lib';
   ],
   imports: [
     BrowserModule,
-    GDesignLibModule,
+    // GDesignLibModule,
     AppRoutingModule,
     HeaderModule,
     CardModule,
@@ -39,8 +40,8 @@ import { GDesignLibModule } from 'g-design-lib';
   exports: [
   ],
   providers: [
- ],
- schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
