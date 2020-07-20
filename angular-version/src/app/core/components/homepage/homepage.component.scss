@@ -1,0 +1,85 @@
+@import  '../../../../../projects/g-design-lib/src/lib/atoms/colors.scss';
+
+#hero {
+    padding-top: 10em;
+
+    #ply-card {
+    margin: 0 auto;
+    display: inline-flex;
+    position: relative;
+    z-index: 1;
+
+        .content {
+            margin-top: 2rem;
+
+            .name {
+                font-size: 2.25rem;
+            }
+        }
+        @media (min-width: 768px) {
+            .content {
+                margin-left: 2rem;
+            }
+        }
+    }
+
+    #ply-img {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        background-color: beige;
+    }
+
+    .background {
+        width: 100%;
+        height: 250px;
+        background: var(--light-blue);
+        transform: skewY(10deg);
+        transform-origin: 80%;
+    }
+
+}
+
+
+section.interest {
+    padding: 3em 0;
+    border-bottom: 1px solid;
+
+    .section-content {
+        max-width: 1048px;
+        margin: 32px auto;
+
+        >div {
+            padding: 0 25px;
+        }
+
+        img {
+            max-height: 250px;
+        }
+
+        .left-content,.right-content {
+            padding-top: 1rem;
+            text-align: center;
+        }
+
+        .left-content {
+            @media (min-width: 768px) {
+                text-align: left;
+            }
+        }
+        .right-content {
+            @media (min-width: 768px) {
+                text-align: right;
+            }
+        }
+    }
+}
+
+section.interest:last-child {
+    border-bottom: none;
+}
+
+#filler {
+    height: 3000px;
+    width: 100%;
+}
