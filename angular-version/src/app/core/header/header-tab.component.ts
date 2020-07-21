@@ -1,10 +1,9 @@
-import { Observable } from 'rxjs';
 import { Component, OnInit, ElementRef, Input, Output } from '@angular/core';
-import { EventEmitter } from 'protractor';
+
 @Component({
     selector: 'g-header-tab',
     template: `
-    <a href="/{{ navLink }}" (click)="onClick()" [attr.title]="navTitle + '.'" [attr.isLink]="isLink"
+    <a href="/{{ navLink }}" [attr.title]="navTitle + '.'" [attr.isLink]="isLink"
     [attr.active]="mainTab ? undefined : (isActive ? true : undefined)" class="d-flex align-items-center"
     ><span class="header-nav-inner"><ng-content></ng-content></span></a>
     `,
@@ -23,12 +22,6 @@ export class HeaderTabComponent implements OnInit {
 
     ngOnInit(): void {
 
-    }
-
-    private onClick(event): boolean{
-        if (!event){
-            return false;
-        }
     }
 
     public forceClick(): void {

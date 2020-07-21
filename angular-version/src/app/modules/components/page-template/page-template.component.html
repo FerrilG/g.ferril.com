@@ -1,6 +1,6 @@
 <!-- <main id="mainContent" class="row no-gutters"> -->
 <g-sidepanel *ngIf="hideSidePanel()" id="sidePanel" class="d-none d-lg-block sticky-top collapse show"></g-sidepanel>
-<div id="pageContent" class="w-100" [ngClass]="{'pads': hideSidePanel()}">
+<div id="pageContent" class="w-100" [ngClass]="{'p-0': !hideSidePanel()}">
     <router-outlet></router-outlet>
 </div>
 <ng-container *ngIf="hideSectionScroller()">

@@ -1,5 +1,5 @@
 import { headerLinks } from './../mocks/navigation-links.mock';
-import { HeaderTabComponent } from './header-tab.component';
+// import { HeaderTabComponent } from './header-tab.component';
 import { NavigationService } from './../../services/navigation.service';
 import { Component, OnInit, AfterViewInit, ContentChildren, forwardRef, QueryList, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
@@ -13,11 +13,11 @@ import { Subscription } from 'rxjs';
 export class HeaderComponent implements OnInit, AfterViewInit, OnDestroy {
 
   // classApplied = true;
-  private currentRoute: string;
+  public currentRoute: string;
 
 
   // @ContentChildren(forwardRef(() => headerLinks))
-  private headerNavTabs = headerLinks;
+  public headerNavTabs = headerLinks;
 
   public headerTabsLoaded = false;
   private routeChangeListener$: Subscription;

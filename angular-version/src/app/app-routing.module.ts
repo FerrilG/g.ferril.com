@@ -35,6 +35,10 @@ const appRoutes: Routes = [
       sidePanelType: 'overview',
       pageSectionScroller: true,
     }
+  },
+  {
+    path: '**',
+    redirectTo: ''
   }
   // {
   //   path: '',
