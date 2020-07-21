@@ -8,14 +8,19 @@ main#mainContent {
 //     width: 7px;
 // }
 
-main>#siteContent::-webkit-scrollbar:hover {
-    width: 15em;
+::-webkit-scrollbar:hover {
+    width: 25em;
 }
 
-main>#siteContent::-webkit-scrollbar-thumb {
-    background: var(--light-blue);
+::-webkit-scrollbar-thumb {
+    background: green;
 }
 
 // main #siteContent::-webkit-scrollbar-thumb:hover {
 //     background: var(--dark-red);
 // }
+
+#filler {
+    height: 3000px;
+    width: 100%;
+}
