@@ -1,4 +1,4 @@
-#pageContent {
+#pageContent.pads {
     padding: 20px;
     // margin-top: -60px;
     // padding-top: 80px;
@@ -12,10 +12,7 @@
 // }
 
 // Medium
-@media (min-width: 768px) {
+@media (min-width: 768px) {}
 
-}
 // Large
-@media (min-width: 992px) {
-
-}
+@media (min-width: 992px) {}

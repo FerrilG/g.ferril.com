@@ -1,43 +1,74 @@
-@import  '../../../../../projects/g-design-lib/src/lib/atoms/colors.scss';
+@import '../../../../../projects/g-design-lib/src/lib/atoms/colors.scss';
 
 #hero {
-    padding-top: 10em;
+    // padding-top: 10em;
+    margin-bottom: 4rem;
+    text-align: center;
+
+    @media (min-width: 768px) {
+        text-align: left;
+    }
 
     #ply-card {
-    margin: 0 auto;
-    display: inline-flex;
-    position: relative;
-    z-index: 1;
+        margin: 0 auto;
+        display: inline-flex;
+        position: relative;
+        z-index: 1;
+        padding: 3rem 0 4rem;
 
         .content {
-            margin-top: 2rem;
+            margin-top: 0.785rem;
+            color: white;
+
+            @media (min-width: 768px) {
+                margin-top: 2rem;
+                margin-left: 2rem;
+            }
 
             .name {
                 font-size: 2.25rem;
             }
         }
-        @media (min-width: 768px) {
-            .content {
-                margin-left: 2rem;
-            }
-        }
     }
 
     #ply-img {
-        width: 250px;
-        height: 250px;
-        border-radius: 50%;
-        background-color: beige;
+        >img {
+            width: 180px;
+            border-radius: 50%;
+            background-color: beige;
+        }
+
     }
 
     .background {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
         width: 100%;
-        height: 250px;
-        background: var(--light-blue);
-        transform: skewY(10deg);
-        transform-origin: 80%;
+        /* max-height: 500px; */
+        // padding: 48px 0px;
+        transform: skewY(-8deg);
+        transform-origin: -35rem;
+
+        >div {
+            width: 100%;
+            height: 40px;
+            background: var(--light-blue);
+        }
+
+        >div.bkgd-top {
+            width: 100%;
+            height: 580px;
+            background: black;
+        }
     }
 
+    // .background.bkgd-top {
+    //     height: 440px;
+    //     background: black;
+    // }
 }
 
 
@@ -57,7 +88,8 @@ section.interest {
             max-height: 250px;
         }
 
-        .left-content,.right-content {
+        .left-content,
+        .right-content {
             padding-top: 1rem;
             text-align: center;
         }
@@ -67,6 +99,7 @@ section.interest {
                 text-align: left;
             }
         }
+
         .right-content {
             @media (min-width: 768px) {
                 text-align: right;
