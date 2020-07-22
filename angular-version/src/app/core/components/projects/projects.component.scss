@@ -1,0 +1,39 @@
+.card {
+    margin: 1em 0;
+    // border: 1px solid;
+    // border-radius: 8px;
+    // box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+
+    .card-content {
+        // height: 200px;
+        // display: flex;
+        justify-content: center;
+
+        #img {
+            background-color: grey;
+            // max-height: 250px;
+            // max-width: 175px;
+            height: 175px;
+            width: 250px;
+        }
+
+        .content-items {
+            display: flex;
+            flex-direction: column;
+
+            @media (min-width: 768px) {
+                display: block;
+            }
+            @media (min-width: 1200px) {
+                display: flex;
+            }
+        }
+        @media (min-width: 768px) {
+            justify-content: start;
+        }
+
+        @media (min-width: 1200px) {
+            justify-content: center;
+        }
+    }
+}
