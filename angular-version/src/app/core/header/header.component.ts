@@ -29,9 +29,9 @@ export class HeaderComponent implements OnInit, AfterViewInit, OnDestroy {
 
   ngOnInit(): void {
     this.routeChangeListener$ = this.navigationService
-    .onRouteChange((data: any, path: string) => {
-      this.currentRoute = path;
-    })
+      .onRouteChange((data: any, path: string) => {
+        this.currentRoute = path;
+      });
   }
 
   ngAfterViewInit(): void {
@@ -44,7 +44,7 @@ export class HeaderComponent implements OnInit, AfterViewInit, OnDestroy {
     this.headerMainTab = this.headerNavTabs.find(i => i.Main);
   }
 
-  ngOnDestroy():void {
+  ngOnDestroy(): void {
     this.routeChangeListener$.unsubscribe();
     this.headerTabWatcher$.unsubscribe();
   }
