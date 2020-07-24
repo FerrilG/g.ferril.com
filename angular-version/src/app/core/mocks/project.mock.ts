@@ -3,6 +3,7 @@ import { ProjectProp } from 'src/app/config/projects.config';
 export const ProjectList: ProjectProp[] = [
     {
         name: 'Online Portfolio',
+        date: 'Jan \'18 - Present',
         number: 1,
         enabled: true,
         lock: false,
@@ -11,10 +12,12 @@ export const ProjectList: ProjectProp[] = [
         type: 'string',
         company: 'g.ferril.com',
         cover: 'string',
-        overview: '',
+        // tslint:disable-next-line: max-line-length
+        overview: 'Rhoncus urna neque viverra justo nec ultrices.Laoreet non curabitur gravida arcu. Fringilla urna porttitor rhoncus dolor purus non enim praeåsent elementum.In nisl nisi scelerisque eu ultrices.Neque ornare aenean euismod elementum.',
     },
     {
         name: 'eCommerce Rewards',
+        date: 'Oct \'18 - Apr \'19',
         number: 1,
         enabled: true,
         lock: false,
@@ -23,10 +26,12 @@ export const ProjectList: ProjectProp[] = [
         type: 'string',
         company: 'CX Loyalty',
         cover: 'string',
-        overview: ''
+        // tslint:disable-next-line: max-line-length
+        overview: 'Rhoncus urna neque viverra justo nec ultrices.Laoreet non curabitur gravida arcu. Fringilla urna porttitor rhoncus dolor purus non enim praeåsent elementum.In nisl nisi scelerisque eu ultrices.Neque ornare aenean euismod elementum.',
     },
     {
         name: 'Billable Time Software',
+        date: 'Nov \'17 - Feb \'18',
         number: 1,
         enabled: true,
         lock: false,
@@ -35,10 +40,12 @@ export const ProjectList: ProjectProp[] = [
         type: 'string',
         company: 'C.H. Robinson',
         cover: 'string',
-        overview: ''
+        // tslint:disable-next-line: max-line-length
+        overview: 'Rhoncus urna neque viverra justo nec ultrices.Laoreet non curabitur gravida arcu. Fringilla urna porttitor rhoncus dolor purus non enim praeåsent elementum.In nisl nisi scelerisque eu ultrices.Neque ornare aenean euismod elementum.',
     },
     {
         name: 'Design System',
+        date: 'Apr \'19 - Oct \'19',
         number: 1,
         enabled: true,
         lock: false,

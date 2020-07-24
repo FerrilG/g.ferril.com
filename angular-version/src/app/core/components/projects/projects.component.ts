@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ProjectList } from '../../mocks/project.mock';
+import { ProjectsService } from '../../services/projects.service';
 
 @Component({
   selector: 'g-projects',
@@ -6,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent implements OnInit {
+  public projects = ProjectList;
 
-  constructor() { }
+  constructor(private projectService: ProjectsService) { }
 
   ngOnInit() {
+    this.getProjects();
+    console.log(this.projects);
   }
 
+  getProjects(): void {
+    this.projects = this.projectService.getProjects();
+  }
 }
