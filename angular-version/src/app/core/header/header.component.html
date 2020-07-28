@@ -1,41 +1,21 @@
 <header class="row no-gutters flex-nowrap align-items-center">
     <!-- g-button -->
-    <a *ngIf="currentRoute != ''" g-button class="px-3 hamburger g-button d-flex align-items-center" data-toggle="collapse" data-target="#sidePanel">
+    <a *ngIf="currentRoute != ''" g-button class="px-3 hamburger g-button d-flex align-items-center"
+        data-toggle="collapse" data-target="#sidePanel">
         <span class="material-icons">menu</span>
     </a>
 
     <!-- <a id="homeLink" class="" (click)="navigateTo('')">g.ferril.com</a> -->
-    <g-header-tab  id="homeLink" [isLink]="false" (click)="navigateTo('')" [navLink]="''" [navTitle]="'Home'">g.ferril.com</g-header-tab>
-    
+    <g-header-tab id="homeLink" [isLink]="false" [navLink]="''" [navTitle]="'Home'">
+        g.ferril.com</g-header-tab>
+
     <ng-container *ngFor="let headerTab of headerNavTabs; let i = index;">
-        <g-header-tab *ngIf="headerTab.Visible" [isActive]="currentRoute === headerTab.Path" (click)="navigateTo(headerTab.Path)" [navLink]="headerTab.Path" [navTitle]="headerTab.Text">{{ headerTab.Text }}</g-header-tab>
+        <g-header-tab *ngIf="headerTab.Visible" [isActive]="currentRoute === headerTab.Path" [navLink]="headerTab.Path"
+            [navTitle]="headerTab.Text">
+            {{ headerTab.Text }}
+        </g-header-tab>
     </ng-container>
-    
-    <!-- <ng-template>
 
-    </ng-template> -->
-
-    <!-- <aio-top-menu class="ng-star-inserted">
-        <ul role="navigation">
-            <li class="ng-star-inserted">
-                <a class="nav-link" href="features" title="Features.">
-                    <span class="nav-link-inner">Features</span>
-                </a>
-            </li>
-            <li class="ng-star-inserted">
-                <a class="nav-link" href="docs" title="Docs.">
-                    <span class="nav-link-inner">Docs</span>
-                </a>
-            </li>
-            <li class="ng-star-inserted">
-                <a class="nav-link" href="https://blog.angular.io/" title="Blog.">
-                    <span class="nav-link-inner">Blog</span>
-                </a>
-            </li>
-        </ul>
-    </aio-top-menu> -->
-    
-    
     <!-- <div>g.ferril.com</div> -->
     <!-- <a id="homeLink" class="px-3 col-auto" href="./">g.ferril.com</a> -->
     <!-- <span class="col-auto">Projects</span> -->

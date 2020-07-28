@@ -1,3 +1,4 @@
+import { ProjectsModule } from 'src/app/core/components/projects/projects.module';
 import { SectionConstructorComponent } from './../section-constructor/section-constructor.component';
 
 import { SidepanelComponent } from './../../../core/sidepanel/sidepanel.component';
@@ -8,7 +9,6 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomepageComponent } from 'src/app/core/components/homepage/homepage.component';
 import { AboutMeComponent } from 'src/app/core/components/about-me/about-me.component';
-import { ProjectsComponent } from 'src/app/core/components/projects/projects.component';
 
 
 @NgModule({
@@ -17,22 +17,21 @@ import { ProjectsComponent } from 'src/app/core/components/projects/projects.com
         SidepanelComponent,
         SectionConstructorComponent,
         HomepageComponent,
-        ProjectsComponent,
         AboutMeComponent,
     ],
     imports: [
         AppRoutingModule,
         CommonModule,
         PageScrollerModule,
+        ProjectsModule
     ],
     exports: [
         PageTemplateComponent,
         SidepanelComponent,
         SectionConstructorComponent,
         HomepageComponent,
-        ProjectsComponent,
         AboutMeComponent,
     ],
-    schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
+    schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class PageTemplateModule { }

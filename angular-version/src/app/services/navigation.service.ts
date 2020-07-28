@@ -10,28 +10,28 @@ import { Inject, Injectable } from '@angular/core';
 export class NavigationService {
     private pageHeader: Observable<string>;
     private pageTabName: Observable<string>;
-    
+
     public currentRoute: string;
 
     private _isFirstPage = false;
 
     constructor(private router: Router, @Inject(DOCUMENT) private document: Document) {
-        this.pageHeader = new Observable<string>(observer => {
-            this.onRouteChange(({ pageHeader }) => {
-                if (pageHeader) {
-                    observer.next(pageHeader);
-                }
-            });
-        });
+        // this.pageHeader = new Observable<string>(observer => {
+        //     this.onRouteChange(({ pageHeader }) => {
+        //         if (pageHeader) {
+        //             observer.next(pageHeader);
+        //         }
+        //     });
+        // });
     }
 
-    public onRouteChange(callbackFn: (snapshotData: any, path: string) => void): Subscription {
+    public onRouteChange(callbackFn: (snapshotData: object, path: string) => void): Subscription {
         return this.router.events.subscribe((event) => {
             if (event instanceof ActivationEnd) {
                 const { data, routeConfig } = event.snapshot;
                 callbackFn(data, routeConfig.path);
             }
-        })
+        });
     }
 
     getPageTitle(): Observable<string> {
@@ -42,21 +42,8 @@ export class NavigationService {
         return this.pageTabName;
     }
 
-    
-    public navigatePathTo(path: string): void {
-    // let promise;
 
-        if (path === 'blog') {
-            // get work table
-            // promise = () => this.projectDataService.retrieveBlog
-            // promise = () => this.pageDataService.retrieveHome
-        } else if (path === 'work') {
-            // promise = () => this.projectDataService.retrieveProject
-        } else if (path === '') {
-            // promise = () => this.projectDataService.retrieveHome
-            this.router.navigate(['']);
-            return;
-        }
+    public navigatePathTo(path: string): void {
         this.router.navigate([path]);
     }
 
@@ -67,5 +54,4 @@ export class NavigationService {
     public get isFirstPage(): boolean {
         return this._isFirstPage;
     }
-
 }

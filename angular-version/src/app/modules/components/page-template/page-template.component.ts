@@ -22,14 +22,16 @@ export class PageTemplateComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     @Inject(DOCUMENT) private document: any
-    ) { }
+  ) { }
 
   ngOnInit(): void {
     this.routeChangeListener$ = this.navigationService
-    .onRouteChange((data: any, path: string) => {
-      this.sidePanel = data.sidePanel;
-      this.pageSectionScroller = data.pageSectionScroller;
-    });
+      .onRouteChange((data: any, path: string) => {
+        if (data.sidePanel != null) {
+          this.sidePanel = data.sidePanel;
+          this.pageSectionScroller = data.pageSectionScroller;
+        }
+      });
 
   }
 

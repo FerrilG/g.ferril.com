@@ -1,9 +1,8 @@
-import { Component, OnInit, ElementRef, Input, Output } from '@angular/core';
-
+import { Component, OnInit, ElementRef, Input } from '@angular/core';
 @Component({
     selector: 'g-header-tab',
     template: `
-    <a href="/{{ navLink }}" [attr.title]="navTitle + '.'" [attr.isLink]="isLink"
+    <a routerLink="{{ navLink }}" [attr.title]="navTitle + '.'" [attr.isLink]="isLink"
     [attr.active]="mainTab ? undefined : (isActive ? true : undefined)" class="d-flex align-items-center"
     ><span class="header-nav-inner"><ng-content></ng-content></span></a>
     `,
