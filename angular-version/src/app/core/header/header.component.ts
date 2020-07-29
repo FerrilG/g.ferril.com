@@ -1,8 +1,9 @@
+import { SecurityService } from './../../security/security.service';
 import { headerLinks } from './../mocks/navigation-links.mock';
-// import { HeaderTabComponent } from './header-tab.component';
 import { NavigationService } from './../../services/navigation.service';
 import { Component, OnInit, AfterViewInit, ContentChildren, forwardRef, QueryList, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
+import { UserAccessAuth } from 'src/app/security/app-user-auth';
 
 @Component({
   selector: 'app-header',
@@ -12,22 +13,19 @@ import { Subscription } from 'rxjs';
 
 export class HeaderComponent implements OnInit, AfterViewInit, OnDestroy {
 
-  // classApplied = true;
   public currentRoute: string;
-
-
-  // @ContentChildren(forwardRef(() => headerLinks))
   public headerNavTabs = headerLinks;
 
   public headerTabsLoaded = false;
   private routeChangeListener$: Subscription;
   private headerTabWatcher$: Subscription;
   public headerMainTab: object;
+  private securityObject: UserAccessAuth = null;
 
-  constructor(private navigationService: NavigationService) {
-  }
+  constructor(private navigationService: NavigationService, private securityService: SecurityService) { }
 
   ngOnInit(): void {
+    this.securityObject = this.securityService.securityObject;
     this.routeChangeListener$ = this.navigationService
       .onRouteChange((data: any, path: string) => {
         this.currentRoute = path;
@@ -36,11 +34,6 @@ export class HeaderComponent implements OnInit, AfterViewInit, OnDestroy {
 
   ngAfterViewInit(): void {
     this.headerTabsLoaded = true;
-
-    // next: () => this.headerMainTabs = this.headerNavTabs.find(i => i.mainTab),
-    // this.headerTabWatcher$ = this.headerNavTabs.changes.subscribe({
-    //   next: () => this.headerMainTabs = this.headerNavTabs.find(i => i.mainTab),
-    // });
     this.headerMainTab = this.headerNavTabs.find(i => i.Main);
   }
 

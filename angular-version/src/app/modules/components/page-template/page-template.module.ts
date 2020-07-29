@@ -1,3 +1,6 @@
+import { FormsModule } from '@angular/forms';
+import { SecurityService } from './../../../security/security.service';
+import { LoginComponent } from './../login/login.component';
 import { ProjectsModule } from 'src/app/core/components/projects/projects.module';
 import { SectionConstructorComponent } from './../section-constructor/section-constructor.component';
 
@@ -18,12 +21,17 @@ import { AboutMeComponent } from 'src/app/core/components/about-me/about-me.comp
         SectionConstructorComponent,
         HomepageComponent,
         AboutMeComponent,
+        LoginComponent
     ],
     imports: [
         AppRoutingModule,
         CommonModule,
         PageScrollerModule,
-        ProjectsModule
+        ProjectsModule,
+        FormsModule
+    ],
+    providers: [
+        SecurityService
     ],
     exports: [
         PageTemplateComponent,

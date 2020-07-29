@@ -1,5 +1,6 @@
+import { AuthGuard } from './../../../security/auth.guard';
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule, Router, ActivationEnd, RouterOutlet } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 import { ProjectsComponent } from './projects.component';
 import { PrjmyCompanyComponent } from './project-pages/myCompany/myCompany.component';
 import { PrjPortfolioComponent } from './project-pages/portfolio/portfolio.component';
@@ -12,6 +13,7 @@ const projectRoutes: Routes = [
             {
                 path: '',
                 component: ProjectsComponent,
+                canActivate: [AuthGuard],
                 data: {
                     sidePanel: true,
                     sidePanelType: 'overview',
@@ -21,7 +23,10 @@ const projectRoutes: Routes = [
             {
                 path: 'portfolio',
                 component: PrjPortfolioComponent,
+                canActivate: [AuthGuard],
                 data: {
+                    canNavigate: 'canAccessProjects',
+                    accessDirectly: false,
                     sidePanel: true,
                     sidePanelType: 'overview',
                     pageSectionScroller: true,
@@ -30,6 +35,7 @@ const projectRoutes: Routes = [
             },
             {
                 path: 'myCompany',
+                canActivate: [AuthGuard],
                 component: PrjmyCompanyComponent,
                 data: {
                     sidePanel: true,

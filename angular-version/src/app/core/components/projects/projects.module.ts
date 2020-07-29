@@ -6,6 +6,7 @@ import { ProjectsRoutingModule } from './project-routing.module';
 import { PrjPortfolioComponent } from './project-pages/portfolio/portfolio.component';
 import { PrjmyCompanyComponent } from './project-pages/myCompany/myCompany.component';
 import { ProjectsComponent } from './projects.component';
+import { SecurityService } from 'src/app/security/security.service';
 
 @NgModule({
     declarations: [
@@ -16,6 +17,9 @@ import { ProjectsComponent } from './projects.component';
     imports: [
         CommonModule,
         ProjectsRoutingModule
+    ],
+    providers: [
+        SecurityService
     ],
     exports: [
         ProjectsRoutingModule,

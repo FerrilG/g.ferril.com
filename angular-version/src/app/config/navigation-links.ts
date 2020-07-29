@@ -1,8 +1,3 @@
-// export interface NavigationLinks {
-//     Type: string;
-//     Text: string;
-//     Path: string;
-// }
 export enum NavigationLinks {
     Header,
     SideBar,

@@ -7,7 +7,7 @@ import { Component, ElementRef } from '@angular/core';
 })
 export class AppComponent {
 
-  constructor (private el: ElementRef) {
+  constructor(private el: ElementRef) {
     // Sets app-root attribute
     // (this.el.nativeElement as HTMLElement).setAttribute('data-app-container', '');
   }

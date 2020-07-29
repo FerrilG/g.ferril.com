@@ -9,13 +9,18 @@
     <g-header-tab id="homeLink" [isLink]="false" [navLink]="''" [navTitle]="'Home'">
         g.ferril.com</g-header-tab>
 
-    <ng-container *ngFor="let headerTab of headerNavTabs; let i = index;">
-        <g-header-tab *ngIf="headerTab.Visible" [isActive]="currentRoute === headerTab.Path" [navLink]="headerTab.Path"
-            [navTitle]="headerTab.Text">
-            {{ headerTab.Text }}
-        </g-header-tab>
-    </ng-container>
+    <nav id="siteNav" class="col-auto d-flex">
+        <ng-container *ngFor="let headerTab of headerNavTabs; let i = index;">
+            <g-header-tab *ngIf="headerTab.Visible" [isActive]="currentRoute === headerTab.Path"
+                [navLink]="headerTab.Path" [navTitle]="headerTab.Text">
+                {{ headerTab.Text }}
+            </g-header-tab>
+        </ng-container>
+    </nav>
 
+    <div class="col">
+        <button *ngIf="!securityObject.isAuthenticated" class="float-right" routerLink="login">Unlock Site</button>
+    </div>
     <!-- <div>g.ferril.com</div> -->
     <!-- <a id="homeLink" class="px-3 col-auto" href="./">g.ferril.com</a> -->
     <!-- <span class="col-auto">Projects</span> -->

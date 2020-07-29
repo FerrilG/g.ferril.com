@@ -13,7 +13,7 @@ export class NavigationService {
 
     public currentRoute: string;
 
-    private _isFirstPage = false;
+    private _isFirstPage = true;
 
     constructor(private router: Router, @Inject(DOCUMENT) private document: Document) {
         // this.pageHeader = new Observable<string>(observer => {

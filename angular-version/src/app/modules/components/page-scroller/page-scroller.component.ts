@@ -1,4 +1,5 @@
 import { Component, OnInit, AfterContentInit } from '@angular/core';
+import { stringify } from 'querystring';
 
 @Component({
   selector: 'g-page-scroller',
@@ -7,14 +8,15 @@ import { Component, OnInit, AfterContentInit } from '@angular/core';
 })
 export class PageScrollerComponent implements OnInit {
   public sectionInfo: SectionInfo[] = [];
-  public selectedItem: any;
+  public selectedItem: object;
 
   constructor() {
   }
 
   ngOnInit() {
     let sections = [];
-    sections = Array.prototype.slice.call(document.querySelectorAll('[section] span'));
+    const listItems = 'section > span, [section] span';
+    sections = Array.prototype.slice.call(document.querySelectorAll(listItems));
     sections.map(item => {
       this.sectionInfo.push({
         name: item.innerHTML,
