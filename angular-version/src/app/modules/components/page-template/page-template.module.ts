@@ -38,7 +38,7 @@ import { AboutMeComponent } from 'src/app/core/components/about-me/about-me.comp
         SidepanelComponent,
         SectionConstructorComponent,
         HomepageComponent,
-        AboutMeComponent,
+        AboutMeComponent
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

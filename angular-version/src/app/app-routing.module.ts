@@ -1,11 +1,10 @@
-import { environment } from './../environments/environment.prod';
-import { SecurityService } from './security/security.service';
+import { ProjectsComponent } from './core/components/projects/projects.component';
 import { RedirectGuard } from './security/redirect.gaurd';
 import { LoginComponent } from './modules/components/login/login.component';
 import { AboutMeComponent } from './core/components/about-me/about-me.component';
 import { NavigationService } from './services/navigation.service';
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule, Router, ActivationEnd, ActivationStart } from '@angular/router';
+import { Routes, RouterModule, Router, ActivationEnd, ActivationStart, PreloadAllModules } from '@angular/router';
 import { HomepageComponent } from './core/components/homepage/homepage.component';
 
 const appRoutes: Routes = [
@@ -41,24 +40,26 @@ const appRoutes: Routes = [
     path: 'projects',
     loadChildren: () => import('./core/components/projects/projects.module').then(m => m.ProjectsModule)
   },
-  {
-    path: '**',
-    canActivate: [RedirectGuard],
-    component: RedirectGuard,
-    data: {
-      externalUrl: ''
-    }
-  }
   // {
   //   path: '**',
   //   canActivate: [RedirectGuard],
-  //   component: HomepageComponent,
-  //   redirectTo: ''
+  //   component: RedirectGuard,
+  //   data: {
+  //     externalUrl: ''
+  //   }
   // }
+  {
+    path: '**',
+    redirectTo: '',
+    pathMatch: 'full'
+  }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(appRoutes)],
+  imports: [RouterModule.forRoot(
+    appRoutes, {
+    preloadingStrategy: PreloadAllModules
+  })],
   providers: [NavigationService],
   exports: [RouterModule]
 })
