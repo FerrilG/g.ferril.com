@@ -1,11 +1,14 @@
+import { PageScrollerComponent } from './../page-scroller/page-scroller.component';
+import { SidepanelComponent } from './../../../core/sidepanel/sidepanel.component';
 import { SecurityService } from './../../../security/security.service';
 import { PageScrollerService, SectionInfo } from './../page-scroller/page-scroller.service';
 import { Router, NavigationEnd, ActivatedRoute, ActivationEnd, ActivationStart } from '@angular/router';
-import { Component, OnInit, AfterContentInit, AfterViewInit, Inject } from '@angular/core';
+import { Component, OnInit, AfterContentInit, AfterViewInit, Inject, OnChanges, DoCheck, ChangeDetectorRef } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { NavigationService } from 'src/app/services/navigation.service';
 import { DOCUMENT } from '@angular/common';
 import { UserAccessAuth } from 'src/app/security/app-user-auth';
+import { CompileShallowModuleMetadata } from '@angular/compiler';
 
 
 @Component({
@@ -35,6 +38,8 @@ export class PageTemplateComponent implements OnInit {
         if (data.sidePanel != null) {
           this.sidePanel = data.sidePanel;
           this.pageSectionScroller = data.pageSectionScroller;
+          if (this.pageSectionScroller) {
+          }
         }
       });
   }
@@ -50,6 +55,5 @@ export class PageTemplateComponent implements OnInit {
   hideSectionScroller(): boolean {
     return this.pageSectionScroller;
   }
-
 }
 

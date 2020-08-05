@@ -1,5 +1,6 @@
-import { Component, OnInit, AfterContentInit } from '@angular/core';
+import { Component, OnInit, AfterContentInit, OnChanges, SimpleChanges, DoCheck } from '@angular/core';
 import { stringify } from 'querystring';
+import { PageScrollerService } from './page-scroller.service';
 
 @Component({
   selector: 'g-page-scroller',
@@ -7,22 +8,12 @@ import { stringify } from 'querystring';
   styleUrls: ['./page-scroller.component.scss']
 })
 export class PageScrollerComponent implements OnInit {
-  public sectionInfo: SectionInfo[] = [];
-  public selectedItem: object;
+  private sectionInfo: object = this.sectionService.getSections();
+  private selectedItem: object = null;
 
-  constructor() {
-  }
+  constructor(private sectionService: PageScrollerService) { }
 
-  ngOnInit() {
-    let sections = [];
-    const listItems = 'section > span, [section] span';
-    sections = Array.prototype.slice.call(document.querySelectorAll(listItems));
-    sections.map(item => {
-      this.sectionInfo.push({
-        name: item.innerHTML,
-        target: item.parentElement
-      });
-    });
+  ngOnInit(): void {
   }
 
   scrollClick(el: HTMLElement, item: HTMLElement) {
@@ -32,9 +23,4 @@ export class PageScrollerComponent implements OnInit {
       block: 'center'
     });
   }
-}
-
-interface SectionInfo {
-  name: any;
-  target: object;
 }
