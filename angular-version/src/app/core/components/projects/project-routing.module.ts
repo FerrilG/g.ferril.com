@@ -35,7 +35,8 @@ const projectRoutes: Routes = [
             sidePanel: true,
             sidePanelType: 'overview',
             pageSectionScroller: true,
-            breadcrumb: 'myCompany'
+            breadcrumb: 'myCompany',
+            pageBlog: true,
         }
     }
 ];

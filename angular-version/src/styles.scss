@@ -12,6 +12,16 @@
     --gray-font: #262626;
 }
 
+body {
+    color: var(--gray-font);
+}
+
+h4 {
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    letter-spacing: 0.06em;
+}
+
 // ::-webkit-scrollbar {
 //     width: 0.5em;
 //     background: none;
@@ -366,7 +376,7 @@
 //     margin-left: auto;
 // }
 
-// /* 
+// /*
 // #exp-timeline .timeline-item-content ul {
 // margin-block-start: 0px;
 // margin-inline-start: -3rem;

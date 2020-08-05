@@ -34,6 +34,7 @@ const appRoutes: Routes = [
       sidePanel: true,
       sidePanelType: 'overview',
       pageSectionScroller: true,
+      pageBlog: true,
     }
   },
   {

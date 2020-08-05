@@ -1,26 +1,31 @@
-main#mainContent {
+main {
     padding-top: 60px;
     height: 100vh;
     overflow: auto;
+
+    &::-webkit-scrollbar {
+        width: 7px;
+        width: 0.44em;
+        background: white;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: var(--dark-blue);
+    }
 }
 
 // main #siteContent::-webkit-scrollbar {
 //     width: 7px;
 // }
 
-::-webkit-scrollbar:hover {
-    width: 25em;
-}
+// ::-webkit-scrollbar:hover {
+//     width: 25em;
+// }
 
-::-webkit-scrollbar-thumb {
-    background: green;
-}
+// ::-webkit-scrollbar-thumb {
+//     background: green;
+// }
 
 // main #siteContent::-webkit-scrollbar-thumb:hover {
 //     background: var(--dark-red);
 // }
-
-#filler {
-    height: 3000px;
-    width: 100%;
-}

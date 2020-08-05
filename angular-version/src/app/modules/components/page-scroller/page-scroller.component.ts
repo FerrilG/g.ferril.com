@@ -18,9 +18,12 @@ export class PageScrollerComponent implements OnInit {
 
   scrollClick(el: HTMLElement, item: HTMLElement) {
     this.selectedItem = item;
-    el.scrollIntoView({
+    const yOffset: number = 104;
+    const pagePanel: HTMLElement = document.getElementById('mainContent');
+    const y: number = el.getBoundingClientRect().top + pagePanel.scrollTop - yOffset;
+    pagePanel.scrollTo({
+      top: y,
       behavior: 'smooth',
-      block: 'center'
     });
   }
 }

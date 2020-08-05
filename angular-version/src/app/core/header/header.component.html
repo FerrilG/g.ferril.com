@@ -1,10 +1,4 @@
 <header class="row no-gutters flex-nowrap align-items-center">
-    <!-- g-button -->
-    <a *ngIf="currentRoute != ''" g-button class="px-3 hamburger g-button d-flex align-items-center"
-        data-toggle="collapse" data-target="#sidePanel">
-        <span class="material-icons">menu</span>
-    </a>
-
     <!-- <a id="homeLink" class="" (click)="navigateTo('')">g.ferril.com</a> -->
     <g-header-tab id="homeLink" [isLink]="false" [navLink]="''" [navTitle]="'Home'">
         g.ferril.com</g-header-tab>
@@ -21,6 +15,11 @@
     <div class="col">
         <button *ngIf="!securityObject.isAuthenticated" class="float-right" routerLink="login">Unlock Site</button>
     </div>
+    <!-- g-button -->
+    <button g-button class="px-3 hamburger g-button d-flex align-items-center" data-toggle="collapse"
+        data-target="#sidePanel">
+        <span class="material-icons">menu</span>
+    </button>
     <!-- <div>g.ferril.com</div> -->
     <!-- <a id="homeLink" class="px-3 col-auto" href="./">g.ferril.com</a> -->
     <!-- <span class="col-auto">Projects</span> -->

@@ -7,24 +7,30 @@
 
 // Tablet
 @media (min-width: 767px){
-    
-}
-
-// Desktop
-@media (min-width: 992px) {
     [app-scroll] {
         display: block;
         position: fixed;
+        right: 11px;
         right: 0.7em;
+        bottom: 7.6px;
         bottom: 0.475em;
+        padding: 4.8px 11px;
         padding: 0.3rem 0.725em;
-        border-radius: 0.725em;
+        border: none;
+        border-radius: 5px;
+        border-radius: 0.3125em;
         background-color: var(--light-blue);
         color: white;
-        font-size: .825em;
+        font-size: 13px;
+        font-size: 0.825em;
         cursor: default;
     }
     [app-scroll]:hover,[app-scroll]:focus {
         background-color: var(--dark-blue);
     }
+}
+
+// Desktop
+@media (min-width: 992px) {
+
 }

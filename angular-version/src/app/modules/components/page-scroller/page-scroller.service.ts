@@ -13,7 +13,7 @@ export class PageScrollerService {
 
   getSections() {
     let sections = [];
-    sections = Array.prototype.slice.call(document.querySelectorAll('section > span, [section] span'));
+    sections = Array.prototype.slice.call(document.querySelectorAll('section > span, [section] span, section > h4'));
     sections.forEach((item, i) => {
       this.sectionInfo.push(sections[i] = {
         name: item.innerHTML,

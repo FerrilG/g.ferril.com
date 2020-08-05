@@ -20,6 +20,7 @@ export class PageTemplateComponent implements OnInit {
 
   private routeChangeListener$: Subscription;
   private sidePanel = false;
+  private pageBlog = false;
   private pageSectionScroller = false;
   private securityObject: UserAccessAuth = null;
 
@@ -38,8 +39,14 @@ export class PageTemplateComponent implements OnInit {
         if (data.sidePanel != null) {
           this.sidePanel = data.sidePanel;
           this.pageSectionScroller = data.pageSectionScroller;
+          this.pageBlog = data.pageBlog;
           if (this.pageSectionScroller) {
           }
+          const pagePanel: HTMLElement = document.getElementById('mainContent');
+          pagePanel.scrollTo({
+            top: 0,
+            behavior: 'auto',
+          });
         }
       });
   }
@@ -54,6 +61,10 @@ export class PageTemplateComponent implements OnInit {
 
   hideSectionScroller(): boolean {
     return this.pageSectionScroller;
+  }
+
+  pageStart(): boolean {
+    return this.pageBlog;
   }
 }
 
