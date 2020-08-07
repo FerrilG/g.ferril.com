@@ -1,8 +1,5 @@
 import { Injectable, ChangeDetectorRef } from '@angular/core';
 
-// import { ProjectProp } from 'src/app/config/projects.config';
-// import { ProjectList } from './../mocks/project.mock';
-
 @Injectable({
   providedIn: 'root'
 })

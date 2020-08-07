@@ -8,14 +8,14 @@ import { ProjectList } from 'src/app/core/mocks/project.mock';
   styleUrls: ['./work.component.scss']
 })
 export class ProjectsComponent implements OnInit {
-  projects = ProjectList;
+  // projects = ProjectList;
 
   constructor(private projectService: ProjectsService) { }
 
   ngOnInit() {
-    this.getProjects();
+    // this.getProjects();
   }
-  getProjects(): void {
-    this.projects = this.projectService.getProjects();
-  }
+  // getProjects(): void {
+  //   this.projects = this.projectService.getProjects();
+  // }
 }

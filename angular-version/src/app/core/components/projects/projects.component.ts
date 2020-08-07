@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ProjectList } from '../../mocks/project.mock';
 import { ProjectsService } from '../../services/projects.service';
 
 @Component({
@@ -8,15 +7,12 @@ import { ProjectsService } from '../../services/projects.service';
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent implements OnInit {
-  public projects = ProjectList;
+  public projects: {} = null;
 
-  constructor(private projectService: ProjectsService) { }
-
-  ngOnInit() {
-    this.getProjects();
+  constructor(private projectService: ProjectsService) {
+    this.projects = this.projectService.projectData;
   }
 
-  getProjects(): void {
-    this.projects = this.projectService.getProjects();
-  }
+  ngOnInit() { }
+
 }

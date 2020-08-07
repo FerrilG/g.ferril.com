@@ -1,14 +1,14 @@
 <div class="row m-0">
-    <div class="col-12 col-xl-6" *ngFor='let item of projects'>
-        <div class="card col">
-            <a routerLink="./{{ item.folder }}" class="row p-3 card-content">
+    <ng-container *ngFor='let item of projects'>
+        <div *ngIf="item.enabled" class="col-12 col-xl-6">
+            <a routerLink="./{{ item.folder }}" class="row no-gutters card" ondragstart="return false;">
                 <div class="" id="img"></div>
-                <div class="pt-3 col-11 col-md col-xl-11 content-items">
+                <div class="col-11 col-md col-xl-11 content-items">
                     <h5 class="title">{{ item.name }}</h5>
                     <h6 class="float-right date">{{ item.date }}</h6>
                     <p class="pt-3">{{ item.overview }}</p>
                 </div>
             </a>
         </div>
-    </div>
+    </ng-container>
 </div>

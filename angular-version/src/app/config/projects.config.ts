@@ -1,4 +1,4 @@
-export interface ProjectProp {
+export interface ProjectProperties {
   name: string;
   date?: string;
   number: number;

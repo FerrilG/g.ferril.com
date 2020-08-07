@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
-
-import { ProjectProp } from 'src/app/config/projects.config';
 import { ProjectList } from './../mocks/project.mock';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProjectsService {
-  getProjects(): ProjectProp[] {
-    return ProjectList;
+  public projectData: Array<any> = null;
+
+  constructor(private http: HttpClient) {
+    this.projectData = ProjectList;
   }
-  constructor() { }
 }

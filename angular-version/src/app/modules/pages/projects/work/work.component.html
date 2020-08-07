@@ -1,18 +1,18 @@
-<div *ngFor='let item of projects'>
-    <a routerLink="./{{ item.folder }}">{{ item.name }}</a>
-</div>
+<!-- <div *ngFor='let item of projects'> -->
+<a routerLink="./{{ item.folder }}">{{ item.name }}</a>
+<!-- </div> -->
 
-<app-card *ngFor='let item of projects'>
-    <div class="row no-gutters" id="proj-inspector">
-        <figure class="col-12 col-md-6 d-flex">
-            <img src="{{ item.cover }}">
-        </figure>
-        <div class="col-12 col-md d-flex ml-md-3" id="proj-inspect-info">
-            <div>
-                <span id="inspect-info-name" [routerLink]='item.folder'>{{ item.name }}</span>
-                <span class="d-none d-inline" id="inspect-info-lock">
-                    <span class="mx-2">-</span>
-                    <!-- <?php
+<!-- <app-card *ngFor='let item of projects'> -->
+<div class="row no-gutters" id="proj-inspector">
+    <figure class="col-12 col-md-6 d-flex">
+        <img src="{{ item.cover }}">
+    </figure>
+    <div class="col-12 col-md d-flex ml-md-3" id="proj-inspect-info">
+        <div>
+            <span id="inspect-info-name" [routerLink]='item.folder'>{{ item.name }}</span>
+            <span class="d-none d-inline" id="inspect-info-lock">
+                <span class="mx-2">-</span>
+                <!-- <?php
                     // Lock Label
                     if ($this->lock === "True" && ($_COOKIE['Access'] != "Authorized" && $_POST['access'] != "HireGeoff")) {
                         ?>
@@ -25,13 +25,13 @@
                         <?php
                     };
                     ?> -->
-                </span>
-            </div>
-            <div id="inspect-info-description">
-                {{ item.overview }}
-            </div>
-            <span class="mt-4">
-                <!-- <?php
+            </span>
+        </div>
+        <div id="inspect-info-description">
+            {{ item.overview }}
+        </div>
+        <span class="mt-4">
+            <!-- <?php
                 // Lock Button
                 if ($this->lock === "True" && ($_COOKIE['Access'] != "Authorized" && $_POST['access'] != "HireGeoff")) {
                     ?>
@@ -47,7 +47,7 @@
                         <span>Click to read more</span>
                         <i class="material-icons">keyboard_arrow_right</i>
                     </a> -->
-            </span>
-        </div>
+        </span>
     </div>
+</div>
 </app-card>

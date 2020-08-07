@@ -1,25 +1,29 @@
+import { ProjectsService } from './../core/services/projects.service';
 import { SecurityService } from './security.service';
 import { Injectable } from '@angular/core';
-import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, Router, CanActivateChild } from '@angular/router';
-import { Observable } from 'rxjs';
+import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, Router } from '@angular/router';
+import { Observable, Subscription } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AuthGuard implements CanActivate, CanActivateChild {
+export class AuthGuard implements CanActivate {
+  constructor(private securityService: SecurityService, private router: Router, private projectService: ProjectsService) {
 
-  constructor(private securityService: SecurityService, private router: Router) { }
+  }
 
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    return this.securityService.securityObject.isAuthenticated;
-  }
+    const isAuthenticated: boolean = this.securityService.securityObject.isAuthenticated;
+    const getProjectLock: boolean = this.projectService.projectData.find(item => item.folder === next.url[0].path)['lock'];
 
-  canActivateChild(
-    next: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    return true;
+    if (!getProjectLock) {
+      return true;
+    } else if (isAuthenticated) {
+      return true;
+    } else {
+      return false;
+    }
   }
 }
-

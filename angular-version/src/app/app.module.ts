@@ -3,6 +3,7 @@ import { PageScrollerModule } from './modules/components/page-scroller/page-scro
 import { PageTemplateModule } from './modules/components/page-template/page-template.module';
 import { FooterModule } from './core/footer/footer.module';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -26,7 +27,8 @@ import { CardModule } from './modules/components/card/card.module';
     CardModule,
     FooterModule,
     PageTemplateModule,
-    PageScrollerModule
+    PageScrollerModule,
+    HttpClientModule,
   ],
   exports: [
   ],

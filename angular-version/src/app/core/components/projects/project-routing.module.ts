@@ -30,7 +30,7 @@ const projectRoutes: Routes = [
     {
         path: 'myCompany',
         component: PrjmyCompanyComponent,
-        // canActivate: [AuthGuard],
+        canActivate: [AuthGuard],
         data: {
             sidePanel: true,
             sidePanelType: 'overview',
