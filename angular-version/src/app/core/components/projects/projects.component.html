@@ -2,6 +2,11 @@
     <ng-container *ngFor='let item of projects'>
         <div *ngIf="item.enabled" class="col-12 col-xl-6">
             <a routerLink="./{{ item.folder }}" class="row no-gutters card" ondragstart="return false;">
+                <div *ngIf='item.lock' class="lock-indicator">
+                    <!-- <div *ngIf='!securityObject.isAuthenticated' class="lock-indicator"> -->
+                    <i class="material-icons-outlined">emoji_people</i>
+                    <span>Unlock to view</span>
+                </div>
                 <div class="" id="img"></div>
                 <div class="col-11 col-md col-xl-11 content-items">
                     <h5 class="title">{{ item.name }}</h5>

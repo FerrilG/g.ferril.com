@@ -1,5 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { SecurityService } from 'src/app/security/security.service';
+import { Component, OnInit, DoCheck, AfterViewInit, OnChanges, ChangeDetectorRef } from '@angular/core';
 import { ProjectsService } from '../../services/projects.service';
+import { NavigationService } from 'src/app/services/navigation.service';
+import { Router, ActivationEnd } from '@angular/router';
 
 @Component({
   selector: 'g-projects',
@@ -7,12 +10,14 @@ import { ProjectsService } from '../../services/projects.service';
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent implements OnInit {
-  public projects: {} = null;
+  private projects = this.projectService.projectData;
 
-  constructor(private projectService: ProjectsService) {
-    this.projects = this.projectService.projectData;
+  constructor(private projectService: ProjectsService, private securityService: SecurityService) {
   }
 
-  ngOnInit() { }
+  ngOnInit(): void {
+    // alert(this.securityService.os = this.securityService.os + 1);
+    console.log(this.securityService.securityObject);
+  }
 
 }

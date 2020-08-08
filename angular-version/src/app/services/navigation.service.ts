@@ -1,3 +1,5 @@
+import { UserAccessAuth } from 'src/app/security/app-user-auth';
+import { SecurityService } from 'src/app/security/security.service';
 import { Router, ActivationEnd } from '@angular/router';
 import { Observable, Subscription } from 'rxjs';
 import { DOCUMENT } from '@angular/common';
@@ -10,12 +12,14 @@ import { Inject, Injectable } from '@angular/core';
 export class NavigationService {
     private pageHeader: Observable<string>;
     private pageTabName: Observable<string>;
-
     public currentRoute: string;
-
     private _isFirstPage = true;
 
-    constructor(private router: Router, @Inject(DOCUMENT) private document: Document) {
+    constructor(
+        private router: Router,
+        private securityService: SecurityService,
+        @Inject(DOCUMENT) private document: Document
+    ) {
         // this.pageHeader = new Observable<string>(observer => {
         //     this.onRouteChange(({ pageHeader }) => {
         //         if (pageHeader) {

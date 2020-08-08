@@ -8,7 +8,6 @@ import { Subscription } from 'rxjs';
 import { NavigationService } from 'src/app/services/navigation.service';
 import { DOCUMENT } from '@angular/common';
 import { UserAccessAuth } from 'src/app/security/app-user-auth';
-import { CompileShallowModuleMetadata } from '@angular/compiler';
 
 
 @Component({
@@ -19,13 +18,14 @@ import { CompileShallowModuleMetadata } from '@angular/compiler';
 export class PageTemplateComponent implements OnInit {
 
   private routeChangeListener$: Subscription;
+  private pageConfig: object = null;
   private sidePanel = false;
   private pageBlog = false;
   private pageSectionScroller = false;
   private securityObject: UserAccessAuth = null;
 
   constructor(
-    public navigationService: NavigationService,
+    private navigationService: NavigationService,
     private route: ActivatedRoute,
     private router: Router,
     private securityService: SecurityService,
@@ -36,7 +36,8 @@ export class PageTemplateComponent implements OnInit {
   ngOnInit(): void {
     this.routeChangeListener$ = this.navigationService
       .onRouteChange((data: any, path: string) => {
-        if (data.sidePanel != null) {
+        if (Object.keys(data).length !== 0) {
+          // this.securityObject = this.navigationService.securityObject;
           this.sidePanel = data.sidePanel;
           this.pageSectionScroller = data.pageSectionScroller;
           this.pageBlog = data.pageBlog;

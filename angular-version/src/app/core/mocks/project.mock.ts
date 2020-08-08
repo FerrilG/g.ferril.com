@@ -20,7 +20,7 @@ export const ProjectList: ProjectProperties[] = [
         date: 'Oct \'18 - Apr \'19',
         number: 1,
         enabled: true,
-        lock: false,
+        lock: true,
         folder: 'myCompany',
         role: 'string',
         type: 'string',
