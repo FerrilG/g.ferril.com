@@ -1,0 +1,30 @@
+<!-- <ng-container *ngIf='(!project.lock) else locked'> -->
+<a routerLink="./{{ project.folder }}" class="row no-gutters card" ondragstart="return false;">
+    <div *ngIf='project.lock' class="lock-indicator">
+        <i class="material-icons-outlined">emoji_people</i>
+        <span>Unlock to view</span>
+    </div>
+    <div class="" id="img"></div>
+    <div class="col-11 col-md col-xl-11 content-items">
+        <h5 class="title">{{ project.name }}</h5>
+        <h6 class="float-right date">{{ project.date }}</h6>
+        <p class="pt-3">{{ project.overview }}</p>
+    </div>
+</a>
+<!-- </ng-container> -->
+
+<ng-template #locked>
+    <div class="row no-gutters card" ondragstart="return false;">
+        <!-- <span>Click to unlock</span> -->
+        <div class="lock-indicator">
+            <i class="material-icons-outlined">emoji_people</i>
+            <span>Unlock to view</span>
+        </div>
+        <div class="" id="img"></div>
+        <div class="col-11 col-md col-xl-11 content-items">
+            <h5 class="title">{{ project.name }}</h5>
+            <h6 class="float-right date">{{ project.date }}</h6>
+            <p class="pt-3">{{ project.overview }}</p>
+        </div>
+    </div>
+</ng-template>

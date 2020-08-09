@@ -1,3 +1,4 @@
+import { ProjectCardComponent } from './../../../modules/components/project-card/project-card.component';
 // import { CardModule } from './../../components/card/card.module';
 // import { CardComponent } from './../../components/card/card.component';
 import { NgModule } from '@angular/core';
@@ -12,7 +13,8 @@ import { SecurityService } from 'src/app/security/security.service';
     declarations: [
         ProjectsComponent,
         PrjPortfolioComponent,
-        PrjmyCompanyComponent
+        PrjmyCompanyComponent,
+        ProjectCardComponent
     ],
     imports: [
         CommonModule,
