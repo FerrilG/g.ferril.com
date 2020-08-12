@@ -19,7 +19,7 @@ import { UserAccessAuth } from 'src/app/security/app-user-auth';
 export class PageTemplateComponent implements OnInit {
 
   private routeChangeListener$: Subscription;
-  private modalOpen: object = this.loginModal;
+  private modalOpen: any = this.loginModal;
   private pageConfig: object = null;
   private sidePanel = false;
   private pageBlog = false;
