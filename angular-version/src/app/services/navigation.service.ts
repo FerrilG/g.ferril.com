@@ -1,6 +1,7 @@
+import { LoginModalService } from './login-modal.service';
 import { UserAccessAuth } from 'src/app/security/app-user-auth';
 import { SecurityService } from 'src/app/security/security.service';
-import { Router, ActivationEnd } from '@angular/router';
+import { Router, ActivationEnd, ActivationStart } from '@angular/router';
 import { Observable, Subscription } from 'rxjs';
 import { DOCUMENT } from '@angular/common';
 import { Inject, Injectable } from '@angular/core';
@@ -12,12 +13,14 @@ import { Inject, Injectable } from '@angular/core';
 export class NavigationService {
     private pageHeader: Observable<string>;
     private pageTabName: Observable<string>;
+    public pageConstruction: object;
     public currentRoute: string;
     private _isFirstPage = true;
 
     constructor(
         private router: Router,
         private securityService: SecurityService,
+        private loginModal: LoginModalService,
         @Inject(DOCUMENT) private document: Document
     ) {
         // this.pageHeader = new Observable<string>(observer => {
@@ -33,7 +36,11 @@ export class NavigationService {
         return this.router.events.subscribe((event) => {
             if (event instanceof ActivationEnd) {
                 const { data, routeConfig } = event.snapshot;
-                callbackFn(data, routeConfig.path);
+                if (routeConfig.data !== undefined) {
+                    this.pageConstruction = routeConfig.data;
+                    this.constructPage();
+                    callbackFn(data, routeConfig.path);
+                }
             }
         });
     }
@@ -46,7 +53,6 @@ export class NavigationService {
         return this.pageTabName;
     }
 
-
     public navigatePathTo(path: string): void {
         this.router.navigate([path]);
     }
@@ -57,5 +63,11 @@ export class NavigationService {
 
     public get isFirstPage(): boolean {
         return this._isFirstPage;
+    }
+
+    private constructPage(): void {
+        if (this.loginModal.modalState === true) {
+            this.loginModal.closeModal();
+        }
     }
 }

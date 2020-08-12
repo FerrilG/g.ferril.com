@@ -35,22 +35,22 @@ export class PageTemplateComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.routeChangeListener$ = this.navigationService
-      .onRouteChange((data: any, path: string) => {
-        if (Object.keys(data).length !== 0) {
-          // this.securityObject = this.navigationService.securityObject;
-          this.sidePanel = data.sidePanel;
-          this.pageSectionScroller = data.pageSectionScroller;
-          this.pageBlog = data.pageBlog;
-          if (this.pageSectionScroller) {
-          }
-          const pagePanel: HTMLElement = document.getElementById('mainContent');
-          pagePanel.scrollTo({
-            top: 0,
-            behavior: 'auto',
-          });
-        }
-      });
+    // this.routeChangeListener$ = this.navigationService
+    //   .onRouteChange((data: any, path: string) => {
+    //     if (Object.keys(data).length !== 0) {
+    //       // this.securityObject = this.navigationService.securityObject;
+    //       this.sidePanel = data.sidePanel;
+    //       this.pageSectionScroller = data.pageSectionScroller;
+    //       this.pageBlog = data.pageBlog;
+    //       if (this.pageSectionScroller) {
+    //       }
+    //       const pagePanel: HTMLElement = document.getElementById('mainContent');
+    //       pagePanel.scrollTo({
+    //         top: 0,
+    //         behavior: 'auto',
+    //       });
+    //     }
+    //   });
   }
 
   ngOnDestroy(): void {

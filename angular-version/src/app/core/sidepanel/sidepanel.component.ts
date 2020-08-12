@@ -19,13 +19,13 @@ export class SidepanelComponent implements OnInit, OnDestroy {
     private route: ActivatedRoute,
     private router: Router,
     @Inject(DOCUMENT) private document: any
-    ) { }
+  ) { }
 
   ngOnInit(): void {
-    this.routeChangeListener$ = this.navigationService
-    .onRouteChange((data: any, path: string) => {
-      this.sidePanelType = data.sidePanelType;
-    });
+    // this.routeChangeListener$ = this.navigationService
+    // .onRouteChange((data: any, path: string) => {
+    //   this.sidePanelType = data.sidePanelType;
+    // });
   }
 
   ngOnDestroy(): void {

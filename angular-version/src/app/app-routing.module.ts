@@ -1,9 +1,10 @@
+import { LoginModalService } from './services/login-modal.service';
 import { ProjectsComponent } from './core/components/projects/projects.component';
 import { RedirectGuard } from './security/redirect.gaurd';
 import { LoginComponent } from './modules/components/login/login.component';
 import { AboutMeComponent } from './core/components/about-me/about-me.component';
 import { NavigationService } from './services/navigation.service';
-import { NgModule } from '@angular/core';
+import { NgModule, OnInit } from '@angular/core';
 import { Routes, RouterModule, Router, ActivationEnd, ActivationStart, PreloadAllModules } from '@angular/router';
 import { HomepageComponent } from './core/components/homepage/homepage.component';
 
@@ -61,8 +62,14 @@ const appRoutes: Routes = [
     appRoutes, {
     preloadingStrategy: PreloadAllModules
   })],
-  providers: [NavigationService],
+  providers: [],
   exports: [RouterModule]
 })
 
-export class AppRoutingModule { }
+export class AppRoutingModule {
+  constructor(private modalService: LoginModalService, private navigationService: NavigationService) {
+    this.navigationService.onRouteChange((data: object, path: string) => {
+      console.log(this.navigationService.pageConstruction);
+    });
+  }
+}

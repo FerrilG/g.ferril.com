@@ -1,3 +1,4 @@
+import { NavigationService } from 'src/app/services/navigation.service';
 import { LoginModalService } from './services/login-modal.service';
 import { SecurityService } from 'src/app/security/security.service';
 import { HeaderModule } from './core/header/header.module';
@@ -37,6 +38,7 @@ import { CardModule } from './modules/components/card/card.module';
   providers: [
     SecurityService,
     LoginModalService,
+    NavigationService
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]

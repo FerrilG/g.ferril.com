@@ -26,10 +26,10 @@ export class HeaderComponent implements OnInit, AfterViewInit, OnDestroy {
 
   ngOnInit(): void {
     this.securityObject = this.securityService.securityObject;
-    this.routeChangeListener$ = this.navigationService
-      .onRouteChange((data: any, path: string) => {
-        this.currentRoute = path;
-      });
+    // this.routeChangeListener$ = this.navigationService
+    // .onRouteChange((data: any, path: string) => {
+    //   this.currentRoute = path;
+    // });
   }
 
   ngAfterViewInit(): void {

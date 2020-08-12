@@ -43,7 +43,7 @@ const projectRoutes: Routes = [
 
 @NgModule({
     imports: [RouterModule.forChild(projectRoutes)],
-    providers: [NavigationService],
+    providers: [],
     exports: [RouterModule]
 })
 export class ProjectsRoutingModule { }
