@@ -1,4 +1,3 @@
-import { ProjectCardComponent } from './../../../modules/components/project-card/project-card.component';
 // import { CardModule } from './../../components/card/card.module';
 // import { CardComponent } from './../../components/card/card.component';
 import { NgModule } from '@angular/core';
@@ -14,14 +13,12 @@ import { SecurityService } from 'src/app/security/security.service';
         ProjectsComponent,
         PrjPortfolioComponent,
         PrjmyCompanyComponent,
-        ProjectCardComponent
     ],
     imports: [
         CommonModule,
         ProjectsRoutingModule
     ],
     providers: [
-        SecurityService
     ],
     exports: [
         ProjectsRoutingModule,

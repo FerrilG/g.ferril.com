@@ -1,47 +1,35 @@
-<!-- <div class="row m-0">
-    <ng-container *ngFor='let item of projects'>
-        <div *ngIf="item.enabled" class="col-12 col-xl-6">
-            <a routerLink="./{{ item.folder }}" class="row no-gutters card" ondragstart="return false;">
-                <locked-card *ngIf='item.lock'></locked-card>
-                <div class="" id="img"></div>
-                <div class="col-11 col-md col-xl-11 content-items">
-                    <h5 class="title">{{ item.name }}</h5>
-                    <h6 class="float-right date">{{ item.date }}</h6>
-                    <p class="pt-3">{{ item.overview }}</p>
-                </div>
-            </a>
-        </div>
-    </ng-container>
-</div> -->
-
 <div class="row m-0">
     <ng-container *ngFor='let item of projects, let i = index'>
         <div *ngIf="item.enabled" class="col-12 col-xl-6">
-            <!-- <div *ngIf='!item.lock; else locked'>
-
-            </div> -->
-            <!-- <ng-container *ngTemplateOutlet="locked"></ng-container> -->
-            <!-- <p>{{ i }}</p> -->
-            <g-project-card i='{{ i }}'>{{ i }}</g-project-card>
-            <!-- <ng-template>
-            </ng-template> -->
+            <ng-container [ngTemplateOutlet]="item.lock && !securityObject.isAuthenticated === true ?locked : unlocked"
+                [ngTemplateOutletContext]="{item:item}">
+            </ng-container>
         </div>
     </ng-container>
 </div>
 
-<ng-template #unlocked>
-    <!-- <p>Unlocked</p> -->
-    <!-- <a routerLink="./{{ item.folder }}" class="row no-gutters card" ondragstart="return false;">
-        <locked-card *ngIf='item.lock'></locked-card>
+<ng-template #unlocked let-item='item'>
+    <a routerLink="./{{ item.folder }}" class="row no-gutters card" ondragstart="return false;">
         <div class="" id="img"></div>
         <div class="col-11 col-md col-xl-11 content-items">
             <h5 class="title">{{ item.name }}</h5>
             <h6 class="float-right date">{{ item.date }}</h6>
             <p class="pt-3">{{ item.overview }}</p>
         </div>
-    </a> -->
+    </a>
 </ng-template>
 
-<ng-template #locked>
-    <p>Locked</p>
+<ng-template #locked let-item='item'>
+    <a (click)="unlockSite()" class="row no-gutters card" ondragstart="return false;">
+        <div class="lock-indicator">
+            <i class="material-icons-outlined">emoji_people</i>
+            <span>Unlock to view</span>
+        </div>
+        <div class="" id="img"></div>
+        <div class="col-11 col-md col-xl-11 content-items">
+            <h5 class="title">{{ item.name }}</h5>
+            <h6 class="float-right date">{{ item.date }}</h6>
+            <p class="pt-3">{{ item.overview }}</p>
+        </div>
+    </a>
 </ng-template>

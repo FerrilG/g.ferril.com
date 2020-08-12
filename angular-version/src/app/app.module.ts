@@ -1,3 +1,5 @@
+import { LoginModalService } from './services/login-modal.service';
+import { SecurityService } from 'src/app/security/security.service';
 import { HeaderModule } from './core/header/header.module';
 import { PageScrollerModule } from './modules/components/page-scroller/page-scroller.module';
 import { PageTemplateModule } from './modules/components/page-template/page-template.module';
@@ -33,6 +35,8 @@ import { CardModule } from './modules/components/card/card.module';
   exports: [
   ],
   providers: [
+    SecurityService,
+    LoginModalService,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]

@@ -5,9 +5,47 @@
             <p>Invalid User Name/Password.</p>
         </div>
     </div>
+</div>  -->
+<div id="modal-background" (click)="closeModal()"></div>
+<div id="modal" class="col-9 col-md-4 p-3">
+    <form>
+        <div class="row">
+            <div class="col">
+                <div class="panel panel-primary">
+                    <div class="panel-heading mb-4">
+                        <h5>Enter code to unlock full site</h5>
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input id="userName" name="userName" class="form-control" required
+                                    [(ngModel)]="user.userName" autofocus="autofocus" placeholder="Site code" />
+                                <span class="input-group-addon">
+                                    <button class="btn btn-primary" (click)="login()">
+                                        Login
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-footer"></div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+<!-- <div class="row">
+    <div class="col-xs-12">
+        <div class="alert alert-danger" *ngIf="securityObject &&
+           !securityObject.isAuthenticated">
+            <p>Invalid User Name/Password.</p>
+        </div>
+    </div>
 </div> -->
 
-TEMPORARY CODE TO VIEW SECURITY OBJECT
+<!-- TEMPORARY CODE TO VIEW SECURITY OBJECT
 <div class="row">
     <div class="col-xs-12">
         <label>{{securityObject | json}}</label>
@@ -47,4 +85,4 @@ TEMPORARY CODE TO VIEW SECURITY OBJECT
             </div>
         </div>
     </div>
-</form>
+</form> -->

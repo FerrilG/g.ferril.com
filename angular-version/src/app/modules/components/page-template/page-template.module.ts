@@ -31,7 +31,7 @@ import { AboutMeComponent } from 'src/app/core/components/about-me/about-me.comp
         FormsModule
     ],
     providers: [
-        SecurityService
+
     ],
     exports: [
         PageTemplateComponent,

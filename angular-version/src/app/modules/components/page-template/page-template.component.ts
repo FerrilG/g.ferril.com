@@ -1,3 +1,4 @@
+import { LoginModalService } from './../../../services/login-modal.service';
 import { PageScrollerComponent } from './../page-scroller/page-scroller.component';
 import { SidepanelComponent } from './../../../core/sidepanel/sidepanel.component';
 import { SecurityService } from './../../../security/security.service';
@@ -18,17 +19,17 @@ import { UserAccessAuth } from 'src/app/security/app-user-auth';
 export class PageTemplateComponent implements OnInit {
 
   private routeChangeListener$: Subscription;
+  private modalOpen: object = this.loginModal;
   private pageConfig: object = null;
   private sidePanel = false;
   private pageBlog = false;
   private pageSectionScroller = false;
-  private securityObject: UserAccessAuth = null;
 
   constructor(
     private navigationService: NavigationService,
     private route: ActivatedRoute,
     private router: Router,
-    private securityService: SecurityService,
+    private loginModal: LoginModalService,
     @Inject(DOCUMENT) private document: any
   ) {
   }
@@ -66,6 +67,10 @@ export class PageTemplateComponent implements OnInit {
 
   pageStart(): boolean {
     return this.pageBlog;
+  }
+
+  private closeModal(): void {
+    this.loginModal.modalState = false;
   }
 }
 

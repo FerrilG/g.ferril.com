@@ -13,20 +13,13 @@ export class SecurityService {
 
   public resetSecurityObject(): void {
     this.securityObject.userName = null;
-    this.securityObject.bearerToken = null;
     this.securityObject.isAuthenticated = false;
-    this.securityObject.canAccessProjects = false;
-    localStorage.removeItem('bearerToken');
   }
 
   public login(entity: UserAccess): Observable<UserAccessAuth> {
     this.resetSecurityObject();
-    Object.assign(this.securityObject, LOGIN_MOCKS.find(
+    this.securityObject = Object.assign(this.securityObject, LOGIN_MOCKS.find(
       user => user.userName.toLowerCase() === entity.userName.toLowerCase()));
-
-    if (this.securityObject.userName !== null) {
-      localStorage.setItem('bearerToken', this.securityObject.bearerToken);
-    }
     return of<UserAccessAuth>(this.securityObject);
   }
 

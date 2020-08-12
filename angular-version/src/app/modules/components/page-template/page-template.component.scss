@@ -1,7 +1,26 @@
-#pageContent {
-    padding: 20px;
-    // margin-top: -60px;
-    // padding-top: 80px;
+#pageContainer {
+
+    #pageContent {
+        padding: 20px;
+    }
+
+    &.modal-open {
+        -webkit-filter: blur(0.2rem);
+        -moz-filter: blur(0.2rem);
+        -o-filter: blur(0.2rem);
+        -ms-filter: blur(0.2rem);
+        filter: blur(0.2rem);
+    }
+}
+
+g-login-modal {
+    position: fixed;
+    z-index: 1080;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% - 0.44em);
 }
 
 // .row g-page-scroller.bean3 {
@@ -15,4 +34,8 @@
 @media (min-width: 768px) {}
 
 // Large
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
+    g-login-modal {
+        width: calc(100% - 191px - 0.44em);
+    }
+}

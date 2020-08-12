@@ -1,12 +1,13 @@
 [app-scroll] {
     display: none;
 }
+
 [app-scroll] {
-   user-select: none;
+    user-select: none;
 }
 
 // Tablet
-@media (min-width: 767px){
+@media (min-width: 767px) {
     [app-scroll] {
         display: block;
         position: fixed;
@@ -25,12 +26,12 @@
         font-size: 0.825em;
         cursor: default;
     }
-    [app-scroll]:hover,[app-scroll]:focus {
+
+    [app-scroll]:hover,
+    [app-scroll]:focus {
         background-color: var(--dark-blue);
     }
 }
 
 // Desktop
-@media (min-width: 992px) {
-
-}
+@media (min-width: 992px) {}

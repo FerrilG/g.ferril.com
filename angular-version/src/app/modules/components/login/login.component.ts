@@ -1,29 +1,31 @@
+import { LoginModalService } from './../../../services/login-modal.service';
 import { SecurityService } from './../../../security/security.service';
 import { UserAccessAuth } from './../../../security/app-user-auth';
 import { UserAccess } from './../../../security/app-user';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'g-login',
+  selector: 'g-login-modal',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  private user: UserAccess = new UserAccess();
-  private securityObject: UserAccessAuth = null;
 
-  constructor(private securityService: SecurityService) { }
+  private user: UserAccess = new UserAccess();
+
+  constructor(private securityService: SecurityService, private loginModal: LoginModalService) { }
 
   ngOnInit() { }
 
   public login() {
     this.securityService.login(this.user)
       .subscribe(resp => {
-        this.securityObject = resp;
+        this.securityService.securityObject = resp;
       });
+    this.closeModal();
   }
 
-  public logOut(): void {
-    this.securityService.logout();
+  private closeModal(): void {
+    this.loginModal.closeModal();
   }
 }

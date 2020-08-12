@@ -1,3 +1,4 @@
+import { LoginModalService } from './../../../services/login-modal.service';
 import { SecurityService } from 'src/app/security/security.service';
 import { Component, OnInit, DoCheck, AfterViewInit, OnChanges, ChangeDetectorRef, Directive } from '@angular/core';
 import { ProjectsService } from '../../services/projects.service';
@@ -12,12 +13,16 @@ import { Router, ActivationEnd } from '@angular/router';
 
 export class ProjectsComponent implements OnInit {
   private projects = this.projectService.projectData;
+  private securityObject = this.securityService.securityObject;
 
-  constructor(private projectService: ProjectsService, private securityService: SecurityService) {
+  constructor(private projectService: ProjectsService, private securityService: SecurityService, private loginModal: LoginModalService) {
   }
 
   ngOnInit(): void {
-
   }
 
+  unlockSite(): void {
+    this.loginModal.modalState = true;
+    // document.getElementById('')
+  }
 }

@@ -1,0 +1,14 @@
+#modal {
+    background-color: white;
+    border-radius: 5px;
+    max-width: 375px;
+    min-width: 300px;
+}
+
+#modal-background {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: inherit;
+    left: 0;
+}
