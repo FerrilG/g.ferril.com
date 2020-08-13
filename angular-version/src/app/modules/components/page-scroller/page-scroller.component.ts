@@ -8,8 +8,8 @@ import { PageScrollerService } from './page-scroller.service';
   styleUrls: ['./page-scroller.component.scss']
 })
 export class PageScrollerComponent implements OnInit {
-  private sectionInfo: object = this.sectionService.getSections();
-  private selectedItem: object = null;
+  public sectionInfo: object = this.sectionService.getSections();
+  public selectedItem: object = null;
 
   constructor(private sectionService: PageScrollerService) { }
 
