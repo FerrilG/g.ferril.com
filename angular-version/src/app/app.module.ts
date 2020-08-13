@@ -38,7 +38,7 @@ import { CardModule } from './modules/components/card/card.module';
   providers: [
     SecurityService,
     LoginModalService,
-    NavigationService
+    NavigationService,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]

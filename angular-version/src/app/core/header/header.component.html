@@ -13,11 +13,11 @@
     </nav>
 
     <div class="col">
-        <button *ngIf="!securityObject.isAuthenticated" class="float-right" routerLink="login">Unlock Site</button>
+        
     </div>
     <!-- g-button -->
     <button g-button class="px-3 hamburger g-button d-flex align-items-center" data-toggle="collapse"
-        data-target="#sidePanel">
+        data-target="#sidePanel" (click)="toggleSidePanel()">
         <span class="material-icons">menu</span>
     </button>
     <!-- <div>g.ferril.com</div> -->

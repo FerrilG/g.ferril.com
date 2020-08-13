@@ -1,8 +1,7 @@
 import { LoginModalService } from './../../../services/login-modal.service';
 import { SecurityService } from './../../../security/security.service';
-import { UserAccessAuth } from './../../../security/app-user-auth';
 import { UserAccess } from './../../../security/app-user';
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, HostListener } from '@angular/core';
 
 @Component({
   selector: 'g-login-modal',
@@ -11,7 +10,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  private user: UserAccess = new UserAccess();
+  public user: UserAccess = new UserAccess();
 
   constructor(private securityService: SecurityService, private loginModal: LoginModalService) { }
 
@@ -25,7 +24,17 @@ export class LoginComponent implements OnInit {
     this.closeModal();
   }
 
-  private closeModal(): void {
+  public closeModal(): void {
     this.loginModal.closeModal();
+  }
+
+  @HostListener('document:keyup', ['$event'])
+  handleKeyboardEvent(event: KeyboardEvent) {
+    switch (event.keyCode) {
+      case 27:
+        this.closeModal();
+        break;
+      default:
+    }
   }
 }

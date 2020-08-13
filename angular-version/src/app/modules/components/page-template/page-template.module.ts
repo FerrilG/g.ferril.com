@@ -30,9 +30,7 @@ import { AboutMeComponent } from 'src/app/core/components/about-me/about-me.comp
         ProjectsModule,
         FormsModule
     ],
-    providers: [
-
-    ],
+    providers: [ ],
     exports: [
         PageTemplateComponent,
         SidepanelComponent,

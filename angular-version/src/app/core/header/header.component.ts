@@ -25,7 +25,7 @@ export class HeaderComponent implements OnInit, AfterViewInit, OnDestroy {
   constructor(private navigationService: NavigationService, private securityService: SecurityService) { }
 
   ngOnInit(): void {
-    this.securityObject = this.securityService.securityObject;
+    // this.securityObject = this.securityService.securityObject;
     // this.routeChangeListener$ = this.navigationService
     // .onRouteChange((data: any, path: string) => {
     //   this.currentRoute = path;
@@ -46,8 +46,13 @@ export class HeaderComponent implements OnInit, AfterViewInit, OnDestroy {
     // this.classApplied = !this.classApplied;
   }
 
-  navigateTo(path: string): void {
-    this.navigationService.navigatePathTo(path);
+  public toggleSidePanel(): void {
+    // const panelState = this.navigationService.pageConstruction.sidePanel
+    // if (panelState) {
+    //   this.navigationService.pageConstruction.sidePanel = false;
+    //   // alert(panelState);
+    // } else if (!panelState) {
+    //   this.navigationService.pageConstruction.sidePanel = true;
+    // }
   }
-
 }

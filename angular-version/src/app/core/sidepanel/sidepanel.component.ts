@@ -16,8 +16,6 @@ export class SidepanelComponent implements OnInit, OnDestroy {
 
   constructor(
     public navigationService: NavigationService,
-    private route: ActivatedRoute,
-    private router: Router,
     @Inject(DOCUMENT) private document: any
   ) { }
 
@@ -29,11 +27,7 @@ export class SidepanelComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.routeChangeListener$.unsubscribe();
-  }
-
-  setSidePanel(): Observable<string> {
-    return this.sidePanelType;
+    // this.routeChangeListener$.unsubscribe();
   }
 
 }

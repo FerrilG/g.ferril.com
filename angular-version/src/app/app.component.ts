@@ -1,14 +1,8 @@
-import { Component, ElementRef } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit, OnDestroy, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-
-  constructor(private el: ElementRef) {
-    // Sets app-root attribute
-    // (this.el.nativeElement as HTMLElement).setAttribute('data-app-container', '');
-  }
-}
+export class AppComponent { }

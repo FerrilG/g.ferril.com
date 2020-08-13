@@ -23,19 +23,12 @@ g-login-modal {
     width: calc(100% - 0.44em);
 }
 
-// .row g-page-scroller.bean3 {
-//     margin-top: 20px;
-//     height: auto;
-//     position: absolute;
-//     right: 0;
-// }
-
 // Medium
 @media (min-width: 768px) {}
 
 // Large
 @media (min-width: 992px) {
     g-login-modal {
-        width: calc(100% - 191px - 0.44em);
+        width: calc(100% - 12.14rem);
     }
 }

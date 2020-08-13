@@ -5,6 +5,7 @@ import { Router, ActivationEnd, ActivationStart } from '@angular/router';
 import { Observable, Subscription } from 'rxjs';
 import { DOCUMENT } from '@angular/common';
 import { Inject, Injectable } from '@angular/core';
+import { PageTemplate } from '../config/pageTemplate';
 
 @Injectable({
     providedIn: 'root',
@@ -13,7 +14,7 @@ import { Inject, Injectable } from '@angular/core';
 export class NavigationService {
     private pageHeader: Observable<string>;
     private pageTabName: Observable<string>;
-    public pageConstruction: object;
+    public pageConstruction: PageTemplate = null;
     public currentRoute: string;
     private _isFirstPage = true;
 
@@ -37,8 +38,7 @@ export class NavigationService {
             if (event instanceof ActivationEnd) {
                 const { data, routeConfig } = event.snapshot;
                 if (routeConfig.data !== undefined) {
-                    this.pageConstruction = routeConfig.data;
-                    this.constructPage();
+                    this.constructPage(routeConfig.data);
                     callbackFn(data, routeConfig.path);
                 }
             }
@@ -65,9 +65,22 @@ export class NavigationService {
         return this._isFirstPage;
     }
 
-    private constructPage(): void {
+    // ======================= Cleaned Up ==============
+    public getData(): object {
+        return this.pageConstruction;
+    }
+
+    private constructPage(data: any): void {
         if (this.loginModal.modalState === true) {
             this.loginModal.closeModal();
+        }
+
+        this.pageConstruction = {
+            sidePanel: data.sidePanel,
+            pageSectionScroller: data.pageSectionScroller,
+            sidePanelType: data.sidePanelType,
+            pageBlog: data.pageBlog,
+            breadCrumb: data.breadcrumb,
         }
     }
 }

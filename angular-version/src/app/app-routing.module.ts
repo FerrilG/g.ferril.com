@@ -66,10 +66,4 @@ const appRoutes: Routes = [
   exports: [RouterModule]
 })
 
-export class AppRoutingModule {
-  constructor(private modalService: LoginModalService, private navigationService: NavigationService) {
-    this.navigationService.onRouteChange((data: object, path: string) => {
-      console.log(this.navigationService.pageConstruction);
-    });
-  }
-}
+export class AppRoutingModule { }
