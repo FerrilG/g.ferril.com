@@ -11,8 +11,7 @@ export class FooterComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
   toggleScroll() {
     this.show = !this.show;
