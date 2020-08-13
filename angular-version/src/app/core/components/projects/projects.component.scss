@@ -13,16 +13,21 @@
         outline: 2px solid var(--light-blue);
         outline-style: auto;
         background-color: var(--pastel-blue);
-        // color: var(--dark-blue);
     }
 
     .lock-indicator {
         position: absolute;
         left: 0.5rem;
         top: 0.5rem;
-        background-color: red;
+        background-color: var(--dark-blue);
+        border-radius: 2px;
+        color: white;
         padding: 0.375em 0.5em;
         display: flex;
+
+        span {
+            margin-left: 0.25em;
+        }
     }
 
     #img {

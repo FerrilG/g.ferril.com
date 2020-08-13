@@ -14,7 +14,9 @@ export class LoginComponent implements OnInit {
 
   constructor(private securityService: SecurityService, private loginModal: LoginModalService) { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    document.getElementById('userName').focus();
+  }
 
   public login() {
     this.securityService.login(this.user)

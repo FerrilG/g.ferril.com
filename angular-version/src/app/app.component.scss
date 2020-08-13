@@ -2,6 +2,8 @@ main {
     padding-top: 60px;
     height: 100vh;
     overflow: auto;
+    min-width: 350px;
+
 
     &::-webkit-scrollbar {
         width: 7px;

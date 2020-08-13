@@ -12,8 +12,8 @@ import { Router, ActivationEnd } from '@angular/router';
 })
 
 export class ProjectsComponent implements OnInit {
-  private projects = this.projectService.projectData;
-  private securityObject = this.securityService.securityObject;
+  public projects = this.projectService.projectData;
+  public securityObject = this.securityService.securityObject;
 
   constructor(private projectService: ProjectsService, private securityService: SecurityService, private loginModal: LoginModalService) {
   }
@@ -23,6 +23,5 @@ export class ProjectsComponent implements OnInit {
 
   unlockSite(): void {
     this.loginModal.modalState = true;
-    // document.getElementById('')
   }
 }
