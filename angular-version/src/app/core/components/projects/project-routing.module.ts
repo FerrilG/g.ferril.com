@@ -13,7 +13,7 @@ const projectRoutes: Routes = [
         data: {
             sidePanel: true,
             sidePanelType: 'overview',
-            pageSectionScroller: false,
+            pageScroller: false,
         }
     },
     {
@@ -23,7 +23,7 @@ const projectRoutes: Routes = [
         data: {
             sidePanel: true,
             sidePanelType: 'overview',
-            pageSectionScroller: true,
+            pageScroller: true,
             breadcrumb: 'Portfolio'
         }
     },
@@ -34,7 +34,7 @@ const projectRoutes: Routes = [
         data: {
             sidePanel: true,
             sidePanelType: 'overview',
-            pageSectionScroller: true,
+            pageScroller: true,
             breadcrumb: 'myCompany',
             pageBlog: true,
         }

@@ -1,5 +1,5 @@
 <ul id="sectionContainer">
-    <li *ngFor='let item of sectionInfo' [class.active]="selectedItem == item" (click)="scrollClick(item.target, item)">
+    <li *ngFor='let item of scrollList' [class.active]="selectedItem == item" (click)="scrollClick(item.target, item)">
         <span>{{ item.name }}</span>
     </li>
 </ul>

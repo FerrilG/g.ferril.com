@@ -1,14 +1,15 @@
 export interface PageTemplate {
-    sidePanel: boolean;
-    pageSectionScroller: boolean;
-    sidePanelType?: string;
-    pageBlog?: boolean;
-    breadCrumb?: string;
+  sidePanel: boolean;
+  pageScroller: boolean;
+  sidePanelType?: string;
+  pageBlog?: boolean;
+  breadCrumb?: string;
+  pageScrollList?: Array<any>;
 }
 
 export class PageConfigDefault implements PageTemplate {
   sidePanel: false;
-  pageSectionScroller: false;
+  pageScroller: false;
   sidePanelType?: '';
   pageBlog?: false;
   breadCrumb?: '';

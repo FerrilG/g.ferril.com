@@ -16,7 +16,7 @@ const appRoutes: Routes = [
     data: {
       sidePanel: false,
       sidePanelType: null,
-      pageSectionScroller: false,
+      pageScroller: false,
     }
   },
   {
@@ -25,7 +25,7 @@ const appRoutes: Routes = [
     data: {
       sidePanel: true,
       sidePanelType: 'overview',
-      pageSectionScroller: false,
+      pageScroller: false,
     }
   },
   {
@@ -34,7 +34,7 @@ const appRoutes: Routes = [
     data: {
       sidePanel: true,
       sidePanelType: 'overview',
-      pageSectionScroller: true,
+      pageScroller: true,
       pageBlog: true,
     }
   },

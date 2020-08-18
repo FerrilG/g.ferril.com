@@ -22,4 +22,4 @@ export const headerLinks: HeaderLinks[] = [
         Text: 'About Me',
         Path: 'about-me',
     }
-]
+];

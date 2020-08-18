@@ -1,27 +1,46 @@
-import { Injectable, ChangeDetectorRef } from '@angular/core';
+import { NavigationService } from 'src/app/services/navigation.service';
+import { Observable } from 'rxjs';
+import { Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PageScrollerService {
   private sectionInfo: SectionInfo[] = [];
+  private _pageScrollList: Array<SectionInfo> = new Array<SectionInfo>();
 
-  constructor() { }
+  constructor(
+    private navService: NavigationService,
+  ) { }
 
-  getSections() {
+  public renderScrollList() {
+    const newList: Array<SectionInfo> = new Array<SectionInfo>();
     let sections = [];
-    sections = Array.prototype.slice.call(document.querySelectorAll('section > span, [section] span, section > h4'));
+    sections = Array.prototype.slice.call(document.querySelectorAll(DOMSelectors.selectors));
     sections.forEach((item, i) => {
-      this.sectionInfo.push(sections[i] = {
+      newList.push(sections[i] = {
         name: item.innerHTML,
         target: item.parentElement
       });
     });
-    return sections;
+    this._pageScrollList = newList;
+    return newList;
+  }
+
+  public getScrollList(): Array<SectionInfo> {
+    return this._pageScrollList;
   }
 }
 
 export interface SectionInfo {
   name: any;
   target: object;
+}
+
+enum DOMSelectors {
+  selectors = `
+  section > span,
+  [section] span,
+  section > h4
+  `
 }

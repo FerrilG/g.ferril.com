@@ -1,3 +1,4 @@
+import { NavigationService } from 'src/app/services/navigation.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,7 +9,6 @@ export class PrjPortfolioComponent implements OnInit {
 
     constructor() { }
 
-    ngOnInit() {
-    }
+    ngOnInit() { }
 
 }

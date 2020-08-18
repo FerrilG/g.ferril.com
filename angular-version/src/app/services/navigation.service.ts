@@ -23,15 +23,7 @@ export class NavigationService {
         private securityService: SecurityService,
         private loginModal: LoginModalService,
         @Inject(DOCUMENT) private document: Document
-    ) {
-        // this.pageHeader = new Observable<string>(observer => {
-        //     this.onRouteChange(({ pageHeader }) => {
-        //         if (pageHeader) {
-        //             observer.next(pageHeader);
-        //         }
-        //     });
-        // });
-    }
+    ) { }
 
     public onRouteChange(callbackFn: (snapshotData: object, path: string) => void): Subscription {
         return this.router.events.subscribe((event) => {
@@ -77,10 +69,11 @@ export class NavigationService {
 
         this.pageConstruction = {
             sidePanel: data.sidePanel,
-            pageSectionScroller: data.pageSectionScroller,
+            pageScroller: data.pageScroller,
             sidePanelType: data.sidePanelType,
             pageBlog: data.pageBlog,
             breadCrumb: data.breadcrumb,
-        }
+            pageScrollList: [],
+        };
     }
 }

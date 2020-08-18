@@ -11,8 +11,12 @@ import { Component, OnInit, Input, HostListener } from '@angular/core';
 export class LoginComponent implements OnInit {
 
   public user: UserAccess = new UserAccess();
+  public securityObject = this.securityService.securityObject;
 
-  constructor(private securityService: SecurityService, private loginModal: LoginModalService) { }
+  constructor(
+    private securityService: SecurityService,
+    private loginModal: LoginModalService,
+  ) { }
 
   ngOnInit() {
     document.getElementById('userName').focus();
