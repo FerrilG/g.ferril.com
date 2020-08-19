@@ -15,8 +15,11 @@ export class ProjectsComponent implements OnInit {
   public projects = this.projectService.projectData;
   public securityObject = this.securityService.securityObject;
 
-  constructor(private projectService: ProjectsService, private securityService: SecurityService, private loginModal: LoginModalService) {
-  }
+  constructor(
+    private projectService: ProjectsService,
+    private securityService: SecurityService,
+    private loginModal: LoginModalService,
+  ) { }
 
   ngOnInit(): void {
   }

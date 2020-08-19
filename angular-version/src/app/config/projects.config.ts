@@ -10,4 +10,5 @@ export interface ProjectProperties {
   company?: string;
   cover: string;
   overview: string;
+  content: Array<object>;
 }

@@ -12,6 +12,7 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomepageComponent } from 'src/app/core/components/homepage/homepage.component';
 import { AboutMeComponent } from 'src/app/core/components/about-me/about-me.component';
+import { ProjectsService } from 'src/app/core/services/projects.service';
 
 
 @NgModule({
@@ -30,7 +31,7 @@ import { AboutMeComponent } from 'src/app/core/components/about-me/about-me.comp
         ProjectsModule,
         FormsModule
     ],
-    providers: [ ],
+    providers: [ProjectsService],
     exports: [
         PageTemplateComponent,
         SidepanelComponent,

@@ -154,13 +154,13 @@
           "options": {
             "tsConfig": "projects/g-design-lib/tsconfig.lib.json",
             "project": "projects/g-design-lib/ng-package.json"
-          }
-        ,          "configurations": {
+          },
+          "configurations": {
             "production": {
               "tsConfig": "projects/g-design-lib/tsconfig.lib.prod.json"
             }
           }
-},
+        },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
@@ -182,6 +182,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "angular-version"
 }

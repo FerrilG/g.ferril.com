@@ -21,7 +21,7 @@ import { CardModule } from './modules/components/card/card.module';
     AppComponent,
     HomeComponent,
     SubHeaderComponent,
-    BreadcrumbComponent
+    BreadcrumbComponent,
   ],
   imports: [
     BrowserModule,

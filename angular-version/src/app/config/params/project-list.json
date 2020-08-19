@@ -1,0 +1,30 @@
+[
+    {
+        "name": "My Design Portfolio",
+        "date": "Jan '18 - Present",
+        "number": 1,
+        "enabled": true,
+        "lock": true,
+        "folder": "portfolio",
+        "role": "",
+        "type": "",
+        "company": "g.ferril.com",
+        "cover": "",
+        "overview": "Rhoncus urna neque viverra justo nec ultrices.Laoreet non curabitur gravida arcu. Fringilla urna porttitor rhoncus dolor purus non enim praeåsent elementum.In nisl nisi scelerisque eu ultrices.Neque ornare aenean euismod elementum.",
+        "content": []
+    },
+    {
+        "name": "eCommerce Rewards",
+        "date": "Oct '18 - Apr '19",
+        "number": 2,
+        "enabled": true,
+        "lock": true,
+        "folder": "myCompany",
+        "role": "",
+        "type": "",
+        "company": "CX Loyalty",
+        "cover": "",
+        "overview": "Rhoncus urna neque viverra justo nec ultrices.Laoreet non curabitur gravida arcu. Fringilla urna porttitor rhoncus dolor purus non enim praeåsent elementum.In nisl nisi scelerisque eu ultrices.Neque ornare aenean euismod elementum.",
+        "content": []
+    }
+]
