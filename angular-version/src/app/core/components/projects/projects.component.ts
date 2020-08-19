@@ -1,7 +1,7 @@
 import { LoginModalService } from './../../../services/login-modal.service';
 import { SecurityService } from 'src/app/security/security.service';
 import { Component, OnInit, DoCheck, AfterViewInit, OnChanges, ChangeDetectorRef, Directive } from '@angular/core';
-import { ProjectsService } from '../../services/projects.service';
+import { ProjectService } from '../../services/projects.service';
 import { NavigationService } from 'src/app/services/navigation.service';
 import { Router, ActivationEnd } from '@angular/router';
 
@@ -16,7 +16,7 @@ export class ProjectsComponent implements OnInit {
   public securityObject = this.securityService.securityObject;
 
   constructor(
-    private projectService: ProjectsService,
+    private projectService: ProjectService,
     private securityService: SecurityService,
     private loginModal: LoginModalService,
   ) { }

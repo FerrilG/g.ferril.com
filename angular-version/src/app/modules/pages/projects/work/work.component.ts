@@ -1,4 +1,4 @@
-import { ProjectsService } from '../../../../core/services/projects.service';
+import { ProjectService } from '../../../../core/services/projects.service';
 import { Component, OnInit } from '@angular/core';
 import { ProjectList } from 'src/app/core/mocks/project.mock';
 
@@ -10,7 +10,7 @@ import { ProjectList } from 'src/app/core/mocks/project.mock';
 export class ProjectsComponent implements OnInit {
   // projects = ProjectList;
 
-  constructor(private projectService: ProjectsService) { }
+  constructor(private projectService: ProjectService) { }
 
   ngOnInit() {
     // this.getProjects();

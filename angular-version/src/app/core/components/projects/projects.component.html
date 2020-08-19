@@ -10,7 +10,10 @@
 
 <ng-template #unlocked let-item='item'>
     <a routerLink="./{{ item.folder }}" class="row no-gutters card" ondragstart="return false;">
-        <div class="" id="img"></div>
+        <div class="hoverOverlay"></div>
+        <!-- <div class="coverContainer"> -->
+        <img class="projectCover" src="{{ item.cover }}">
+        <!-- </div> -->
         <div class="col-11 col-md col-xl-11 content-items">
             <h5 class="title">{{ item.name }}</h5>
             <h6 class="float-right date">{{ item.date }}</h6>
@@ -20,12 +23,16 @@
 </ng-template>
 
 <ng-template #locked let-item='item'>
-    <a (click)="unlockSite()" class="row no-gutters card" ondragstart="return false;">
+    <a routerLink="./{{ item.folder }}" (click)="unlockSite()" class="row no-gutters card" ondragstart="return false;">
         <div class="lock-indicator">
             <i class="material-icons">lock</i>
             <span>Locked - Click to unlock</span>
         </div>
-        <div class="" id="img"></div>
+        <div class="hoverOverlay"></div>
+        <!-- <div class="coverContainer"> -->
+        <img class="projectCover" src="{{ item.cover }}">
+        <!-- </div> -->
+        <!-- <div class="" id="img"></div> -->
         <div class="col-11 col-md col-xl-11 content-items">
             <h5 class="title">{{ item.name }}</h5>
             <h6 class="float-right date">{{ item.date }}</h6>

@@ -1,4 +1,4 @@
-import { ProjectsService } from './../core/services/projects.service';
+import { ProjectService } from './../core/services/projects.service';
 import { SecurityService } from './security.service';
 import { Injectable } from '@angular/core';
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, Router } from '@angular/router';
@@ -8,7 +8,7 @@ import { Observable, Subscription } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthGuard implements CanActivate {
-  constructor(private securityService: SecurityService, private router: Router, private projectService: ProjectsService) {
+  constructor(private securityService: SecurityService, private router: Router, private projectService: ProjectService) {
 
   }
 

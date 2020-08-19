@@ -1,4 +1,6 @@
-import { NavigationService } from 'src/app/services/navigation.service';
+import { filter } from 'rxjs/operators';
+// import { data } from 'src/app/config/params/project-list.json';
+import { ProjectService } from 'src/app/core/services/projects.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./portfolio.component.scss']
 })
 export class PrjPortfolioComponent implements OnInit {
+    public content: Array<object>;
 
-    constructor() { }
+    constructor(private _projectContent: ProjectService) { }
 
-    ngOnInit() { }
+    ngOnInit() {
+        const thisProject = 'portfolio';
+        this.content = this._projectContent.getContent(thisProject);
+        console.log(this.content);
+    }
 
 }

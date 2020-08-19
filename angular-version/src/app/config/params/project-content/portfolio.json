@@ -1,14 +1,14 @@
-[
-    {
-        "name": "Sec 1",
+{
+    "outline": {
+        "name": "Sec 3",
         "date": "Jan '18 - Present"
     },
-    {
+    "responsibilities": {
         "name": "Sec 2",
         "date": "Jan '18 - Present"
     },
-    {
+    "design": {
         "name": "Sec 3",
         "date": "Jan '18 - Present"
     }
-]
+}
