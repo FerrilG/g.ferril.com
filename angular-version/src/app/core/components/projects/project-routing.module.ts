@@ -4,7 +4,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { ProjectsComponent } from './projects.component';
 import { PrjmyCompanyComponent } from './project-pages/myCompany/myCompany.component';
 import { PrjPortfolioComponent } from './project-pages/portfolio/portfolio.component';
-import { NavigationService } from 'src/app/services/navigation.service';
 
 const projectRoutes: Routes = [
     {
@@ -29,7 +28,7 @@ const projectRoutes: Routes = [
     },
     {
         path: 'myCompany',
-        component: PrjmyCompanyComponent,
+        component: PrjPortfolioComponent,
         canActivate: [AuthGuard],
         data: {
             sidePanel: true,

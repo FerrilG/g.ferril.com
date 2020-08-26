@@ -10,7 +10,7 @@ import { ProjectList } from 'src/app/core/mocks/project.mock';
 export class ProjectsComponent implements OnInit {
   // projects = ProjectList;
 
-  constructor(private projectService: ProjectService) { }
+  constructor() { }
 
   ngOnInit() {
     // this.getProjects();

@@ -31,7 +31,7 @@ import { ProjectService } from 'src/app/core/services/projects.service';
         ProjectsModule,
         FormsModule
     ],
-    providers: [ProjectService],
+    // providers: [ProjectService],
     exports: [
         PageTemplateComponent,
         SidepanelComponent,

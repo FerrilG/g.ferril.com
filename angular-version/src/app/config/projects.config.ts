@@ -1,3 +1,11 @@
+interface contentStructure {
+  section: string;
+  content?: {
+    text: string;
+    image?: object[];
+  };
+}
+
 export interface ProjectProperties {
   name: string;
   date?: string;
@@ -10,5 +18,5 @@ export interface ProjectProperties {
   company?: string;
   cover: string;
   overview: string;
-  content: Array<object>;
+  content?: contentStructure[];
 }

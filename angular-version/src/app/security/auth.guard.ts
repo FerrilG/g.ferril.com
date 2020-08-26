@@ -8,7 +8,11 @@ import { Observable, Subscription } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthGuard implements CanActivate {
-  constructor(private securityService: SecurityService, private router: Router, private projectService: ProjectService) {
+  constructor(
+    private securityService: SecurityService,
+    private router: Router,
+    private projectService: ProjectService,
+  ) {
 
   }
 
@@ -16,7 +20,7 @@ export class AuthGuard implements CanActivate {
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     const isAuthenticated: boolean = this.securityService.securityObject.isAuthenticated;
-    const getProjectLock: boolean = this.projectService.projectData.find(item => item.folder === next.url[0].path)['lock'];
+    const getProjectLock: boolean = this.projectService.projectData.find(item => item.folder === next.url[0].path).lock;
 
     if (!getProjectLock) {
       return true;

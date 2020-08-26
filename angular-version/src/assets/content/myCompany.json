@@ -1,14 +1,36 @@
 [
     {
-        "name": "Comp 1",
-        "date": "Jan '18 - Present"
+        "section": "Project overview",
+        "content": [
+            {
+                "label": "Problem",
+                "text": "The internal sales team found it difficult to sell their eCommerce product. The assumption was that it didn't have features the client wanted for their customers."
+            },
+            {
+                "label": "Solution",
+                "text": "I compared user pain points with a heuristic evaluation and supportive research to support a sitewide redesign that would address user concerns and meet stakeholder requirements."
+            },
+            {
+                "label": "Challenge",
+                "text": "During the middle of the project an escalation regarding the current platform and ADA compliance required our project decisions to pivot."
+            }
+        ]
     },
     {
-        "name": "Comp 2",
-        "date": "Jan '18 - Present"
-    },
-    {
-        "name": "Comp 3",
-        "date": "Jan '18 - Present"
+        "section": "Discovery",
+        "content": [
+            {
+                "label": "Problem",
+                "text": "The internal sales team found it difficult to sell their eCommerce product. The assumption was that it didn't have features the client wanted for their customers."
+            },
+            {
+                "label": "Solution",
+                "text": "I compared user pain points with a heuristic evaluation and supportive research to support a sitewide redesign that would address user concerns and meet stakeholder requirements."
+            },
+            {
+                "label": "Challenge",
+                "text": "During the middle of the project an escalation regarding the current platform and ADA compliance required our project decisions to pivot."
+            }
+        ]
     }
 ]
