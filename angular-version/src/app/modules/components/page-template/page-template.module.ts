@@ -1,3 +1,4 @@
+import { PageScrollerComponent } from './../page-scroller/page-scroller.component';
 import { FormsModule } from '@angular/forms';
 import { SecurityService } from './../../../security/security.service';
 import { LoginComponent } from './../login/login.component';
@@ -5,7 +6,6 @@ import { ProjectsModule } from 'src/app/core/components/projects/projects.module
 import { SectionConstructorComponent } from './../section-constructor/section-constructor.component';
 
 import { SidepanelComponent } from './../../../core/sidepanel/sidepanel.component';
-import { PageScrollerModule } from './../page-scroller/page-scroller.module';
 import { AppRoutingModule } from './../../../app-routing.module';
 import { PageTemplateComponent } from './page-template.component';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
@@ -22,12 +22,12 @@ import { ProjectService } from 'src/app/core/services/projects.service';
         SectionConstructorComponent,
         HomepageComponent,
         AboutMeComponent,
-        LoginComponent
+        LoginComponent,
+        PageScrollerComponent
     ],
     imports: [
         AppRoutingModule,
         CommonModule,
-        PageScrollerModule,
         ProjectsModule,
         FormsModule
     ],
@@ -37,7 +37,8 @@ import { ProjectService } from 'src/app/core/services/projects.service';
         SidepanelComponent,
         SectionConstructorComponent,
         HomepageComponent,
-        AboutMeComponent
+        AboutMeComponent,
+        PageScrollerComponent,
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

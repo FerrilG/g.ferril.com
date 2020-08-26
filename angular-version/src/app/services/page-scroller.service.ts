@@ -1,5 +1,4 @@
 import { NavigationService } from 'src/app/services/navigation.service';
-import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -13,18 +12,20 @@ export class PageScrollerService {
     private navService: NavigationService,
   ) { }
 
-  public renderScrollList() {
+  public renderScrollList(): void {
     const newList: Array<SectionInfo> = new Array<SectionInfo>();
-    let sections = [];
-    sections = Array.prototype.slice.call(document.querySelectorAll(DOMSelectors.selectors));
+    // let sections = [];
+    const sections = Array.prototype.slice.call(document.querySelectorAll(DOMSelectors.selectors));
+    console.log(sections);
     sections.forEach((item, i) => {
       newList.push(sections[i] = {
         name: item.innerHTML,
         target: item.parentElement
       });
+      if (i > 0) {
+      }
     });
     this._pageScrollList = newList;
-    return newList;
   }
 
   public getScrollList(): Array<SectionInfo> {

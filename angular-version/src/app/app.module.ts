@@ -2,7 +2,6 @@ import { NavigationService } from 'src/app/services/navigation.service';
 import { LoginModalService } from './services/login-modal.service';
 import { SecurityService } from 'src/app/security/security.service';
 import { HeaderModule } from './core/header/header.module';
-import { PageScrollerModule } from './modules/components/page-scroller/page-scroller.module';
 import { PageTemplateModule } from './modules/components/page-template/page-template.module';
 import { FooterModule } from './core/footer/footer.module';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
@@ -30,7 +29,6 @@ import { CardModule } from './modules/components/card/card.module';
     CardModule,
     FooterModule,
     PageTemplateModule,
-    PageScrollerModule,
     HttpClientModule,
   ],
   exports: [

@@ -18,7 +18,7 @@
         "date": "Oct '18 - Apr '19",
         "number": 2,
         "enabled": true,
-        "lock": true,
+        "lock": false,
         "folder": "myCompany",
         "role": "",
         "type": "",

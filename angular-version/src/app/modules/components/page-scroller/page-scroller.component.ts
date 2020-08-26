@@ -1,6 +1,6 @@
 import { NavigationService } from 'src/app/services/navigation.service';
-import { Component, OnInit, AfterContentInit, OnChanges, SimpleChanges, DoCheck } from '@angular/core';
-import { PageScrollerService, SectionInfo } from './page-scroller.service';
+import { Component, OnInit, DoCheck } from '@angular/core';
+import { PageScrollerService, SectionInfo } from '../../../services/page-scroller.service';
 
 @Component({
   selector: 'g-page-scroller',
@@ -8,7 +8,7 @@ import { PageScrollerService, SectionInfo } from './page-scroller.service';
   styleUrls: ['./page-scroller.component.scss']
 })
 export class PageScrollerComponent implements OnInit, DoCheck {
-  public selectedItem: Object = null;
+  public selectedItem: HTMLElement = null;
   public scrollList: Array<SectionInfo> = new Array<SectionInfo>();
   // tslint:disable-next-line: variable-name
   private _newList: Array<SectionInfo>;
@@ -22,6 +22,7 @@ export class PageScrollerComponent implements OnInit, DoCheck {
   ngDoCheck(): void {
     this._newList = this.sectionService.getScrollList();
     if (this.scrollList !== this._newList) {
+      // console.log(this._newList);
       this.scrollList = this._newList;
     }
   }

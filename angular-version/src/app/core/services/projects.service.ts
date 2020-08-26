@@ -51,6 +51,7 @@ export class ProjectService {
     return this.projectData[openProject];
   }
 
+
   public renderContent() {
     const url = window.document.URL.replace(window.document.baseURI, '');
     const folder = url.replace(url.substring(url.indexOf('/')), '');

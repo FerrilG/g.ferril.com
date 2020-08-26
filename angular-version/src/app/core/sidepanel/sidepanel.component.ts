@@ -1,4 +1,4 @@
-import { NavigationService } from './../../services/navigation.service';
+import { NavigationService } from 'src/app/services/navigation.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit, OnDestroy, Inject } from '@angular/core';
 import { Subscription, Observable } from 'rxjs';

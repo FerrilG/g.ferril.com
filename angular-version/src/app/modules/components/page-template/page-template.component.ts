@@ -1,10 +1,11 @@
-import { PageScrollerService, SectionInfo } from './../page-scroller/page-scroller.service';
+
 import { PageConfigDefault } from './../../../config/pageTemplate';
 import { LoginModalService } from './../../../services/login-modal.service';
-import { Component, OnInit, Inject, OnDestroy, DoCheck } from '@angular/core';
+import { Component, OnInit, OnDestroy, AfterContentInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { NavigationService } from 'src/app/services/navigation.service';
 import { PageTemplate } from 'src/app/config/pageTemplate';
+import { PageScrollerService } from 'src/app/services/page-scroller.service';
 
 @Component({
   selector: 'g-page-template',
@@ -12,7 +13,7 @@ import { PageTemplate } from 'src/app/config/pageTemplate';
   styleUrls: ['./page-template.component.scss']
 })
 
-export class PageTemplateComponent implements OnInit, OnDestroy {
+export class PageTemplateComponent implements OnInit, AfterContentInit, OnDestroy {
 
   private routeChangeListener$: Subscription;
   public modalOpen: any = this.loginModal;
@@ -22,14 +23,13 @@ export class PageTemplateComponent implements OnInit, OnDestroy {
     private pageScrollService: PageScrollerService,
     private navigationService: NavigationService,
     private loginModal: LoginModalService) {
-  }
-
-  ngOnInit(): void {
     this.routeChangeListener$ = this.navigationService.onRouteChange(() => {
       this.pageConfig = this.navigationService.pageConstruction;
       if (this.pageConfig !== undefined) {
         if (this.pageConfig.pageScroller !== false) {
-          this.pageScrollService.renderScrollList();
+          setTimeout(() => {
+            this.pageScrollService.renderScrollList();
+          }, 40);
         }
       }
       const pagePanel: HTMLElement = document.getElementById('mainContent');
@@ -38,6 +38,14 @@ export class PageTemplateComponent implements OnInit, OnDestroy {
         behavior: 'auto',
       });
     });
+  }
+
+  ngOnInit(): void {
+
+  }
+
+  ngAfterContentInit(): void {
+
   }
 
   ngOnDestroy(): void {
