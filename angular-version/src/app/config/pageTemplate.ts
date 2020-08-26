@@ -5,6 +5,7 @@ export interface PageTemplate {
   pageBlog?: boolean;
   breadCrumb?: string;
   pageScrollList?: Array<any>;
+  firstPage?: boolean;
 }
 
 export class PageConfigDefault implements PageTemplate {

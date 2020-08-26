@@ -16,7 +16,6 @@ export class PageScrollerService {
     const newList: Array<SectionInfo> = new Array<SectionInfo>();
     // let sections = [];
     const sections = Array.prototype.slice.call(document.querySelectorAll(DOMSelectors.selectors));
-    console.log(sections);
     sections.forEach((item, i) => {
       newList.push(sections[i] = {
         name: item.innerHTML,

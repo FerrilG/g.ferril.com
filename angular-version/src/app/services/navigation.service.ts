@@ -49,12 +49,18 @@ export class NavigationService {
         this.router.navigate([path]);
     }
 
-    public set isFirstPage(isFirstPage: boolean) {
-        this._isFirstPage = isFirstPage;
-    }
+    // public set isFirstPage(isFirstPage: boolean) {
+    //     this._isFirstPage = isFirstPage;
+    // }
 
-    public get isFirstPage(): boolean {
-        return this._isFirstPage;
+    private isFirstPage(): boolean {
+        switch (this._isFirstPage) {
+            case true:
+                this._isFirstPage = false;
+                return true;
+            default:
+                return false;
+        }
     }
 
     // ======================= Cleaned Up ==============
@@ -74,6 +80,7 @@ export class NavigationService {
             pageBlog: data.pageBlog,
             breadCrumb: data.breadcrumb,
             pageScrollList: [],
+            firstPage: this.isFirstPage(),
         };
     }
 }

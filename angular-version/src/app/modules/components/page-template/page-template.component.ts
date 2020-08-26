@@ -13,7 +13,7 @@ import { PageScrollerService } from 'src/app/services/page-scroller.service';
   styleUrls: ['./page-template.component.scss']
 })
 
-export class PageTemplateComponent implements OnInit, AfterContentInit, OnDestroy {
+export class PageTemplateComponent implements OnInit, OnDestroy {
 
   private routeChangeListener$: Subscription;
   public modalOpen: any = this.loginModal;
@@ -24,13 +24,10 @@ export class PageTemplateComponent implements OnInit, AfterContentInit, OnDestro
     private navigationService: NavigationService,
     private loginModal: LoginModalService) {
     this.routeChangeListener$ = this.navigationService.onRouteChange(() => {
-      this.pageConfig = this.navigationService.pageConstruction;
-      if (this.pageConfig !== undefined) {
-        if (this.pageConfig.pageScroller !== false) {
-          setTimeout(() => {
-            this.pageScrollService.renderScrollList();
-          }, 40);
-        }
+      const pageBuild = this.navigationService.pageConstruction;
+      this.pageConfig = pageBuild;
+      if (pageBuild !== undefined) {
+        this.loadPageScroller(pageBuild);
       }
       const pagePanel: HTMLElement = document.getElementById('mainContent');
       pagePanel.scrollTo({
@@ -40,16 +37,37 @@ export class PageTemplateComponent implements OnInit, AfterContentInit, OnDestro
     });
   }
 
-  ngOnInit(): void {
-
-  }
-
-  ngAfterContentInit(): void {
-
-  }
+  ngOnInit(): void { }
 
   ngOnDestroy(): void {
     this.routeChangeListener$.unsubscribe();
+  }
+
+  private loadPageScroller(object: PageTemplate): void {
+    // console.log(object);
+    // console.clear();
+    switch (object.pageScroller) {
+      case true:
+        // console.log('Scroll: True');
+        switch (object.firstPage) {
+          case true:
+            // console.log('First: True');
+            setTimeout(() => {
+              this.pageScrollService.renderScrollList();
+            }, 200);
+            break;
+          default:
+            // console.log('First: False');
+            setTimeout(() => {
+              this.pageScrollService.renderScrollList();
+            }, 40);
+            break;
+        }
+        break;
+      default:
+        // console.log('Scroll: False');
+        break;
+    }
   }
 
 }
