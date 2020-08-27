@@ -49,6 +49,54 @@ const projectRoutes: Routes = [
             breadcrumb: 'accountMgr',
             pageBlog: true,
         }
+    },
+    {
+        path: 'medical',
+        component: PrjPortfolioComponent,
+        canActivate: [AuthGuard],
+        data: {
+            sidePanel: true,
+            sidePanelType: 'overview',
+            pageScroller: true,
+            breadcrumb: 'medical',
+            pageBlog: true,
+        }
+    },
+    {
+        path: 'motive',
+        component: PrjPortfolioComponent,
+        canActivate: [AuthGuard],
+        data: {
+            sidePanel: true,
+            sidePanelType: 'overview',
+            pageScroller: true,
+            breadcrumb: 'motive',
+            pageBlog: true,
+        }
+    },
+    {
+        path: 'recreogo',
+        component: PrjPortfolioComponent,
+        canActivate: [AuthGuard],
+        data: {
+            sidePanel: true,
+            sidePanelType: 'overview',
+            pageScroller: true,
+            breadcrumb: 'recreogo',
+            pageBlog: true,
+        }
+    },
+    {
+        path: 'designSystem',
+        component: PrjPortfolioComponent,
+        canActivate: [AuthGuard],
+        data: {
+            sidePanel: true,
+            sidePanelType: 'overview',
+            pageScroller: true,
+            breadcrumb: 'designSystem',
+            pageBlog: false,
+        }
     }
 ];
 

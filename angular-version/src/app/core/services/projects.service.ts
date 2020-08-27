@@ -31,7 +31,7 @@ export class ProjectService {
     const info = [];
     this.http.get(folder)
       .pipe(
-        retry(1),
+        // retry(1),
         catchError(err => of([]))
       ).subscribe((event: object[]) => {
         if (event !== null) {
