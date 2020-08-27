@@ -2,9 +2,10 @@ import { ProjectProperties } from 'src/app/config/projects.config';
 // import { data, projList } from 'src/app/config/params/project-list.json';
 import { Injectable } from '@angular/core';
 import { ProjectList } from './../mocks/project.mock';
-import { HttpClient } from '@angular/common/http';
-import { map } from 'rxjs/operators';
-import { Subscription, Observable } from 'rxjs';
+import { HttpClient, HttpParams } from '@angular/common/http';
+import { map, retry, catchError } from 'rxjs/operators';
+import { Subscription, Observable, of } from 'rxjs';
+import { error } from '@angular/compiler/src/util';
 // import * as data from 'src/app/config/params/project-content';
 
 @Injectable({
@@ -19,18 +20,39 @@ export class ProjectService {
     this.projectData = ProjectList;
     this.projectData.forEach((project, i) => {
       const contentObject: string = 'assets/content/' + project.folder + '.json';
+      // console.log(contentObject);
+      // console.log(this.injectContent(contentObject, i));
       project.content = this.injectContent(contentObject, i);
+
     });
   }
 
   private injectContent(folder: string, index?: number) {
     const info = [];
-    this.http.get(folder).subscribe((event: object[]) => {
-      event.forEach(val => {
-        info.push(val);
+    this.http.get(folder)
+      .pipe(
+        retry(1),
+        catchError(err => of([]))
+      ).subscribe((event: object[]) => {
+        if (event !== null) {
+          event.forEach(val => {
+            info.push(val);
+          });
+        }
       });
-    });
     return info;
+
+
+
+    // const info = [];
+    // this.http.get(folder).subscribe((event: object[]) => {
+    //   if (event !== null) {
+    //     event.forEach(val => {
+    //       info.push(val);
+    //     });
+    //   }
+    // });
+    // return info;
   }
 
 

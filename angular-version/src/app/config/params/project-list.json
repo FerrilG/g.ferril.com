@@ -22,9 +22,23 @@
         "folder": "myCompany",
         "role": "",
         "type": "",
-        "company": "CX Loyalty",
+        "company": "cxLoyalty, Inc.",
         "cover": "http://www.g.ferril.com/3.0/work/ecommerce/images/cover.jpg",
         "overview": "Rhoncus urna neque viverra justo nec ultrices.Laoreet non curabitur gravida arcu. Fringilla urna porttitor rhoncus dolor purus non enim praeåsent elementum.In nisl nisi scelerisque eu ultrices.Neque ornare aenean euismod elementum.",
+        "content": []
+    },
+    {
+        "name": "eCommerce Account Manager",
+        "date": "Oct '18 - Apr '19",
+        "number": 3,
+        "enabled": true,
+        "lock": true,
+        "folder": "accountMgr",
+        "role": "UX Architect",
+        "type": "Case Study",
+        "company": "cxLoyalty, Inc.",
+        "cover": "./../../../assets/images/project_imgs/accountMgr/cover.png",
+        "overview": "I presented the client and internal stakeholders a new concept that would remove an interstitial page. Thus reducing development scope and adding value to the users experience.",
         "content": []
     }
 ]

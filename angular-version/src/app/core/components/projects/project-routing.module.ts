@@ -37,6 +37,18 @@ const projectRoutes: Routes = [
             breadcrumb: 'myCompany',
             pageBlog: true,
         }
+    },
+    {
+        path: 'accountMgr',
+        component: PrjPortfolioComponent,
+        canActivate: [AuthGuard],
+        data: {
+            sidePanel: true,
+            sidePanelType: 'overview',
+            pageScroller: true,
+            breadcrumb: 'accountMgr',
+            pageBlog: true,
+        }
     }
 ];
 
