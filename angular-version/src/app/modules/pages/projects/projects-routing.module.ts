@@ -19,28 +19,28 @@ const projectRoutes: Routes = [
         path: 'design-system',
         component: DesignSystemComponent,
         data: {
-          breadcrumb: 'Design System'
+          breadcrumb: 'Design System',
         }
       },
       {
         path: 'folio-study',
         component: FolioStudyComponent,
         data: {
-          breadcrumb: 'Portfolio'
+          breadcrumb: 'Portfolio',
         }
       },
       {
         path: 'ecommerce-rewards',
         component: EcommerceRewardsComponent,
         data: {
-          breadcrumb: 'eCommerce Rewards'
+          breadcrumb: 'eCommerce Rewards',
         }
       },
       {
         path: 'time-entry',
         component: TimeEntryComponent,
         data: {
-          breadcrumb: 'Time Billable'
+          breadcrumb: 'Time Billable',
         }
       }
     ]

@@ -10,6 +10,7 @@ const projectRoutes: Routes = [
         path: '',
         component: ProjectsComponent,
         data: {
+            pageTitle: 'Geoff\u0027s Projects',
             sidePanel: true,
             sidePanelType: 'overview',
             pageScroller: false,
@@ -20,6 +21,7 @@ const projectRoutes: Routes = [
         component: PrjPortfolioComponent,
         canActivate: [AuthGuard],
         data: {
+            pageTitle: 'My Design Portfolio | Geoff\u0027s Projects',
             sidePanel: true,
             sidePanelType: 'overview',
             pageScroller: true,
@@ -31,6 +33,7 @@ const projectRoutes: Routes = [
         component: PrjPortfolioComponent,
         canActivate: [AuthGuard],
         data: {
+            pageTitle: 'eCommerce Rewards | Geoff\u0027s Projects',
             sidePanel: true,
             sidePanelType: 'overview',
             pageScroller: true,
@@ -43,6 +46,7 @@ const projectRoutes: Routes = [
         component: PrjPortfolioComponent,
         canActivate: [AuthGuard],
         data: {
+            pageTitle: 'eCommerce Account Manager | Geoff\u0027s Projects',
             sidePanel: true,
             sidePanelType: 'overview',
             pageScroller: true,
@@ -55,6 +59,7 @@ const projectRoutes: Routes = [
         component: PrjPortfolioComponent,
         canActivate: [AuthGuard],
         data: {
+            pageTitle: 'Handheld Medical Records | Geoff\u0027s Projects',
             sidePanel: true,
             sidePanelType: 'overview',
             pageScroller: true,
@@ -67,6 +72,7 @@ const projectRoutes: Routes = [
         component: PrjPortfolioComponent,
         canActivate: [AuthGuard],
         data: {
+            pageTitle: 'Mobile In-Flight Incentives | Geoff\u0027s Projects',
             sidePanel: true,
             sidePanelType: 'overview',
             pageScroller: true,
@@ -79,6 +85,7 @@ const projectRoutes: Routes = [
         component: PrjPortfolioComponent,
         canActivate: [AuthGuard],
         data: {
+            pageTitle: 'Sales Inventory Management | Geoff\u0027s Projects',
             sidePanel: true,
             sidePanelType: 'overview',
             pageScroller: true,
@@ -91,6 +98,7 @@ const projectRoutes: Routes = [
         component: PrjPortfolioComponent,
         canActivate: [AuthGuard],
         data: {
+            pageTitle: 'Custom Design System | Geoff\u0027s Projects',
             sidePanel: true,
             sidePanelType: 'overview',
             pageScroller: true,

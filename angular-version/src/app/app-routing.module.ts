@@ -14,24 +14,26 @@ const appRoutes: Routes = [
     pathMatch: 'full',
     component: HomepageComponent,
     data: {
+      pageTitle: 'Geoffrey\u0027s Portfolio',
       sidePanel: false,
       sidePanelType: null,
       pageScroller: false,
     }
   },
-  {
-    path: 'login',
-    component: LoginComponent,
-    data: {
-      sidePanel: true,
-      sidePanelType: 'overview',
-      pageScroller: false,
-    }
-  },
+  // {
+  //   path: 'login',
+  //   component: LoginComponent,
+  //   data: {
+  //     sidePanel: true,
+  //     sidePanelType: 'overview',
+  //     pageScroller: false,
+  //   }
+  // },
   {
     path: 'about-me',
     component: AboutMeComponent,
     data: {
+      pageTitle: 'About Geoff',
       sidePanel: true,
       sidePanelType: 'overview',
       pageScroller: true,

@@ -1,3 +1,4 @@
+import { PageConfigDefault } from './../config/pageTemplate';
 import { LoginModalService } from './login-modal.service';
 import { UserAccessAuth } from 'src/app/security/app-user-auth';
 import { SecurityService } from 'src/app/security/security.service';
@@ -6,6 +7,7 @@ import { Observable, Subscription } from 'rxjs';
 import { DOCUMENT } from '@angular/common';
 import { Inject, Injectable } from '@angular/core';
 import { PageTemplate } from '../config/pageTemplate';
+import { Title } from '@angular/platform-browser';
 
 @Injectable({
     providedIn: 'root',
@@ -14,7 +16,7 @@ import { PageTemplate } from '../config/pageTemplate';
 export class NavigationService {
     private pageHeader: Observable<string>;
     private pageTabName: Observable<string>;
-    public pageConstruction: PageTemplate = null;
+    public pageConstruction: PageTemplate = new PageConfigDefault();
     public currentRoute: string;
     private _isFirstPage = true;
 
@@ -22,6 +24,7 @@ export class NavigationService {
         private router: Router,
         private securityService: SecurityService,
         private loginModal: LoginModalService,
+        private titleService: Title,
         @Inject(DOCUMENT) private document: Document
     ) { }
 
@@ -53,7 +56,7 @@ export class NavigationService {
     //     this._isFirstPage = isFirstPage;
     // }
 
-    private isFirstPage(): boolean {
+    public isFirstPage(): boolean {
         switch (this._isFirstPage) {
             case true:
                 this._isFirstPage = false;
@@ -69,11 +72,14 @@ export class NavigationService {
     }
 
     private constructPage(data: any): void {
+        const titleDefault: string = 'Geoffrey\u0027s Portfolio';
+
         if (this.loginModal.modalState === true) {
             this.loginModal.closeModal();
         }
 
         this.pageConstruction = {
+            pageTitle: data.pageTitle,
             sidePanel: data.sidePanel,
             pageScroller: data.pageScroller,
             sidePanelType: data.sidePanelType,
@@ -82,5 +88,31 @@ export class NavigationService {
             pageScrollList: [],
             firstPage: this.isFirstPage(),
         };
+
+        switch (data.pageTitle !== undefined) {
+            case true:
+                this.titleService.setTitle(data.pageTitle);
+                break;
+            default:
+                this.titleService.setTitle(titleDefault);
+                break;
+        }
     }
 }
+
+
+// import { Title } from '@angular/platform-browser';
+// <p>
+//     Select a title to set on the current HTML document:
+// </p>
+
+//     < ul >
+//     <li><a (click)="setTitle( 'Good morning!' )" > Good morning < /a>.</li >
+//         <li><a (click)="setTitle( 'Good afternoon!' )" > Good afternoon < /a>.</li >
+//             <li><a (click)="setTitle( 'Good evening!' )" > Good evening < /a>.</li >
+//                 </ul>
+//   public constructor(private titleService: Title) { }
+
+//   public setTitle(newTitle: string) {
+//     this.titleService.setTitle(newTitle);
+// }

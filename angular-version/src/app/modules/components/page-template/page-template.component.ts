@@ -44,20 +44,15 @@ export class PageTemplateComponent implements OnInit, OnDestroy {
   }
 
   private loadPageScroller(object: PageTemplate): void {
-    // console.log(object);
-    // console.clear();
     switch (object.pageScroller) {
       case true:
-        // console.log('Scroll: True');
         switch (object.firstPage) {
           case true:
-            // console.log('First: True');
             setTimeout(() => {
               this.pageScrollService.renderScrollList();
             }, 200);
             break;
           default:
-            // console.log('First: False');
             setTimeout(() => {
               this.pageScrollService.renderScrollList();
             }, 40);
@@ -65,7 +60,6 @@ export class PageTemplateComponent implements OnInit, OnDestroy {
         }
         break;
       default:
-        // console.log('Scroll: False');
         break;
     }
   }

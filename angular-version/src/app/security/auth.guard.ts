@@ -1,3 +1,4 @@
+import { NavigationService } from 'src/app/services/navigation.service';
 import { ProjectService } from './../core/services/projects.service';
 import { SecurityService } from './security.service';
 import { Injectable } from '@angular/core';
@@ -12,9 +13,8 @@ export class AuthGuard implements CanActivate {
     private securityService: SecurityService,
     private router: Router,
     private projectService: ProjectService,
-  ) {
-
-  }
+    private navService: NavigationService
+  ) { }
 
   canActivate(
     next: ActivatedRouteSnapshot,
@@ -27,6 +27,9 @@ export class AuthGuard implements CanActivate {
     } else if (isAuthenticated) {
       return true;
     } else {
+      if (this.navService.isFirstPage()) {
+        this.router.navigate(['projects']);
+      }
       return false;
     }
   }
