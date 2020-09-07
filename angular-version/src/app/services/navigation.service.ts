@@ -99,20 +99,3 @@ export class NavigationService {
         }
     }
 }
-
-
-// import { Title } from '@angular/platform-browser';
-// <p>
-//     Select a title to set on the current HTML document:
-// </p>
-
-//     < ul >
-//     <li><a (click)="setTitle( 'Good morning!' )" > Good morning < /a>.</li >
-//         <li><a (click)="setTitle( 'Good afternoon!' )" > Good afternoon < /a>.</li >
-//             <li><a (click)="setTitle( 'Good evening!' )" > Good evening < /a>.</li >
-//                 </ul>
-//   public constructor(private titleService: Title) { }
-
-//   public setTitle(newTitle: string) {
-//     this.titleService.setTitle(newTitle);
-// }
