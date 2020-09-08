@@ -34,7 +34,8 @@ export class NavigationService {
                 const { data, routeConfig } = event.snapshot;
                 if (routeConfig.data !== undefined) {
                     this.constructPage(routeConfig.data);
-                    callbackFn(data, routeConfig.path);
+                    const url = '/' + event.snapshot.pathFromRoot.map(r => r.url).filter(f => !!f[0]).map(([f]) => f.path).join('/');
+                    callbackFn(data, url);
                 }
             }
         });
@@ -51,10 +52,6 @@ export class NavigationService {
     public navigatePathTo(path: string): void {
         this.router.navigate([path]);
     }
-
-    // public set isFirstPage(isFirstPage: boolean) {
-    //     this._isFirstPage = isFirstPage;
-    // }
 
     public isFirstPage(): boolean {
         switch (this._isFirstPage) {

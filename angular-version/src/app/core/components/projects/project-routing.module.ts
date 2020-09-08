@@ -6,16 +6,16 @@ import { PrjmyCompanyComponent } from './project-pages/myCompany/myCompany.compo
 import { PrjPortfolioComponent } from './project-pages/portfolio/portfolio.component';
 
 const projectRoutes: Routes = [
-    {
-        path: '',
-        component: ProjectsComponent,
-        data: {
-            pageTitle: 'Geoff\u0027s Projects',
-            sidePanel: true,
-            sidePanelType: 'overview',
-            pageScroller: false,
-        }
-    },
+    // {
+    //     path: '',
+    //     component: ProjectsComponent,
+    //     data: {
+    //         pageTitle: 'Geoff\u0027s Projects',
+    //         sidePanel: true,
+    //         sidePanelType: 'overview',
+    //         pageScroller: false,
+    //     }
+    // },
     {
         path: 'portfolio',
         component: PrjPortfolioComponent,

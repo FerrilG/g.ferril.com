@@ -7,10 +7,11 @@ import { NavigationService } from './services/navigation.service';
 import { NgModule, OnInit } from '@angular/core';
 import { Routes, RouterModule, Router, ActivationEnd, ActivationStart, PreloadAllModules } from '@angular/router';
 import { HomepageComponent } from './core/components/homepage/homepage.component';
+import { PageTemplateComponent } from './modules/components/page-template/page-template.component';
 
 const appRoutes: Routes = [
   {
-    path: '',
+    path: 'home',
     pathMatch: 'full',
     component: HomepageComponent,
     data: {
@@ -42,8 +43,20 @@ const appRoutes: Routes = [
   },
   {
     path: 'projects',
+    component: ProjectsComponent,
+    data: {
+      pageTitle: 'Geoff\u0027s Projects',
+      sidePanel: true,
+      sidePanelType: 'overview',
+      pageScroller: false,
+    }
+  },
+  // Project Children
+  {
+    path: 'projects',
     loadChildren: () => import('./core/components/projects/projects.module').then(m => m.ProjectsModule)
   },
+
   // {
   //   path: '**',
   //   canActivate: [RedirectGuard],
@@ -54,7 +67,7 @@ const appRoutes: Routes = [
   // }
   {
     path: '**',
-    redirectTo: '',
+    redirectTo: 'home',
     pathMatch: 'full'
   }
 ];

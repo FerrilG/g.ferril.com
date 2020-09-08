@@ -26,10 +26,14 @@ export class HeaderComponent implements OnInit, AfterViewInit, OnDestroy {
 
   ngOnInit(): void {
     // this.securityObject = this.securityService.securityObject;
-    // this.routeChangeListener$ = this.navigationService
-    // .onRouteChange((data: any, path: string) => {
-    //   this.currentRoute = path;
-    // });
+    this.routeChangeListener$ = this.navigationService.onRouteChange((data: any, path: string) => {
+      const folder = path.lastIndexOf('/');
+      if (folder >= 1) {
+        this.currentRoute = path.slice(1, path.lastIndexOf('/'));
+      } else {
+        this.currentRoute = path.slice(1, path.length);
+      }
+    });
   }
 
   ngAfterViewInit(): void {
@@ -45,6 +49,15 @@ export class HeaderComponent implements OnInit, AfterViewInit, OnDestroy {
   contactCard(): void {
     // this.classApplied = !this.classApplied;
   }
+
+  // private toTitleCase(str) {
+  //   return str.replace(
+  //     /\w\S*/g,
+  //     (txt) => {
+  //       return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+  //     }
+  //   );
+  // }
 
   public toggleSidePanel(): void {
     // const panelState = this.navigationService.pageConstruction.sidePanel
