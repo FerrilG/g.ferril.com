@@ -23,5 +23,21 @@
                 "text": "During the middle of the project an escalation regarding the current platform and ADA compliance required our project decisions to pivot."
             }
         ]
+    },
+    {
+        "section": "Research",
+        "content": [
+            {
+                "text": "I conduct routine discovery by browsing successful designers and reading through their portfolios. While doing this, I’m paying attention to their style of writing about design decisions. I also read blogs and other articles on sites such as UX Collective, UX Mastery, UX Blog, and various Medium Design articles. Combined, these articles help keep my focus and offer different approaches to articulating my design decisions."
+            },
+            {
+                "label": "Solution",
+                "text": "I compared user pain points with a heuristic evaluation and supportive research to support a sitewide redesign that would address user concerns and meet stakeholder requirements."
+            },
+            {
+                "label": "Challenge",
+                "text": "During the middle of the project an escalation regarding the current platform and ADA compliance required our project decisions to pivot."
+            }
+        ]
     }
 ]

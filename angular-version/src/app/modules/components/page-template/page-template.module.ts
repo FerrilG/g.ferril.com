@@ -12,7 +12,7 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomepageComponent } from 'src/app/core/components/homepage/homepage.component';
 import { AboutMeComponent } from 'src/app/core/components/about-me/about-me.component';
-import { ProjectService } from 'src/app/core/services/projects.service';
+import { ProjectTemplateService } from 'src/app/core/services/projects.service';
 
 
 @NgModule({

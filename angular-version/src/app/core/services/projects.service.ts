@@ -13,7 +13,7 @@ import { error } from '@angular/compiler/src/util';
 })
 
 
-export class ProjectService {
+export class ProjectTemplateService {
   public projectData: Array<ProjectProperties> = [];
 
   constructor(private http: HttpClient) {

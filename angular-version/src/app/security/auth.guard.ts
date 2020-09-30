@@ -1,5 +1,5 @@
 import { NavigationService } from 'src/app/services/navigation.service';
-import { ProjectService } from './../core/services/projects.service';
+import { ProjectTemplateService } from './../core/services/projects.service';
 import { SecurityService } from './security.service';
 import { Injectable } from '@angular/core';
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, Router } from '@angular/router';
@@ -12,7 +12,7 @@ export class AuthGuard implements CanActivate {
   constructor(
     private securityService: SecurityService,
     private router: Router,
-    private projectService: ProjectService,
+    private projectService: ProjectTemplateService,
     private navService: NavigationService
   ) { }
 

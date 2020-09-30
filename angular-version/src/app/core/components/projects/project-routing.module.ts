@@ -1,9 +1,10 @@
+import { PrjPortfolioComponent } from './project-pages/portfolio/portfolio.component';
 import { AuthGuard } from './../../../security/auth.guard';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ProjectsComponent } from './projects.component';
 import { PrjmyCompanyComponent } from './project-pages/myCompany/myCompany.component';
-import { PrjPortfolioComponent } from './project-pages/portfolio/portfolio.component';
+import { PrjTemplateComponent } from './project-pages/prj-template/prj-template.component';
 
 const projectRoutes: Routes = [
     // {
@@ -21,7 +22,7 @@ const projectRoutes: Routes = [
         component: PrjPortfolioComponent,
         canActivate: [AuthGuard],
         data: {
-            pageTitle: 'My Design Portfolio | Geoff\u0027s Projects',
+            pageTitle: 'Design Portfolio | Geoff\u0027s Projects',
             sidePanel: true,
             sidePanelType: 'overview',
             pageScroller: true,
@@ -30,7 +31,7 @@ const projectRoutes: Routes = [
     },
     {
         path: 'myCompany',
-        component: PrjPortfolioComponent,
+        component: PrjmyCompanyComponent,
         canActivate: [AuthGuard],
         data: {
             pageTitle: 'eCommerce Rewards | Geoff\u0027s Projects',
@@ -43,7 +44,7 @@ const projectRoutes: Routes = [
     },
     {
         path: 'accountMgr',
-        component: PrjPortfolioComponent,
+        component: PrjTemplateComponent,
         canActivate: [AuthGuard],
         data: {
             pageTitle: 'eCommerce Account Manager | Geoff\u0027s Projects',
@@ -56,7 +57,7 @@ const projectRoutes: Routes = [
     },
     {
         path: 'medical',
-        component: PrjPortfolioComponent,
+        component: PrjTemplateComponent,
         canActivate: [AuthGuard],
         data: {
             pageTitle: 'Handheld Medical Records | Geoff\u0027s Projects',
@@ -69,7 +70,7 @@ const projectRoutes: Routes = [
     },
     {
         path: 'motive',
-        component: PrjPortfolioComponent,
+        component: PrjTemplateComponent,
         canActivate: [AuthGuard],
         data: {
             pageTitle: 'Mobile In-Flight Incentives | Geoff\u0027s Projects',
@@ -82,7 +83,7 @@ const projectRoutes: Routes = [
     },
     {
         path: 'recreogo',
-        component: PrjPortfolioComponent,
+        component: PrjTemplateComponent,
         canActivate: [AuthGuard],
         data: {
             pageTitle: 'Sales Inventory Management | Geoff\u0027s Projects',
@@ -95,7 +96,7 @@ const projectRoutes: Routes = [
     },
     {
         path: 'designSystem',
-        component: PrjPortfolioComponent,
+        component: PrjTemplateComponent,
         canActivate: [AuthGuard],
         data: {
             pageTitle: 'Custom Design System | Geoff\u0027s Projects',

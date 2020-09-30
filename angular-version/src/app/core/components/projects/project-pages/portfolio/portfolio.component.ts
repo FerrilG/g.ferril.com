@@ -1,7 +1,6 @@
-
-import { ProjectProperties } from 'src/app/config/projects.config';
-import { ProjectService } from 'src/app/core/services/projects.service';
 import { Component, OnInit } from '@angular/core';
+import { ProjectProperties } from 'src/app/config/projects.config';
+import { ProjectTemplateService } from 'src/app/core/services/projects.service';
 import { PageScrollerService } from 'src/app/services/page-scroller.service';
 
 @Component({
@@ -9,14 +8,18 @@ import { PageScrollerService } from 'src/app/services/page-scroller.service';
     styleUrls: ['./portfolio.component.scss']
 })
 export class PrjPortfolioComponent implements OnInit {
+
     public content: ProjectProperties = this.projectService.renderContent();
+    public imgFolder: string = this.content.cover + this.content.folder + '/';
 
     constructor(
-        private projectService: ProjectService,
+        private projectService: ProjectTemplateService,
         private pageScrollerService: PageScrollerService,
-    ) {
-        // console.log(this.content);
+    ) { }
+
+    ngOnInit() {
+        console.log(this.content);
+        console.log(this.imgFolder);
     }
 
-    ngOnInit() { }
 }

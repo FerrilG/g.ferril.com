@@ -1,9 +1,7 @@
-import { LoginModalService } from './../../../services/login-modal.service';
+import { Component, OnInit } from '@angular/core';
 import { SecurityService } from 'src/app/security/security.service';
-import { Component, OnInit, DoCheck, AfterViewInit, OnChanges, ChangeDetectorRef, Directive } from '@angular/core';
-import { ProjectService } from '../../services/projects.service';
-import { NavigationService } from 'src/app/services/navigation.service';
-import { Router, ActivationEnd } from '@angular/router';
+import { ProjectTemplateService } from '../../services/projects.service';
+import { LoginModalService } from './../../../services/login-modal.service';
 
 @Component({
   selector: 'g-projects',
@@ -16,7 +14,7 @@ export class ProjectsComponent implements OnInit {
   public securityObject = this.securityService.securityObject;
 
   constructor(
-    private projectService: ProjectService,
+    private projectService: ProjectTemplateService,
     private securityService: SecurityService,
     private loginModal: LoginModalService,
   ) { }

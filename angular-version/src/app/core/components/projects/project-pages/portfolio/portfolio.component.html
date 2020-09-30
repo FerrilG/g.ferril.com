@@ -1,16 +1,325 @@
-<div id="page-header">
+<div class="col">
     <h1 section>
-        <span>{{ content.name }}</span>
+        <span>Portfolio</span>
     </h1>
-    <span>{{ content.date }}</span>
+    <section class="my-5">
+        <h4 section>
+            Research
+        </h4>
+        <p>I conduct routine discovery by browsing successful designers and reading through their portfolios. While
+            doing
+            this, I’m paying attention to their style of writing about design decisions. I also read blogs and other
+            articles on sites such as
+            <a href="https://uxdesign.cc/" target="blank">UX Collective</a>,
+            <a href="https://uxmastery.com/" target="blank">UX Mastery</a>,
+            <a href="https://theuxblog.com/" target="blank">UX Blog</a>,
+            <a href="https://medium.com/topic/design" target="blank">Medium Design</a> articles.
+            Combined, these articles help keep my focus and offer different approaches to articulating my design
+            decisions.
+        </p>
+        <p>Direct user research is difficult because feedback is recieved in various forms and is hard to pin-point
+            usability issues. My
+            primary
+            method of obtaining user insights is through the use of
+            <a href="https://analytics.google.com/analytics/web/" target="blank">Google Analytics</a>.
+        </p>
+        <div class="py-3">
+            <div class="support-block row align-items-center">
+                <figure class="col-12 col-lg-3">
+                    <img class="w-100" src="{{ imgFolder + 'ganalytics_logo.jpg'}}">
+                </figure>
+                <span class="col-12 col-lg">
+                    <h5>Google Analytics</h5>
+                    <p>Google Analytics helps me observe where the majority of traffic is coming from and the various
+                        facets of my site users found interesting.</p>
+                </span>
+            </div>
+        </div>
+        <p>The three primary data sources I use to draw conclusions are session duration, traffic source.
+            The drawback to using this source is that I have no way of knowing the why’s behind the data.
+            Altering the site based on these figures could be detrimental, so I’d need to include another source of
+            research.</p>
+        <div class="py-3">
+            <div class="support-block row">
+                <div class="col-12 col-lg-4 d-flex align-items-center">
+                    <figure class="d-flex flex-column align-items-center">
+                        <img class="w-100" src="{{ imgFolder + 'bounce.png' }}">
+                        <figcaption>Session Duration</figcaption>
+                    </figure>
+                </div>
+                <div class="col-12 col-lg-4 d-flex align-items-center">
+                    <figure class="d-flex flex-column align-items-center">
+                        <img class="w-100 pb-4 pb-lg-0" src="{{ imgFolder + 'source.png' }}">
+                        <figcaption class="position-absolute" style="bottom: 1rem;">Traffic Source</figcaption>
+                    </figure>
+                </div>
+                <div class="col-12 col-lg-4 d-flex align-items-center">
+                    <figure class="d-flex flex-column align-items-center">
+                        <img class="w-100 pb-4 pb-lg-0" src="{{ imgFolder + 'pageviews.png' }}">
+                        <figcaption class="position-absolute" style="bottom: 1rem;">View Count</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+        <div class="py-2">
+            <h5>Colleague Review</h5>
+            <p>I tried to utilize colleague review, however have had little success. This approach presents multiple
+                problems by itself, whether it’s the reviewers schedule, the extent of visibility on collaborative work,
+                or
+                just the sheer interest of looking at a portfolio.</p>
+            <p>When doing a colleague review, I primarily assess if they understood the listed projects and if there are
+                areas I could elaborate on to complete the whole story.</p>
+        </div>
+        <div class="py-2">
+            <h5>Job Seeking</h5>
+            <p>Interviewing is the final and most critical way of gaining user insight. This is because I’m working
+                directly
+                with my site’s intended users. Throughout the interview process, users observe and can directly ask
+                questions.
+                Not to mention, walking through projects and verbally communicating the scope of projects myself.</p>
+            <p>All of these methods combined have allowed me to identify the critical elements of a successful portfolio
+                as
+                well as areas for improvement.</p>
+        </div>
+    </section>
+    <section class="my-5">
+        <h4 section>
+            Design Concepts
+        </h4>
+        <p>I try to minimize the concepts of my portfolio. This is because I’ve found it to be unnecessary and/or a time
+            sink due to
+            boiling the ocean and then I wind up rebuilding the framework while I’m down in the weeds.</p>
+        <p>I have however, had success concepting minor tweaks like the placement of elements and the page layout with
+            very rough
+            wireframes. These are useful when I do commit to cleaning up my code and launching a revised framework.</p>
+        <div class="my-5">
+            <div class="py-2">
+                <h5>Versions over time</h5>
+                <p>The visual design of my portfolio is intended to reflect my self-interest of working on applications
+                    that
+                    deal directly
+                    with workforce users. I modeled my portfolio around an admin dashboard. Key components include
+                    sidebar
+                    navigation, top
+                    of page control bar, and component cards that one might observe when using similar applications.
+                    I’ve
+                    never
+                    been
+                    attached to specific designs, however I felt that by using this visual representation it would
+                    establish
+                    consistency and
+                    insight.
+                </p>
+                <h6>Links to previous versions</h6>
+                <ul>
+                    <li><a class="text-light-blue" href="http://www.g.ferril.com/archive/1.0" target="_blank">Coded
+                            version
+                            1
+                            (2017)</a></li>
+                    <li><a class="text-light-blue" href="http://www.g.ferril.com/archive/2.0/" target="_blank">Coded
+                            version
+                            2
+                            (2018)</a></li>
+                    <li><a class="text-light-blue" href="http://www.g.ferril.com/archive/3.0" target="_blank">Coded
+                            version
+                            3
+                            (2019)</a></li>
+                </ul>
+            </div>
+            <div class="py-2">
+                <h5>Enhancements</h5>
+                <div class="py-3">
+                    <h6>Section for professional experience</h6>
+                    <p>(<i>Version 1 - Fig 2</i>) No where on my site did I display my professional experience. I relied
+                        on my
+                        resume to communicate this; the issue was that both items should be able to stand on its own and
+                        not
+                        need to be together.</p>
+                    <p>(<i>Version 2 - Fig 3</i>) I added a section at the bottom of the homepage that mimicked my
+                        resume as a
+                        timeline. This would allow HR to scan one page without clicking to identify my history</p>
+                    <div class="py-3">
+                        <div class="support-block row justify-content-center">
+                            <div class="col-12 col-lg-6 d-flex align-items-center">
+                                <figure class="d-flex flex-column align-items-center">
+                                    <img class="w-100" src="{{ imgFolder + 'experience_1.0.png' }}">
+                                    <figcaption>(Fig. 2) Basic experience section</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-12 col-lg-6 d-flex align-items-center">
+                                <figure class="d-flex flex-column align-items-center">
+                                    <img class="w-100" src="{{ imgFolder + 'experience_2.0.png' }}">
+                                    <figcaption>(Fig. 3) Resume section</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="py-3">
+                    <h6>Adding personality</h6>
+                    <p>(<i>Version 1 - Fig 2</i>) I felt images assited users with the ability to build connections to
+                        myself without having a relationship.</p>
+                    <p>(<i>Version 2 - Fig 3</i>) I personally felt the display of items was a little excessive so I
+                        removed the bulk of them. In doing so the new design adopted a serious tone and didn’t portray
+                        my enthusiastic personality</p>
+                    <p>(<i>Version 3 - Fig 4</i>) I have since added additional images back to the site. In doing so I
+                        wanted to be more reserved and not so blunt about them. My personal opinion is that it
+                        complements the site nicely.</p>
+                    <div class="py-3">
+                        <div class="support-block row justify-content-center">
+                            <div class="col-12 col-lg-4 d-flex align-items-center">
+                                <figure class="d-flex flex-column align-items-center">
+                                    <img class="w-100" src="{{ imgFolder + 'credibility_1.0.jpg' }}">
+                                    <figcaption>(Fig. 2) Scrolling image section</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-12 col-lg-4 d-flex align-items-center">
+                                <figure class="d-flex flex-column align-items-center">
+                                    <img class="w-100" src="{{ imgFolder + 'credibility_2.0.png' }}">
+                                    <figcaption>(Fig. 3) Removed personality</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-12 col-lg-4 d-flex align-items-center">
+                                <figure class="d-flex flex-column align-items-center">
+                                    <img class="w-100" src="{{ imgFolder + 'credibility_3.0.jpg' }}">
+                                    <figcaption>(Fig. 3) Bio page</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="py-3">
+                    <h6>Scanability</h6>
+                    <p>(<i>Version 1 - Fig 2</i>) To assist HR and Managers answer the questions they had I tried to
+                        provide a high-level overview of
+                        myself on the home page. I chose to use drawers within the case studies. This was influenced by
+                        users
+                        wanting to find information quickly. The downside to this is that it was tedious for users
+                        across
+                        multiple studies.</p>
+                    <p>(<i>Version 2 - Fig 3</i>) To improve this, I introduced a project overview titled TL;DR (Too
+                        Long; Didn’t Read). I felt this
+                        would assist HR to browse projects for keywords or areas of design the team needs. Through
+                        continuing
+                        research, I learned that not everyone knows what TL;DR meant and thus was confusing.</p>
+                    <p>(<i>Version 3 - Fig 4</i>) With this version I have removed the label and just display the
+                        overview under the title.</p>
+                    <div class="py-3">
+                        <div class="support-block row justify-content-center">
+                            <div class="col-12 col-lg-4 d-flex align-items-center">
+                                <figure class="d-flex flex-column align-items-center">
+                                    <img class="w-100" src="{{ imgFolder + 'scan_1.0.png' }}">
+                                    <figcaption>(Fig. 2) Scrolling image section</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-12 col-lg-4 d-flex align-items-center">
+                                <figure class="d-flex flex-column align-items-center">
+                                    <img class="w-100" src="{{ imgFolder + 'scan_2.0.png' }}">
+                                    <figcaption>(Fig. 3) Removed personality</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-12 col-lg-4 d-flex align-items-center">
+                                <figure class="d-flex flex-column align-items-center">
+                                    <img class="w-100" src="{{ imgFolder + 'scan_3.0.png' }}">
+                                    <figcaption>(Fig. 3) Bio page</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="my-5">
+        <h4 section>
+            Development
+        </h4>
+
+        <p>Initially, I used Squarespace to host my work; however, I quickly became frustrated with the
+            customization
+            hurdles. So, I decided to develop and host my portfolio directly. At the time I sought the use
+            of
+            CSM
+            functionality so I could modify the content seamlessly. Due to site complexity implementing
+            such features seemed unnecessary so I just created a single JSON file to use. This file held the
+            majority of
+            the sites content including project content, images, and various variables for rendering.
+            Through
+            time I
+            learned that this approach was not scalable, and I soon deviated away.</p>
+        <p>I classified each version of my site based on the framework & render style for importing the
+            content.
+        </p>
+        <div class="mt-5 support-container">
+            <div class="support-block row">
+                <figure class="col-12 col-lg-4 text-center">
+                    <img class="w-100" src="{{ imgFolder + 'fullpage_1.0.jpg' }}">
+                    <figcaption>v1.0 Portfolio</figcaption>
+                </figure>
+                <span class="col-12 col-lg">
+                    <h5><a class="text-light-blue" href="http://www.g.ferril.com/archive/1.0" target="_blank">Version 1
+                            (2017)</a></h5>
+                    <p>This version consisted of a linear file structure that used JavaScript to imitate
+                        depth.
+                        This site was thrown
+                        together quickly as I wasn’t too familiar with PHP. This site functioned but the
+                        scalability issues
+                        became apparent as I started adding content.</p>
+                </span>
+            </div>
+        </div>
+        <div class="mt-5 support-container">
+            <div class="support-block row">
+                <figure class="col-12 col-lg-4 text-center">
+                    <img class="w-100" src="{{ imgFolder + 'fullpage_2.0.jpg' }}">
+                    <figcaption>v2.0 Portfolio</figcaption>
+                </figure>
+                <span class="col-12 col-lg">
+                    <h5><a class="text-light-blue" href="http://www.g.ferril.com/archive/2.0" target="_blank">Version 2
+                            (2018)</a></h5>
+                    <p>I chose to utilize a modern site file structure. I have a folder for global site
+                        elements
+                        (header,
+                        footer, page template, etc.) and folders for different content. With this method I
+                        was
+                        able to focus
+                        primarily on the page content and not so much on making it ‘work’. I implemented
+                        modular
+                        elements to
+                        quickly render page content and rely on the cache.</p>
+                </span>
+            </div>
+        </div>
+        <div class="mt-5 support-container">
+            <div class="support-block row">
+                <figure class="col-12 col-lg-4 text-center">
+                    <img class="w-100" src="{{ imgFolder + 'fullpage_3.0.jpg' }}">
+                    <figcaption>v3.0 Portfolio</figcaption>
+                </figure>
+                <span class="col-12 col-lg">
+                    <h5><a class="text-light-blue" href="http://www.g.ferril.com/archive/3.0" target="_blank">Version 3
+                            (2019)</a></h5>
+                    <p>Version 3 utilizes a similar framework to 2.0, except with additional depth. I
+                        implemented configuration settings for the ability to turn projects on or off as
+                        well as
+                        a locking confidential material. Through this implementation I have expanded my
+                        working
+                        knowledge with back-end scripts and the benefits of using them.</p>
+                </span>
+            </div>
+        </div>
+        <div class="mt-5 support-container">
+            <div class="support-block row">
+                <figure class="col-12 col-lg-4 text-center">
+                    <img class="w-100" src="{{ imgFolder + 'fullpage_4.0.jpg' }}">
+                    <figcaption>v4.0 Portfolio</figcaption>
+                </figure>
+                <span class="col-12 col-lg">
+                    <h5>Version 4 (2020)</h5>
+                    <p>Version 4 is built upon Angular 10 using the latest framework for modular application
+                        construction. My previous versions imitated this structure and now it's implemented.</p>
+                </span>
+            </div>
+        </div>
+    </section>
 </div>
-<ng-container *ngFor='let item of content.content, let i = index'>
-    <h2 section>
-        <span>{{ item['section'] }}</span>
-    </h2>
-    <ng-container *ngFor='let sub of item.content'>
-        <h5>{{sub['label']}}</h5>
-        <p>{{ sub['text'] }}</p>
-        <span>{{ sub['image'] }}</span>
-    </ng-container>
-</ng-container>
