@@ -1,8 +1,8 @@
 
-import { ProjectProperties } from 'src/app/config/projects.config';
-import projList from 'src/app/config/params/project-list.json';
+// import { ProjectProperties } from 'src/app/config/projects.config';
+// import projList from 'src/app/config/params/project-list.json';
 
-export const ProjectList: ProjectProperties[] = projList;
+// export const ProjectList: ProjectProperties[] = projList;
 // export const psps
 
 

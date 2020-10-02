@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ProjectProperties } from 'src/app/config/projects.config';
+import { ProjectProperties } from 'src/app/config/types/projects.config';
 import { ProjectTemplateService } from 'src/app/core/services/projects.service';
 import { PageScrollerService } from 'src/app/services/page-scroller.service';
 
@@ -14,12 +14,12 @@ export class PrjPortfolioComponent implements OnInit {
 
     constructor(
         private projectService: ProjectTemplateService,
-        private pageScrollerService: PageScrollerService,
+        // private pageScrollerService: PageScrollerService,
     ) { }
 
     ngOnInit() {
-        console.log(this.content);
-        console.log(this.imgFolder);
+        // console.log(this.content);
+        // console.log(this.imgFolder);
     }
 
 }

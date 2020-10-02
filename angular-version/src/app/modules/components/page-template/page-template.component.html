@@ -3,6 +3,7 @@
 </g-sidepanel>
 <div class="w-100">
     <g-login-modal *ngIf="modalOpen.modalState" [ngClass]="{'sidePanel': pageConfig.sidePanel}"></g-login-modal>
+    <!-- <div class="sticky-top" style="height: 52px; background-color: red;"></div> -->
     <div id="pageContainer" class="d-flex" [ngClass]="{'modal-open': modalOpen.modalState}">
         <div id="pageContent" class="w-100"
             [ngClass]="{'p-0': !pageConfig.sidePanel, 'px-3 px-lg-4 mt-4': pageConfig.pageScroller}">

@@ -1,3 +1,5 @@
+import projList from 'src/app/config/params/project-list.json';
+
 interface contentStructure {
   section: string;
   content?: {
@@ -19,4 +21,7 @@ export interface ProjectProperties {
   cover: string;
   overview: string;
   content?: contentStructure[];
+  pol?: Array<contentStructure>;
 }
+
+export const ProjectList: ProjectProperties[] = projList;

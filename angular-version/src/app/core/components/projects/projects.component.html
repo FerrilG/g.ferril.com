@@ -11,13 +11,13 @@
 <ng-template #unlocked let-item='item'>
     <a routerLink="./{{ item.folder }}" class="row no-gutters card" ondragstart="return false;">
         <div class="hoverOverlay"></div>
-        <!-- <div class="coverContainer"> -->
-        <img class="projectCover" src="{{ item.cover + item.folder + '/cover.' + item.coverFormat}}">
-        <!-- </div> -->
+        <ng-container *ngIf="item.cover !== 'none'">
+            <img class="projectCover" src="{{ item.cover + item.folder + '/cover.' + item.coverFormat}}">
+        </ng-container>
         <div class="col-11 col-md col-xl-11 content-items">
             <div>
                 <h5 class="title">{{ item.name }}</h5>
-                <h6 class="float-right date">{{ item.date }}</h6>
+                <!-- <h6 class="float-right date">{{ item.date }}</h6> -->
             </div>
             <p class="pt-3">{{ item.overview }}</p>
         </div>
@@ -31,14 +31,13 @@
             <span>Locked - Click to unlock</span>
         </div>
         <div class="hoverOverlay"></div>
-        <!-- <div class="coverContainer"> -->
-        <img class="projectCover" src="{{ item.cover + item.folder + '/cover.' + item.coverFormat}}">
-        <!-- </div> -->
-        <!-- <div class="" id="img"></div> -->
+        <ng-container *ngIf="item.cover !== 'none'">
+            <img class="projectCover" src="{{ item.cover + item.folder + '/cover.' + item.coverFormat}}">
+        </ng-container>
         <div class="col-11 col-md col-xl-11 content-items">
             <div>
                 <h5 class="title">{{ item.name }}</h5>
-                <h6 class="float-right date">{{ item.date }}</h6>
+                <!-- <h6 class="float-right date">{{ item.date }}</h6> -->
             </div>
             <p class="pt-3">{{ item.overview }}</p>
         </div>

@@ -10,7 +10,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './modules/pages/home/home.component';
-import { SubHeaderComponent } from './core/sub-header/sub-header.component';
+import { SubHeaderComponent } from './core/_sub-header/sub-header.component';
 import { BreadcrumbComponent } from './modules/components/breadcrumb/breadcrumb.component';
 import { CardModule } from './modules/components/card/card.module';
 

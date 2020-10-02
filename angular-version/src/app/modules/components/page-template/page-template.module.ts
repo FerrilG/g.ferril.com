@@ -3,7 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { SecurityService } from './../../../security/security.service';
 import { LoginComponent } from './../login/login.component';
 import { ProjectsModule } from 'src/app/core/components/projects/projects.module';
-import { SectionConstructorComponent } from './../section-constructor/section-constructor.component';
+import { SectionConstructorComponent } from './../_section-constructor/section-constructor.component';
 
 import { SidepanelComponent } from './../../../core/sidepanel/sidepanel.component';
 import { AppRoutingModule } from './../../../app-routing.module';

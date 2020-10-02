@@ -14,13 +14,12 @@ export class ProjectsComponent implements OnInit {
   public securityObject = this.securityService.securityObject;
 
   constructor(
-    private projectService: ProjectTemplateService,
-    private securityService: SecurityService,
-    private loginModal: LoginModalService,
+    private readonly projectService: ProjectTemplateService,
+    private readonly securityService: SecurityService,
+    private readonly loginModal: LoginModalService,
   ) { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
   unlockSite(): void {
     this.loginModal.modalState = true;

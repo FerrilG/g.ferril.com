@@ -1,10 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ProjectProperties } from '../../../../../config/projects.config';
+import { ProjectProperties } from '../../../../../config/types/projects.config';
 import { ProjectTemplateService } from '../../../../services/projects.service';
-
-// import { ProjectProperties } from 'src/app/config/projects.config';
-// import { ProjectService } from 'src/app/core/services/projects.service';
-// import { PageScrollerService } from 'src/app/services/page-scroller.service';
 import { PageScrollerService } from '../../../../../services/page-scroller.service';
 
 @Component({
@@ -17,9 +13,7 @@ export class PrjTemplateComponent implements OnInit {
     constructor(
         private projectService: ProjectTemplateService,
         private pageScrollerService: PageScrollerService,
-    ) {
-        // console.log(this.content);
-    }
+    ) { }
 
     ngOnInit() { }
 }
