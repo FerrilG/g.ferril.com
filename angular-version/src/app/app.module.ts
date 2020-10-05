@@ -1,3 +1,4 @@
+import { AnalyticsModule } from './core/google-analytics/analytics.module';
 import { NavigationService } from 'src/app/services/navigation.service';
 import { LoginModalService } from './services/login-modal.service';
 import { SecurityService } from 'src/app/security/security.service';
@@ -30,6 +31,7 @@ import { CardModule } from './modules/components/card/card.module';
     FooterModule,
     PageTemplateModule,
     HttpClientModule,
+    AnalyticsModule,
   ],
   exports: [
   ],

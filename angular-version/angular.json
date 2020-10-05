@@ -36,7 +36,8 @@
             "scripts": [
               {
                 "input": "node_modules/bootstrap/dist/js/bootstrap.min.js"
-              }
+              },
+              "src/app/vendor/google-analytics.js"
             ]
           },
           "configurations": {

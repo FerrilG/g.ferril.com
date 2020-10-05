@@ -23,6 +23,7 @@ const projectRoutes: Routes = [
         canActivate: [AuthGuard],
         data: {
             pageTitle: 'Design Portfolio | Geoff\u0027s Projects',
+            gaPage: 'Project - Portfolio',
             sidePanel: true,
             sidePanelType: 'overview',
             pageScroller: true,
@@ -35,6 +36,7 @@ const projectRoutes: Routes = [
         canActivate: [AuthGuard],
         data: {
             pageTitle: 'eCommerce Rewards | Geoff\u0027s Projects',
+            gaPage: 'Projects - MyCompany',
             sidePanel: true,
             sidePanelType: 'overview',
             pageScroller: true,
@@ -48,6 +50,7 @@ const projectRoutes: Routes = [
         canActivate: [AuthGuard],
         data: {
             pageTitle: 'eCommerce Account Manager | Geoff\u0027s Projects',
+            gaPage: 'Projects - AccountMgr | Wells',
             sidePanel: true,
             sidePanelType: 'overview',
             pageScroller: true,
@@ -61,6 +64,7 @@ const projectRoutes: Routes = [
         canActivate: [AuthGuard],
         data: {
             pageTitle: 'Handheld Medical Records | Geoff\u0027s Projects',
+            gaPage: 'Projects - Medical',
             sidePanel: true,
             sidePanelType: 'overview',
             pageScroller: true,
@@ -74,6 +78,7 @@ const projectRoutes: Routes = [
         canActivate: [AuthGuard],
         data: {
             pageTitle: 'Mobile In-Flight Incentives | Geoff\u0027s Projects',
+            gaPage: 'Projects - MotivEngine',
             sidePanel: true,
             sidePanelType: 'overview',
             pageScroller: true,
@@ -87,6 +92,7 @@ const projectRoutes: Routes = [
         canActivate: [AuthGuard],
         data: {
             pageTitle: 'Sales Inventory Management | Geoff\u0027s Projects',
+            gaPage: 'Projects - Recreogo',
             sidePanel: true,
             sidePanelType: 'overview',
             pageScroller: true,
@@ -100,6 +106,7 @@ const projectRoutes: Routes = [
         canActivate: [AuthGuard],
         data: {
             pageTitle: 'Custom Design System | Geoff\u0027s Projects',
+            gaPage: 'Projects - Design System | cx Loyalty',
             sidePanel: true,
             sidePanelType: 'overview',
             pageScroller: true,

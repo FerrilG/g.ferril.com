@@ -16,6 +16,7 @@ const appRoutes: Routes = [
     component: HomepageComponent,
     data: {
       pageTitle: 'Geoffrey\u0027s Portfolio',
+      gaPage: 'Home',
       sidePanel: false,
       sidePanelType: null,
       pageScroller: false,
@@ -35,6 +36,7 @@ const appRoutes: Routes = [
     component: AboutMeComponent,
     data: {
       pageTitle: 'About Geoff',
+      gaPage: 'About Me',
       sidePanel: true,
       sidePanelType: 'overview',
       pageScroller: true,
@@ -46,6 +48,7 @@ const appRoutes: Routes = [
     component: ProjectsComponent,
     data: {
       pageTitle: 'Geoff\u0027s Projects',
+      gaPage: 'Projects',
       sidePanel: true,
       sidePanelType: 'overview',
       pageScroller: false,

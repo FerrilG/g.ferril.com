@@ -17,7 +17,7 @@ import { SecurityService } from 'src/app/security/security.service';
     ],
     imports: [
         CommonModule,
-        ProjectsRoutingModule
+        ProjectsRoutingModule,
     ],
     providers: [
     ],
