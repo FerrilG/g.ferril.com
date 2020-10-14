@@ -9,59 +9,34 @@
 </div>
 
 
-<!-- Temp placeholder -->
+<!-- Links -->
 <nav class="gf-links">
     <div class="gf-nav-item no-gutters">
-        <!-- *ngFor= links -->
-        <a class="gf-nav-link col" id="0">
-            <!-- <i class="material-icons">home</i> -->
-            <span class="d-block">Nav list placeholder</span>
+        <a routerLink="projects" class="gf-nav-link col" id="0">
+            <span class="d-block">Projects</span>
             <div class="nav-link-sel">
-                <!-- make component specific style-->
                 <div class="mask-shadow">
                     <div class="mask"></div>
                 </div>
             </div>
         </a>
-        <a class="gf-nav-link col" id="1">
-            <!-- <i class="material-icons">home</i> -->
-            <span class="d-block">...</span>
-            <div class="nav-link-sel">
-                <!-- make component specific style-->
-                <div class="mask-shadow">
-                    <div class="mask"></div>
-                </div>
-            </div>
-        </a>
-        <a class="gf-nav-link col" id="2">
-            <!-- <i class="material-icons">home</i> -->
-            <span class="d-block">...</span>
-            <div class="nav-link-sel">
-                <!-- make component specific style-->
-                <div class="mask-shadow">
-                    <div class="mask"></div>
-                </div>
-            </div>
-        </a>
-
-
 
         <!-- ============================== -->
-        <!-- || NG Render Displayed List || -->
+        <!-- || Nav Render Projects List || -->
         <!-- ============================== -->
         <ng-container *ngFor="let project of projects">
-            <a routerLink="projects/{{ project.folder }}" class="gf-nav-link col" id="project-{{ project.number }}">
-                <ng-container *ngIf="project.lock === true">
+            <a *ngIf="project.enabled" routerLink="projects/{{ project.folder }}" class="gf-nav-link col"
+                id="project-{{ project.number }}">
+                <ng-container *ngIf="project.lock && !securityObject.isAuthenticated">
                     <ng-container *ngTemplateOutlet="locked; context: {project:project}"></ng-container>
                 </ng-container>
-                <span class="d-block">{{ project.navName }}</span>
+                <span class="d-block">{{project.navName === undefined? project.name : project.navName}}</span>
             </a>
         </ng-container>
     </div>
 </nav>
 
 <ng-template #locked let-project="project">
-    <!-- <span class="d-block">{{ project.name }}</span> -->
     <i class="material-icons-outlined">lock</i>
 </ng-template>
 

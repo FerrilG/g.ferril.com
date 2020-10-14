@@ -113,6 +113,20 @@ const projectRoutes: Routes = [
             breadcrumb: 'designSystem',
             pageBlog: false,
         }
+    },
+    {
+        path: 'VeriShare',
+        component: PrjTemplateComponent,
+        canActivate: [AuthGuard],
+        data: {
+            // pageTitle: 'Custom Design System | Geoff\u0027s Projects',
+            // gaPage: 'Projects - Design System | cx Loyalty',
+            sidePanel: true,
+            sidePanelType: 'overview',
+            pageScroller: true,
+            breadcrumb: 'VeriShare',
+            pageBlog: false,
+        }
     }
 ];
 
