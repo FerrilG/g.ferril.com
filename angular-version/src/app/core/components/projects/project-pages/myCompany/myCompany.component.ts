@@ -1,14 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { ProjectTemplateService } from './../../../../services/projects.service';
+import { Component } from '@angular/core';
+import { ProjectProperties } from 'src/app/config/types/projects.config';
 
 @Component({
     templateUrl: './myCompany.component.html',
     styleUrls: ['./myCompany.component.scss']
 })
-export class PrjmyCompanyComponent implements OnInit {
+export class PrjmyCompanyComponent {
 
-    constructor() { }
+    private content: ProjectProperties = this.projectService.renderContent();
+    public imgFolder: string = this.content.cover + this.content.folder + '/';
 
-    ngOnInit() {
-    }
-
+    constructor(private projectService: ProjectTemplateService) { }
 }

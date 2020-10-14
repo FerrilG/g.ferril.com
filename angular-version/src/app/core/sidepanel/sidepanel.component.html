@@ -43,9 +43,32 @@
                 </div>
             </div>
         </a>
+
+
+
+        <!-- ============================== -->
+        <!-- || NG Render Displayed List || -->
+        <!-- ============================== -->
+        <ng-container *ngFor="let project of projects">
+            <a routerLink="projects/{{ project.folder }}" class="gf-nav-link col" id="project-{{ project.number }}">
+                <ng-container *ngIf="project.lock === true">
+                    <ng-container *ngTemplateOutlet="locked; context: {project:project}"></ng-container>
+                </ng-container>
+                <span class="d-block">{{ project.navName }}</span>
+            </a>
+        </ng-container>
     </div>
 </nav>
 
+<ng-template #locked let-project="project">
+    <!-- <span class="d-block">{{ project.name }}</span> -->
+    <i class="material-icons-outlined">lock</i>
+</ng-template>
+
+
+<!-- =========================== -->
+<!-- || Delete Template Below || -->
+<!-- =========================== -->
 
 <ng-template #panelLinks>
     <nav class="gf-links">

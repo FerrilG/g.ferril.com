@@ -10,6 +10,7 @@ interface contentStructure {
 
 export interface ProjectProperties {
   name: string;
+  navName?: string;
   date?: string;
   number: number;
   enabled: boolean;

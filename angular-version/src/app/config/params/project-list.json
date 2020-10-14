@@ -1,6 +1,7 @@
 [
     {
         "name": "My Design Portfolio",
+        "navName": "Portfolio",
         "date": "Jan '18 - Present",
         "number": 1,
         "enabled": true,
@@ -16,10 +17,11 @@
     },
     {
         "name": "eCommerce Rewards",
+        "navName": "eCommerce Platform",
         "date": "Oct '18 - Apr '19",
         "number": 2,
         "enabled": true,
-        "lock": true,
+        "lock": false,
         "folder": "myCompany",
         "role": "UX Designer",
         "type": "Case Study",
@@ -31,6 +33,7 @@
     },
     {
         "name": "eCommerce Account Manager",
+        "navName": "eCommerce Manager",
         "date": "Set",
         "number": 3,
         "enabled": true,
@@ -46,6 +49,7 @@
     },
     {
         "name": "Handheld Medical Records",
+        "navName": "Medical App",
         "date": "Set",
         "number": 4,
         "enabled": true,
@@ -61,6 +65,7 @@
     },
     {
         "name": "Mobile In-Flight Incentives",
+        "navName": "In-Flight App",
         "date": "Set",
         "number": 5,
         "enabled": true,
@@ -76,6 +81,7 @@
     },
     {
         "name": "Sales Inventory Management",
+        "navName": "Sales Management",
         "date": "Set",
         "number": 6,
         "enabled": true,
@@ -91,6 +97,7 @@
     },
     {
         "name": "Custom Design System",
+        "navName": "Design Systems",
         "date": "Set",
         "number": 7,
         "enabled": true,
@@ -106,6 +113,7 @@
     },
     {
         "name": "Startup Website Enhancements",
+        "navName": "Startup",
         "date": "Set",
         "number": 8,
         "enabled": false,
