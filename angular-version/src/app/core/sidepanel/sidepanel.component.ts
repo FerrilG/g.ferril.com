@@ -23,11 +23,6 @@ export class SidepanelComponent implements OnInit, OnDestroy {
   ) { }
 
   ngOnInit(): void {
-    this.projectService.projectData.forEach(project => {
-      console.log(project.name);
-    });
-    // console.log(this.projectService.projectData);
-
     // this.routeChangeListener$ = this.navigationService
     // .onRouteChange((data: any, path: string) => {
     //   this.sidePanelType = data.sidePanelType;
