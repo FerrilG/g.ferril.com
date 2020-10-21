@@ -21,7 +21,7 @@
         "date": "Oct '18 - Apr '19",
         "number": 2,
         "enabled": true,
-        "lock": false,
+        "lock": true,
         "folder": "myCompany",
         "role": "UX Designer",
         "type": "Case Study",
