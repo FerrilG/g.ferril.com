@@ -40,6 +40,6 @@ import { ProjectTemplateService } from 'src/app/core/services/projects.service';
         AboutMeComponent,
         PageScrollerComponent,
     ],
-    schemas: [CUSTOM_ELEMENTS_SCHEMA]
+    // schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class PageTemplateModule { }

@@ -1,5 +1,5 @@
 import { NavigationService } from 'src/app/services/navigation.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, ActivationEnd } from '@angular/router';
 import { Component, OnInit, OnDestroy, Inject } from '@angular/core';
 import { Subscription, Observable } from 'rxjs';
 import { DOCUMENT } from '@angular/common';
@@ -14,6 +14,7 @@ import { SecurityService } from 'src/app/security/security.service';
 export class SidepanelComponent implements OnInit, OnDestroy {
 
   private routeChangeListener$: Subscription;
+  public isActive: string = this.navigationService.routeInfo.path;
   private sidePanelType = null;
   public readonly projects = this.projectService.projectData;
   public readonly securityObject = this.securityService.securityObject;
@@ -21,11 +22,18 @@ export class SidepanelComponent implements OnInit, OnDestroy {
   constructor(
     private readonly projectService: ProjectTemplateService,
     private readonly securityService: SecurityService,
-    public navigationService: NavigationService,
+    private readonly navigationService: NavigationService,
     @Inject(DOCUMENT) private document: any
-  ) { }
+  ) {
+    this.routeChangeListener$ = this.navigationService.navSnapshot(event => {
+      this.isActive = this.navigationService.routeInfo.path;
+      // console.log(event);
+    });
+    // console.log(this.navigationService.poppp);
+  }
 
   ngOnInit(): void {
+
     // this.routeChangeListener$ = this.navigationService
     // .onRouteChange((data: any, path: string) => {
     //   this.sidePanelType = data.sidePanelType;

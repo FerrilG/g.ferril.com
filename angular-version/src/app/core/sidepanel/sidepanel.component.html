@@ -8,97 +8,63 @@
     <div id="gf-ply-title">UX / UI Designer</div>
 </div>
 
-
-<!-- Links -->
-<nav class="gf-links">
-    <div class="gf-nav-item no-gutters">
-        <a routerLink="projects" class="gf-nav-link col" id="0">
-            <span class="d-block">Projects</span>
-            <div class="nav-link-sel">
-                <div class="mask-shadow">
-                    <div class="mask"></div>
-                </div>
-            </div>
+<nav id="g-nav">
+    <!-- <div class="g-nav-item">
+        <a class="g-nav-link">
+            {{ isActive }}
         </a>
-
-        <!-- ============================== -->
-        <!-- || Nav Render Projects List || -->
-        <!-- ============================== -->
-        <ng-container *ngFor="let project of projects">
-            <a *ngIf="project.enabled" routerLink="projects/{{ project.folder }}" class="gf-nav-link col"
-                id="project-{{ project.number }}">
-                <ng-container *ngIf="project.lock && !securityObject.isAuthenticated">
-                    <ng-container *ngTemplateOutlet="locked; context: {project:project}"></ng-container>
-                </ng-container>
-                <span class="d-block">{{project.navName === undefined? project.name : project.navName}}</span>
-            </a>
-        </ng-container>
+    </div> -->
+    <div class="g-nav-item acstive" id="projectNav">
+        <a routerLink="projects" class="g-nav-link" [ngClass]="{'active': isActive === 'projects'}">
+            <span>Projects</span>
+        </a>
+        <ul class="nav g-sidenav" id="navProjects">
+            <ng-container *ngFor="let project of projects">
+                <ng-container *ngTemplateOutlet="projectLinks; context: {project:project}"></ng-container>
+            </ng-container>
+        </ul>
+    </div>
+    <div class="g-nav-item">
+        <a routerLink="about-me" class="g-nav-link" [ngClass]="{'active': isActive === 'about-me'}">
+            About Me
+        </a>
     </div>
 </nav>
 
-<ng-template #locked let-project="project">
-    <i class="material-icons-outlined">lock</i>
+<!-- <nav id="g-nav" class="accordion">
+    <div class="g-nav-item active" id="projectNav">
+        <a class="g-nav-link" data-toggle="collapse" data-target="#navProjects" aria-expanded="true"
+            aria-controls="navProjects">
+            <span>Projects</span>
+            <i class="material-icons-outlined">lock</i>
+        </a>
+        <ul class="nav g-sidenav collapse show" id="navProjects" aria-labelledby="projectNav" data-parent="#g-nav">
+            <ng-container *ngFor="let project of projects">
+                <ng-container *ngTemplateOutlet="projectLinks; context: {project:project}"></ng-container>
+            </ng-container>
+        </ul>
+    </div>
+    <div class="g-nav-item">
+        <a routerLink="about-me" class="g-nav-link">
+            About Me
+        </a>
+    </div>
+</nav> -->
+
+
+<ng-template #projectLinks let-project="project">
+    <li *ngIf="project.enabled" [ngClass]="{'active': isActive === project.folder}">
+        <a routerLink="projects/{{ project.folder }}" id="project-{{ project.number }}">
+            <ng-container *ngIf="project.lock && !securityObject.isAuthenticated">
+                <ng-container *ngTemplateOutlet="locked; context: {project:project}"></ng-container>
+            </ng-container>
+            <!-- <span class="">{{project.navName === undefined? project.name : project.navName}}</span> -->
+            <span class="">{{project.navName === undefined? project.name : project.navName}}</span>
+        </a>
+    </li>
 </ng-template>
 
 
-<!-- =========================== -->
-<!-- || Delete Template Below || -->
-<!-- =========================== -->
-
-<ng-template #panelLinks>
-    <nav class="gf-links">
-        <div class="gf-nav-item no-gutters">
-            <!-- *ngFor= links -->
-            <a routerLink="/" class="gf-nav-link col" id="Home">
-                <i class="material-icons">home</i>
-                <span class="d-block">Portfolio homepage</span>
-                <div class="nav-link-sel">
-                    <!-- make component specific style-->
-                    <div class="mask-shadow">
-                        <div class="mask"></div>
-                    </div>
-                </div>
-            </a>
-            <a routerLink="/projects" class="gf-nav-link col" id="Work">
-                <i class="material-icons">work</i>
-                <span class="d-block">Work examples</span>
-                <div class="nav-link-sel">
-                    <!-- make component specific style-->
-                    <div class="mask-shadow">
-                        <div class="mask"></div>
-                    </div>
-                </div>
-            </a>
-            <a routerLink="/projects/portfolio" class="gf-nav-link col" id="Work">
-                <span class="d-block">Portfolio</span>
-                <div class="nav-link-sel">
-                    <!-- make component specific style-->
-                    <div class="mask-shadow">
-                        <div class="mask"></div>
-                    </div>
-                </div>
-            </a>
-            <a routerLink="/projects/myCompany" class="gf-nav-link col" id="Work">
-                <span class="d-block">MyCompany</span>
-                <div class="nav-link-sel">
-                    <!-- make component specific style-->
-                    <div class="mask-shadow">
-                        <div class="mask"></div>
-                    </div>
-                </div>
-            </a>
-            <a routerLink="/about-me" class="gf-nav-link col" id="Work">
-                <span class="d-block">About</span>
-                <div class="nav-link-sel">
-                    <!-- make component specific style-->
-                    <div class="mask-shadow">
-                        <div class="mask"></div>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </nav>
-    <!-- </div> -->
-    <!-- </ng-container> -->
-
+<ng-template #locked let-project="project">
+    <i class="material-icons-outlined">lock</i>
 </ng-template>

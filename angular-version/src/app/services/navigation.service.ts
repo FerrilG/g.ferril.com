@@ -2,7 +2,7 @@ import { PageConfigDefault } from './../config/pageTemplate';
 import { LoginModalService } from './login-modal.service';
 import { UserAccessAuth } from 'src/app/security/app-user-auth';
 import { SecurityService } from 'src/app/security/security.service';
-import { Router, ActivationEnd, ActivationStart } from '@angular/router';
+import { Router, ActivationEnd, Route } from '@angular/router';
 import { Observable, Subscription } from 'rxjs';
 import { DOCUMENT } from '@angular/common';
 import { Inject, Injectable } from '@angular/core';
@@ -17,8 +17,8 @@ export class NavigationService {
     private pageHeader: Observable<string>;
     private pageTabName: Observable<string>;
     public pageConstruction: PageTemplate = new PageConfigDefault();
-    public currentRoute: string;
     private _isFirstPage = true;
+    public routeInfo: Route;
 
     constructor(
         private router: Router,
@@ -32,9 +32,14 @@ export class NavigationService {
         return this.router.events.subscribe((event) => {
             if (event instanceof ActivationEnd) {
                 const { data, routeConfig } = event.snapshot;
+                console.log(event.snapshot);
                 if (routeConfig.data !== undefined) {
                     this.constructPage(routeConfig.data);
                     const url = '/' + event.snapshot.pathFromRoot.map(r => r.url).filter(f => !!f[0]).map(([f]) => f.path).join('/');
+                    // console.log(routeConfig.path);
+                    // console.log(event.snapshot);
+                    // this.currentRoute = event.snapshot.routeConfig.path;
+                    this.routeInfo = routeConfig;
                     callbackFn(data, url);
                 }
             }
@@ -94,5 +99,20 @@ export class NavigationService {
                 this.titleService.setTitle(titleDefault);
                 break;
         }
+    }
+
+
+    public navSnapshot(callbackFn: (snapshotData: object, path: string) => void): Subscription {
+        return this.router.events.subscribe((event) => {
+            if (event instanceof ActivationEnd) {
+                const { data, routeConfig } = event.snapshot;
+                if (routeConfig.data !== undefined) {
+                    this.constructPage(routeConfig.data);
+                    const url = '/' + event.snapshot.pathFromRoot.map(r => r.url).filter(f => !!f[0]).map(([f]) => f.path).join('/');
+                    // this.currentRoute = event.snapshot.routeConfig.path;
+                    callbackFn(data, routeConfig.path);
+                }
+            }
+        });
     }
 }

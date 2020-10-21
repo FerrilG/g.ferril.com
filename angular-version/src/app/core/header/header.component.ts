@@ -28,11 +28,15 @@ export class HeaderComponent implements OnInit, AfterViewInit, OnDestroy {
     // this.securityObject = this.securityService.securityObject;
     this.routeChangeListener$ = this.navigationService.onRouteChange((data: any, path: string) => {
       const folder = path.lastIndexOf('/');
+      // let nav = '';
       if (folder >= 1) {
         this.currentRoute = path.slice(1, path.lastIndexOf('/'));
       } else {
         this.currentRoute = path.slice(1, path.length);
       }
+      // nav = path.slice(path.lastIndexOf('/') + 1, path.length);
+      // alert(this.navigationService.currentRoute);
+      // alert(nav);
     });
   }
 
