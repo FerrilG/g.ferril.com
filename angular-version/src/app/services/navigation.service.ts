@@ -32,7 +32,7 @@ export class NavigationService {
         return this.router.events.subscribe((event) => {
             if (event instanceof ActivationEnd) {
                 const { data, routeConfig } = event.snapshot;
-                console.log(event.snapshot);
+                // console.log(event.snapshot);
                 if (routeConfig.data !== undefined) {
                     this.constructPage(routeConfig.data);
                     const url = '/' + event.snapshot.pathFromRoot.map(r => r.url).filter(f => !!f[0]).map(([f]) => f.path).join('/');

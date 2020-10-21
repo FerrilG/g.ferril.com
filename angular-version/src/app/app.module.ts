@@ -40,7 +40,7 @@ import { CardModule } from './modules/components/card/card.module';
     LoginModalService,
     NavigationService,
   ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  // schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
