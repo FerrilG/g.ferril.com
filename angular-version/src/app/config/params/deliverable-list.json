@@ -1,15 +1,39 @@
 [
     {
-        "name": "My Design Portfolio",
-        "navName": "Portfolio",
-        "date": "Jan '18 - Present",
-        "number": 1,
+        "name": "Sitemaps",
         "enabled": true,
         "lock": false,
-        "folder": "portfolio",
-        "role": "UX Design | UI Developer",
-        "type": "Case Study",
-        "company": "g.ferril.com",
+        "folder": "sitemaps",
+        "cover": "./../../../assets/images/project_imgs/",
+        "coverFormat": "jpg",
+        "overview": "Keeping a design portfolio up to date is critical when marketing yourself in a competitive field. I regularly evaluate my portfolio against other designers and blogs to compare the presentation of work.",
+        "content": []
+    },
+    {
+        "name": "User Flows",
+        "enabled": true,
+        "lock": true,
+        "folder": "user-flows",
+        "cover": "./../../../assets/images/project_imgs/",
+        "coverFormat": "jpg",
+        "overview": "Keeping a design portfolio up to date is critical when marketing yourself in a competitive field. I regularly evaluate my portfolio against other designers and blogs to compare the presentation of work.",
+        "content": []
+    },
+    {
+        "name": "Prototypes",
+        "enabled": true,
+        "lock": false,
+        "folder": "prototypes",
+        "cover": "./../../../assets/images/project_imgs/",
+        "coverFormat": "jpg",
+        "overview": "Keeping a design portfolio up to date is critical when marketing yourself in a competitive field. I regularly evaluate my portfolio against other designers and blogs to compare the presentation of work.",
+        "content": []
+    },
+    {
+        "name": "Design Libraries",
+        "enabled": true,
+        "lock": false,
+        "folder": "design-libraries",
         "cover": "./../../../assets/images/project_imgs/",
         "coverFormat": "jpg",
         "overview": "Keeping a design portfolio up to date is critical when marketing yourself in a competitive field. I regularly evaluate my portfolio against other designers and blogs to compare the presentation of work.",

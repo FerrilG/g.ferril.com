@@ -1,1 +1,53 @@
-saljdhsajkd
+<!-- <div class="row m-0">
+    <ng-container *ngFor='let item of deliverables, let i = index'>
+        <div *ngIf="item.enabled" class="col-12 col-xl-6">
+            <ng-container [ngTemplateOutlet]="item.lock && !securityObject.isAuthenticated === true ?locked : unlocked"
+                [ngTemplateOutletContext]="{item:item}">
+            </ng-container>
+        </div>
+    </ng-container>
+</div> -->
+<div class="row m-0">
+    <ng-container *ngFor='let item of deliverables, let i = index'>
+        <!-- <span>{{item.name}}</span> -->
+        <div *ngIf="item.enabled" class="col-12 col-xl-6">
+            <ng-container [ngTemplateOutlet]="item.lock && !securityObject.isAuthenticated === true ?locked : unlocked"
+                [ngTemplateOutletContext]="{item:item}">
+            </ng-container>
+        </div>
+    </ng-container>
+</div>
+
+<ng-template #unlocked let-item='item'>
+    <a routerLink="./{{ item.folder }}" class="row no-gutters card" ondragstart="return false;">
+        <div class="hoverOverlay"></div>
+        <ng-container *ngIf="item.cover !== 'none'">
+            <!-- <img class="projectCover" src="{{ item.cover + item.folder + '/cover.' + item.coverFormat}}"> -->
+        </ng-container>
+        <div class="col-11 col-md col-xl-11 content-items">
+            <div>
+                <h5 class="title">{{ item.name }}</h5>
+            </div>
+            <p class="pt-3">{{ item.overview }}</p>
+        </div>
+    </a>
+</ng-template>
+
+<ng-template #locked let-item='item'>
+    <a routerLink="./{{ item.folder }}" (click)="unlockSite()" class="row no-gutters card" ondragstart="return false;">
+        <div class="lock-indicator">
+            <i class="material-icons">lock</i>
+            <span>Locked - Click to unlock</span>
+        </div>
+        <div class="hoverOverlay"></div>
+        <ng-container *ngIf="item.cover !== 'none'">
+            <!-- <img class="projectCover" src="{{ item.cover + item.folder + '/cover.' + item.coverFormat}}"> -->
+        </ng-container>
+        <div class="col-11 col-md col-xl-11 content-items">
+            <div>
+                <h5 class="title">{{ item.name }}</h5>
+            </div>
+            <p class="pt-3">{{ item.overview }}</p>
+        </div>
+    </a>
+</ng-template>

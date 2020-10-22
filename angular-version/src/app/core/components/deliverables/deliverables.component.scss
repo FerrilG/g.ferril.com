@@ -1,0 +1,103 @@
+.card {
+    margin: 1em 0;
+    padding: 1em;
+    color: inherit;
+    text-decoration: none;
+    flex-direction: row;
+    user-select: none;
+    justify-content: center;
+
+    // &:hover,
+    // &:focus,
+    // &:active {
+    //     outline: 2px solid var(--light-blue);
+    //     outline-style: auto;
+    //     background-color: var(--pastel-blue);
+    // }
+    &:hover>.hoverOverlay {
+        outline: 2px solid var(--light-blue);
+        outline-style: auto;
+        background-color: rgba($color: #add8e6, $alpha: 0.35);
+        z-index: 1;
+    }
+
+    .lock-indicator {
+        position: absolute;
+        left: 0.5rem;
+        top: 0.5rem;
+        background-color: var(--dark-blue);
+        border-radius: 2px;
+        color: white;
+        padding: 0.375em 0.5em;
+        display: flex;
+        z-index: 99;
+
+        span {
+            margin-left: 0.25em;
+        }
+    }
+
+    .hoverOverlay {
+        height: 100%;
+        width: 100%;
+        // background: green;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: inherit;
+    }
+
+    // .coverContainer {
+    .projectCover {
+        // max-height: 250px;
+        // max-width: 175px;
+        height: 175px;
+        width: auto;
+        // width: 250px;
+        margin-top: 1rem;
+
+        // .projectCover {
+        //     height: inherit;
+        // }
+        @media (min-width: 768px) {
+            margin-top: 0;
+        }
+
+        @media (min-width: 1200px) {
+            margin-top: 1rem;
+        }
+    }
+
+    .content-items {
+        // display: flex;
+        // flex-direction: column;
+        margin: 0;
+        padding-top: 1.5rem;
+        z-index: 2;
+
+        >div * {
+            display: inline-block;
+        }
+
+        @media (min-width: 768px) {
+            margin-left: 1.25rem;
+        }
+
+        @media (min-width: 1200px) {
+            margin-left: 0;
+        }
+    }
+
+    @media (min-width: 768px) {
+        justify-content: start;
+    }
+
+    @media (min-width: 1200px) {
+        justify-content: center;
+    }
+
+}
+
+// locked-card{
+//     z-index: 999;
+// }

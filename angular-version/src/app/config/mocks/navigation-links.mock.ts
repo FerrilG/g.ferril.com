@@ -17,7 +17,7 @@ export const headerLinks: HeaderLinks[] = [
     },
     {
         Type: NavigationLinks.Header,
-        Visible: true,
+        Visible: false,
         Main: false,
         Text: 'Deliverables',
         Path: 'deliverables',
