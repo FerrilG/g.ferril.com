@@ -2,7 +2,7 @@
 <g-sidepanel *ngIf="pageConfig.sidePanel" id="sidePanel" class="d-none d-lg-block sticky-top collapse show">
 </g-sidepanel>
 <div class="w-100">
-    <g-login-modal *ngIf="modalOpen.modalState" [ngClass]="{'sidePanel': pageConfig.sidePanel}"></g-login-modal>
+    <g-unlock-modal *ngIf="modalOpen.modalState" [ngClass]="{'sidePanel': pageConfig.sidePanel}"></g-unlock-modal>
     <!-- <div class="sticky-top" style="height: 52px; background-color: red;"></div> -->
     <div id="pageContainer" class="d-flex" [ngClass]="{'modal-open': modalOpen.modalState}">
         <div id="pageContent" class="w-100"
@@ -14,5 +14,4 @@
         </ng-container>
     </div>
 </div>
-
 <!-- </main> -->

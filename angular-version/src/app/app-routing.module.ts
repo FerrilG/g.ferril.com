@@ -1,7 +1,8 @@
+import { DeliverablesComponent } from './core/components/deliverables/deliverables.component';
+import { BlogComponent } from './core/components/blog/blog.component';
 import { LoginModalService } from './services/login-modal.service';
 import { ProjectsComponent } from './core/components/projects/projects.component';
 import { RedirectGuard } from './security/redirect.gaurd';
-import { LoginComponent } from './modules/components/login/login.component';
 import { AboutMeComponent } from './core/components/about-me/about-me.component';
 import { NavigationService } from './services/navigation.service';
 import { NgModule, OnInit } from '@angular/core';
@@ -44,6 +45,18 @@ const appRoutes: Routes = [
     }
   },
   {
+    path: 'blog',
+    component: BlogComponent,
+    data: {
+      pageTitle: 'Blog',
+      gaPage: 'About Me',
+      sidePanel: true,
+      sidePanelType: 'overview',
+      pageScroller: true,
+      pageBlog: true,
+    }
+  },
+  {
     path: 'projects',
     component: ProjectsComponent,
     data: {
@@ -58,6 +71,23 @@ const appRoutes: Routes = [
   {
     path: 'projects',
     loadChildren: () => import('./core/components/projects/projects.module').then(m => m.ProjectsModule)
+  },
+  // Deliverables
+  {
+    path: 'deliverables',
+    component: DeliverablesComponent,
+    data: {
+      pageTitle: 'Geoff\u0027s Projects',
+      gaPage: 'Deliverables',
+      sidePanel: true,
+      sidePanelType: 'overview',
+      pageScroller: false,
+    }
+  },
+  // Deliverable Children
+  {
+    path: 'deliverables',
+    loadChildren: () => import('./core/components/deliverables/deliverables.module').then(m => m.DeliverablesModule)
   },
 
   // {

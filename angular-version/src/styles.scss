@@ -1,6 +1,17 @@
 // /* You can add global styles to this file, and also import other style files */
 @import '../projects/g-design-lib/src/lib/atoms/h1.scss';
 
+.MouseTrail {
+    position: absolute;
+    top: 0;
+    height: 24px;
+    width: 24px;
+    border-radius: 4px;
+    background: teal;
+    z-index: 9999;
+}
+
+
 :root {
     --pastel-blue: lightblue;
     --light-blue: #077BBA;

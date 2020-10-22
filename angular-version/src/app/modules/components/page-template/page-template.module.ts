@@ -1,7 +1,8 @@
+import { DeliverablesModule } from 'src/app/core/components/deliverables/deliverables.module';
 import { PageScrollerComponent } from './../page-scroller/page-scroller.component';
 import { FormsModule } from '@angular/forms';
 import { SecurityService } from './../../../security/security.service';
-import { LoginComponent } from './../login/login.component';
+import { UnlockModalComponent } from './../unlock-modal/unlock-modal.component';
 import { ProjectsModule } from 'src/app/core/components/projects/projects.module';
 import { SectionConstructorComponent } from './../_section-constructor/section-constructor.component';
 
@@ -22,13 +23,14 @@ import { ProjectTemplateService } from 'src/app/core/services/projects.service';
         SectionConstructorComponent,
         HomepageComponent,
         AboutMeComponent,
-        LoginComponent,
-        PageScrollerComponent
+        UnlockModalComponent,
+        PageScrollerComponent,
     ],
     imports: [
         AppRoutingModule,
         CommonModule,
         ProjectsModule,
+        DeliverablesModule,
         FormsModule
     ],
     // providers: [ProjectService],

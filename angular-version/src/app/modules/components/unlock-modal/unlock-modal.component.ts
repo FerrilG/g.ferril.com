@@ -1,14 +1,14 @@
-import { LoginModalService } from './../../../services/login-modal.service';
-import { SecurityService } from './../../../security/security.service';
-import { UserAccess } from './../../../security/app-user';
+import { LoginModalService } from '../../../services/login-modal.service';
+import { SecurityService } from '../../../security/security.service';
+import { UserAccess } from '../../../security/app-user';
 import { Component, OnInit, Input, HostListener } from '@angular/core';
 
 @Component({
-  selector: 'g-login-modal',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  selector: 'g-unlock-modal',
+  templateUrl: './unlock-modal.component.html',
+  styleUrls: ['./unlock-modal.component.scss']
 })
-export class LoginComponent implements OnInit {
+export class UnlockModalComponent implements OnInit {
 
   public user: UserAccess = new UserAccess();
   public securityObject = this.securityService.securityObject;

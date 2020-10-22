@@ -1,5 +1,5 @@
 import { SecurityService } from './../../security/security.service';
-import { headerLinks } from './../mocks/navigation-links.mock';
+import { headerLinks } from 'src/app/config/mocks/navigation-links.mock';
 import { NavigationService } from './../../services/navigation.service';
 import { Component, OnInit, AfterViewInit, ContentChildren, forwardRef, QueryList, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
