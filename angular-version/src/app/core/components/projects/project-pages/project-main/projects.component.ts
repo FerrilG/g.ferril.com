@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SecurityService } from 'src/app/security/security.service';
-import { ProjectTemplateService } from '../../services/projects.service';
-import { LoginModalService } from './../../../services/login-modal.service';
+import { ProjectTemplateService } from 'src/app/core/services/projects.service';
+import { LoginModalService } from 'src/app/services/login-modal.service';
 
 @Component({
   selector: 'g-projects',

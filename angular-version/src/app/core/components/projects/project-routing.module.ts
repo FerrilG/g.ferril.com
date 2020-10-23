@@ -16,6 +16,7 @@ const projectRoutes: Routes = [
     {
         path: 'portfolio',
         component: PrjPortfolioComponent,
+        // outlet: 'project-wrapper',
         canActivate: [AuthGuard],
         data: {
             pageTitle: 'Design Portfolio | Geoff\u0027s Projects',

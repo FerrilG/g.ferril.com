@@ -1,7 +1,7 @@
 import { DeliverablesComponent } from './core/components/deliverables/deliverables.component';
 import { BlogComponent } from './core/components/blog/blog.component';
 import { LoginModalService } from './services/login-modal.service';
-import { ProjectsComponent } from './core/components/projects/projects.component';
+import { ProjectsComponent } from 'src/app/core/components/projects/project-pages/project-main/projects.component';
 import { RedirectGuard } from './security/redirect.gaurd';
 import { AboutMeComponent } from './core/components/about-me/about-me.component';
 import { NavigationService } from './services/navigation.service';
@@ -9,6 +9,7 @@ import { NgModule, OnInit } from '@angular/core';
 import { Routes, RouterModule, Router, ActivationEnd, ActivationStart, PreloadAllModules } from '@angular/router';
 import { HomepageComponent } from './core/components/homepage/homepage.component';
 import { PageTemplateComponent } from './modules/components/page-template/page-template.component';
+import { ProjectWrapperComponent } from './core/components/projects/project-pages/project-wrapper/project-wrapper.component';
 
 const appRoutes: Routes = [
   {
@@ -70,6 +71,7 @@ const appRoutes: Routes = [
   // Project Children
   {
     path: 'projects',
+    component: ProjectWrapperComponent,
     loadChildren: () => import('./core/components/projects/projects.module').then(m => m.ProjectsModule)
   },
   // Deliverables
