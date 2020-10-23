@@ -34,7 +34,7 @@ export class UnlockModalComponent implements OnInit {
     } else {
       // alert('failed');
     }
-    // this.loginModal.closeModal();
+    this.loginModal.closeModal();
   }
 
   public closeModal(): void {

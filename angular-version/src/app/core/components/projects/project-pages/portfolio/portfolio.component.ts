@@ -5,7 +5,7 @@ import { PageScrollerService } from 'src/app/services/page-scroller.service';
 
 @Component({
     templateUrl: './portfolio.component.html',
-    styleUrls: ['./portfolio.component.scss']
+    // styleUrls: ['./portfolio.component.scss']
 })
 export class PrjPortfolioComponent implements OnInit {
 
