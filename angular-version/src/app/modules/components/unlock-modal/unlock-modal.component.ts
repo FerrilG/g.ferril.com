@@ -1,3 +1,4 @@
+import { NavigationService } from 'src/app/services/navigation.service';
 import { LoginModalService } from '../../../services/login-modal.service';
 import { SecurityService } from '../../../security/security.service';
 import { UserAccess } from '../../../security/app-user';
@@ -15,6 +16,7 @@ export class UnlockModalComponent implements OnInit {
 
   constructor(
     private securityService: SecurityService,
+    private navService: NavigationService,
     private loginModal: LoginModalService,
   ) { }
 
@@ -27,7 +29,12 @@ export class UnlockModalComponent implements OnInit {
       .subscribe(resp => {
         this.securityService.securityObject = resp;
       });
-    this.closeModal();
+    if (this.securityObject.isAuthenticated === true) {
+      this.navService.navigatePathTo(this.loginModal.navPath);
+    } else {
+      // alert('failed');
+    }
+    // this.loginModal.closeModal();
   }
 
   public closeModal(): void {

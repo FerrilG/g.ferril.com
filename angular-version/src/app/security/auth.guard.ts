@@ -5,6 +5,7 @@ import { SecurityService } from './security.service';
 import { Injectable } from '@angular/core';
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, Router } from '@angular/router';
 import { Observable, Subscription } from 'rxjs';
+import { LoginModalService } from '../services/login-modal.service';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +14,7 @@ export class AuthGuard implements CanActivate {
   constructor(
     private securityService: SecurityService,
     private router: Router,
+    private readonly loginModal: LoginModalService,
     private projectService: ProjectTemplateService,
     private deliverableService: DeliverableTemplateService,
     private navService: NavigationService
@@ -22,30 +24,46 @@ export class AuthGuard implements CanActivate {
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     const isAuthenticated: boolean = this.securityService.securityObject.isAuthenticated;
-    let isLocked: boolean;
+    let pathLocked: boolean;
     let dir: string;
     switch (state.url.slice(1, state.url.lastIndexOf('/')).toLowerCase()) {
       case 'projects': {
         dir = 'projects';
-        isLocked = this.projectService.projectData.find(item => item.folder === next.url[0].path).lock;
+        pathLocked = this.projectService.projectData.find(item => item.folder === next.url[0].path).lock;
         break;
       }
       case 'deliverables': {
         dir = 'deliverables';
-        isLocked = this.deliverableService.deliverableData.find(item => item.folder === next.url[0].path).lock;
+        pathLocked = this.deliverableService.deliverableData.find(item => item.folder === next.url[0].path).lock;
         break;
       }
     }
 
-    if (!isLocked) {
-      return true;
-    } else if (isAuthenticated) {
-      return true;
-    } else {
-      if (this.navService.isFirstPage()) {
-        this.router.navigate([dir]);
+    switch (this.navService.isFirstPage()) {
+      case true: {
+        if (pathLocked) {
+          this.router.navigate([dir]);
+        } else {
+          return true;
+        }
+        break;
       }
-      return false;
+      case false: {
+        switch (pathLocked) {
+          case true: {
+            if (isAuthenticated) {
+              return true;
+            } else {
+              this.loginModal.unlockSite(state.url);
+              return false;
+            }
+            break;
+          }
+          case false: {
+            return true;
+          }
+        }
+      }
     }
   }
 }

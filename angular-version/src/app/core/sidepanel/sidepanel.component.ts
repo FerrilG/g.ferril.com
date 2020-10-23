@@ -32,23 +32,12 @@ export class SidepanelComponent implements OnInit, OnDestroy {
   ) {
     this.routeChangeListener$ = this.navigationService.navSnapshot(event => {
       this.isActive = this.navigationService.routeInfo.path;
-      // console.log(event);
     });
-    // console.log(this.navigationService.poppp);
   }
 
-  ngOnInit(): void {
-    // this.routeChangeListener$ = this.navigationService
-    // .onRouteChange((data: any, path: string) => {
-    //   this.sidePanelType = data.sidePanelType;
-    // });
-  }
+  ngOnInit(): void { }
 
   ngOnDestroy(): void {
     // this.routeChangeListener$.unsubscribe();
-  }
-
-  unlockSite(): void {
-    this.loginModal.modalState = true;
   }
 }

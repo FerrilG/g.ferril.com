@@ -30,7 +30,7 @@
         </a>
         <ul class="nav g-sidenav" id="navProjects" *ngFor="let project of projects">
             <li *ngIf="project.enabled" [ngClass]="{'active': isActive === project.folder}">
-                <a routerLink="projects/{{ project.folder }}" id="project-{{ project.number }}" (click)="unlockSite()">
+                <a routerLink="projects/{{ project.folder }}" id="project-{{ project.number }}">
                     <ng-container *ngIf="project.lock && !securityObject.isAuthenticated">
                         <ng-container *ngTemplateOutlet="locked; context: {project:project}"></ng-container>
                     </ng-container>
