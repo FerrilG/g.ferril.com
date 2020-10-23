@@ -1,22 +1,18 @@
-import { PrjPortfolioComponent } from './project-pages/portfolio/portfolio.component';
+import {
+    PrjAcctMgrComponent,
+    PrjPortfolioComponent,
+    PrjmyCompanyComponent,
+    PrjMedicalComponent,
+    PrjMotiveComponent,
+    PrjRecreogoComponent,
+    PrjDesignSystemComponent,
+    PrjVeriShareComponent,
+} from './page-binding.component';
 import { AuthGuard } from './../../../security/auth.guard';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ProjectsComponent } from './projects.component';
-import { PrjmyCompanyComponent } from './project-pages/myCompany/myCompany.component';
-import { PrjTemplateComponent } from './project-pages/prj-template/prj-template.component';
 
 const projectRoutes: Routes = [
-    // {
-    //     path: '',
-    //     component: ProjectsComponent,
-    //     data: {
-    //         pageTitle: 'Geoff\u0027s Projects',
-    //         sidePanel: true,
-    //         sidePanelType: 'overview',
-    //         pageScroller: false,
-    //     }
-    // },
     {
         path: 'portfolio',
         component: PrjPortfolioComponent,
@@ -46,7 +42,7 @@ const projectRoutes: Routes = [
     },
     {
         path: 'accountMgr',
-        component: PrjTemplateComponent,
+        component: PrjAcctMgrComponent,
         canActivate: [AuthGuard],
         data: {
             pageTitle: 'eCommerce Account Manager | Geoff\u0027s Projects',
@@ -60,7 +56,7 @@ const projectRoutes: Routes = [
     },
     {
         path: 'medical',
-        component: PrjTemplateComponent,
+        component: PrjMedicalComponent,
         canActivate: [AuthGuard],
         data: {
             pageTitle: 'Handheld Medical Records | Geoff\u0027s Projects',
@@ -74,7 +70,7 @@ const projectRoutes: Routes = [
     },
     {
         path: 'motive',
-        component: PrjTemplateComponent,
+        component: PrjMotiveComponent,
         canActivate: [AuthGuard],
         data: {
             pageTitle: 'Mobile In-Flight Incentives | Geoff\u0027s Projects',
@@ -88,7 +84,7 @@ const projectRoutes: Routes = [
     },
     {
         path: 'recreogo',
-        component: PrjTemplateComponent,
+        component: PrjRecreogoComponent,
         canActivate: [AuthGuard],
         data: {
             pageTitle: 'Sales Inventory Management | Geoff\u0027s Projects',
@@ -102,7 +98,7 @@ const projectRoutes: Routes = [
     },
     {
         path: 'designSystem',
-        component: PrjTemplateComponent,
+        component: PrjDesignSystemComponent,
         canActivate: [AuthGuard],
         data: {
             pageTitle: 'Custom Design System | Geoff\u0027s Projects',
@@ -116,7 +112,7 @@ const projectRoutes: Routes = [
     },
     {
         path: 'VeriShare',
-        component: PrjTemplateComponent,
+        component: PrjVeriShareComponent,
         canActivate: [AuthGuard],
         data: {
             // pageTitle: 'Custom Design System | Geoff\u0027s Projects',
@@ -131,8 +127,28 @@ const projectRoutes: Routes = [
 ];
 
 @NgModule({
+    declarations: [
+        PrjAcctMgrComponent,
+        PrjPortfolioComponent,
+        PrjmyCompanyComponent,
+        PrjMedicalComponent,
+        PrjMotiveComponent,
+        PrjRecreogoComponent,
+        PrjDesignSystemComponent,
+        PrjVeriShareComponent,
+    ],
     imports: [RouterModule.forChild(projectRoutes)],
     providers: [],
-    exports: [RouterModule]
+    exports: [
+        RouterModule,
+        PrjAcctMgrComponent,
+        PrjPortfolioComponent,
+        PrjmyCompanyComponent,
+        PrjMedicalComponent,
+        PrjMotiveComponent,
+        PrjRecreogoComponent,
+        PrjDesignSystemComponent,
+        PrjVeriShareComponent,
+    ]
 })
 export class ProjectsRoutingModule { }
