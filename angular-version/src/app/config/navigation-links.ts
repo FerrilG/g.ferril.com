@@ -4,9 +4,10 @@ export enum NavigationLinks {
 }
 
 export interface HeaderLinks {
-    Type: NavigationLinks.Header;
+    Type: NavigationLinks;
     Visible: boolean;
     Main: boolean;
+    Directory: boolean;
     Text: string;
     Path: string;
 }

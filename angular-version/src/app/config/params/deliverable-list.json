@@ -1,7 +1,7 @@
 [
     {
         "name": "Sitemaps",
-        "enabled": true,
+        "enabled": false,
         "lock": false,
         "folder": "sitemaps",
         "cover": "./../../../assets/images/project_imgs/",
@@ -10,8 +10,18 @@
         "content": []
     },
     {
+        "name": "Annotations",
+        "enabled": false,
+        "lock": false,
+        "folder": "annotations",
+        "cover": "./../../../assets/images/project_imgs/",
+        "coverFormat": "jpg",
+        "overview": "Keeping a design portfolio up to date is critical when marketing yourself in a competitive field. I regularly evaluate my portfolio against other designers and blogs to compare the presentation of work.",
+        "content": []
+    },
+    {
         "name": "User Flows",
-        "enabled": true,
+        "enabled": false,
         "lock": true,
         "folder": "user-flows",
         "cover": "./../../../assets/images/project_imgs/",
@@ -21,7 +31,7 @@
     },
     {
         "name": "Prototypes",
-        "enabled": true,
+        "enabled": false,
         "lock": false,
         "folder": "prototypes",
         "cover": "./../../../assets/images/project_imgs/",
@@ -31,7 +41,7 @@
     },
     {
         "name": "Design Libraries",
-        "enabled": true,
+        "enabled": false,
         "lock": false,
         "folder": "design-libraries",
         "cover": "./../../../assets/images/project_imgs/",

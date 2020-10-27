@@ -1,3 +1,4 @@
+import { DelAnnotationsComponent } from './deliverable-pages/annotations/annotations.component';
 import { AuthGuard } from 'src/app/security/auth.guard';
 import { DelSitemapsComponent } from './deliverable-pages/sitemaps/sitemaps.component';
 import { RouterModule, Routes } from '@angular/router';
@@ -32,6 +33,19 @@ const deliverableRoutes: Routes = [
             pageScroller: true,
             breadcrumb: 'User Flows',
         }
+    },
+    {
+        path: 'annotations',
+        component: DelAnnotationsComponent,
+        canActivate: [AuthGuard],
+        data: {
+            pageTitle: 'Annotations | Geoff\u0027s Deliverables',
+            gaPage: 'Deliverables/Annotations',
+            sidePanel: true,
+            sidePanelType: 'overview',
+            pageScroller: true,
+            breadcrumb: 'Annotations',
+        }
     }
 ];
 
@@ -40,6 +54,7 @@ const deliverableRoutes: Routes = [
     declarations: [
         DeliverablesComponent,
         DelSitemapsComponent,
+        DelAnnotationsComponent,
     ],
     imports: [
         CommonModule,

@@ -59,6 +59,9 @@ nav[id="g-nav"] {
     padding: 1rem 0;
 
     .g-nav-item {
+        &:not(:first-child) {
+            margin-top: 1rem;
+        }
 
         .g-nav-link {
             display: block;
@@ -104,7 +107,10 @@ nav[id="g-nav"] {
 
         ul.nav {
             display: block;
-            letter-spacing: 0.0625rem;
+            padding-left: revert;
+            // color: white;
+            // list-style: '[ ';
+            // letter-spacing: 0.0625rem;
             // background: white;
 
             &.collapse:not(.show) {
@@ -114,7 +120,7 @@ nav[id="g-nav"] {
             >li>a {
                 text-decoration: none;
                 display: block;
-                padding: .25rem 1.5rem;
+                padding: .25rem 0;
                 font-size: 85%;
                 // color: rgba(0, 0, 0, .65);
                 color: white;
