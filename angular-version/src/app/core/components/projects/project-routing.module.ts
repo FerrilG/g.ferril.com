@@ -7,6 +7,7 @@ import {
     PrjRecreogoComponent,
     PrjDesignSystemComponent,
     PrjVeriShareComponent,
+    PrjTimeTrackerComponent,
 } from './page-binding.component';
 import { AuthGuard } from './../../../security/auth.guard';
 import { NgModule } from '@angular/core';
@@ -47,11 +48,25 @@ const projectRoutes: Routes = [
         canActivate: [AuthGuard],
         data: {
             pageTitle: 'eCommerce Account Manager | Geoff\u0027s Projects',
-            gaPage: 'Projects - AccountMgr | Wells',
+            gaPage: 'Projects - AccountMgr',
             sidePanel: true,
             sidePanelType: 'overview',
             pageScroller: true,
             breadcrumb: 'accountMgr',
+            pageBlog: true,
+        }
+    },
+    {
+        path: 'timeTracker',
+        component: PrjTimeTrackerComponent,
+        canActivate: [AuthGuard],
+        data: {
+            pageTitle: 'Billable Time Entry | Geoff\u0027s Projects',
+            gaPage: 'Projects - Time Entry',
+            sidePanel: true,
+            sidePanelType: 'overview',
+            pageScroller: true,
+            breadcrumb: 'timeTracker',
             pageBlog: true,
         }
     },

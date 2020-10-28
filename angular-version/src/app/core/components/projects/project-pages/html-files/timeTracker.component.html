@@ -1,0 +1,190 @@
+<!-- Enterprise Application -->
+<h5>Project Role: {{ content.role }}</h5>
+<section class="my-5">
+    <h4 section>
+        Overview
+    </h4>
+    <div class="my-3">
+        <h5>Problem</h5>
+        <p>I worked as a consultant alongside two other UX designers to enhance the client’s internal time
+            tracker. The project focus was to identify user pain points and potential solutions that would save
+            time, address accuracy, and encourage consistent submission of their timesheets.</p>
+    </div>
+    <div class="my-3">
+        <h5>Challenge</h5>
+        <p>Designing a solution at an enterprise level requires insight into all facets that drive the product.
+            This level of attention involves administrative and end-user involvement to understand the technical
+            constraints and business requirements of the project.</p>
+    </div>
+    <div class="my-3">
+        <h5>Solution</h5>
+        <p>We introduced new features that would assist users logging their development time more accurately
+            and reduce the mundane repetitive tasks frequently requested by administration.</p>
+    </div>
+</section>
+
+<section class="my-5">
+    <h4 section>
+        Research
+    </h4>
+    <div class="py-2">
+        <h5>Discovery</h5>
+        <p>In order to design with a user centric mindset, we decided to include the users in a few of our
+            design
+            sessions because of our direct access to them. This allowed us to have a constant contact with them
+            to assist with any questions we had.</p>
+        <div class="row mt-3">
+            <div class="col-12 col-md-5">
+                <figure>
+                    <img class="border" style="width: 100%" src="{{ imgFolder + 'whiteboard.jpg' }}" alt="">
+                </figure>
+            </div>
+
+            <div class="col-12 col-md-7">
+                <h5>Design Workshop</h5>
+                <p>We brought users in to our design workshops so they could sketch and design their ideas. We
+                    then asked them to elaborate on their designs and listened to their responses.</p>
+            </div>
+        </div>
+        <p>By including the users, we were able to observe and outline their individual concerns through their
+            mockups. The team was able to take our initial findings back and outline major pain points.</p>
+    </div>
+    <div class="py-2">
+        <h5>Concept Iteration</h5>
+        <p>Taking our initial findings, we went to the drawing board and started thinking about holistic
+            approaches to the problem. This allowed us to think about pie in the sky concepts and then reel them
+            back to meet constraints.</p>
+        <div class="row mt-3">
+            <div class="col-12 col-md-5">
+                <figure>
+                    <img class="border" style="width: 100%" src="{{ imgFolder + 'ideation_sketch.jpg' }}" alt="">
+                </figure>
+            </div>
+            <div class="col-12 col-md-7">
+                <h5>Initial Concepts</h5>
+                <p>I sketched a few rough concepts with the team to annotate the features and functionality.</p>
+            </div>
+        </div>
+        <div class="row mt-3 mb-3">
+            <div class="col-12 col-md-5">
+                <figure>
+                    <img class="border" style="width: 100%" src="{{ imgFolder + 'onsite_visit.png' }}" alt="">
+                </figure>
+            </div>
+            <div class="col-12 col-md-7">
+                <h5>Usability Testing</h5>
+                <p>I then built the new features into a robust prototype to demonstrate functionality to users.
+                    We brought this back to the client’s location to conduct usability tests to identify areas
+                    for improvement.</p>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-12 col-md-5">
+                <figure>
+                    <img class="border" style="width: 100%" src="{{ imgFolder + 'affinity_diagram.jpg' }}" alt="">
+                </figure>
+            </div>
+            <div class="col-12 col-md-7">
+                <h5>Synthesis</h5>
+                <p>We took all our findings and created a comprehensive list that outlined our key insights. We
+                    used this to finalize our concept and proceed to client handoff.</p>
+            </div>
+        </div>
+    </div>
+    <div class="py-2">
+        <h5>Research findings</h5>
+        <div>
+            <h5>Undefined definition of project, bucket, and their relationship</h5>
+            <p>Projects are defined as individual tasks assigned to teams. A bucket is a task in which employees
+                are assigned and they log their time to.</p>
+            <p>Many people have these terms confused by thinking the Bucket is the “Parent” of the Projects.
+                Buckets include Admin, Inter-sourcing, Support, Enhancements, and Projects.</p>
+            <span>Bucket Names:</span>
+            <ul>
+                <li>Admin has a collection of tasks that are relative to non-productive time. This bucket
+                    includes
+                    tasks such as: PTO, meetings, and training etc.</li>
+                <li>Inter-Sourcing is cross-departmental work.</li>
+                <li>Enhancement is also perpetual but is tied to specific products.</li>
+                <li>Project includes tasks defined as a temporary endeavor done to produce something as a goal
+                    or
+                    end product.</li>
+            </ul>
+            <div>Note: Having a Bucket named “Projects” added to the confusion.</div>
+        </div>
+        <div class="mt-5">
+            <h5>Limited Search Functionality</h5>
+            <p>Users explained their issues when findings the projects they were supposed to track their time
+                to. If
+                they were unable to find the proper location, their time would be allocated improperly. This
+                issue
+                is due to the current naming system. By adding a project description, set by the manager, users
+                would be able to search for terms or keywords in the description.</p>
+        </div>
+        <div class="mt-5">
+            <h5>Lack of Automation / Project Import</h5>
+            <p>Users want to login, track their time, and log out. Often, they do this while referencing another
+                calendar, schedule, or time tracking tool. As they expressed how it feels like a redundant task,
+                users indicated they wanted a way to automatically populate the projects they work on the most
+                frequent. This
+                would reduce most of the repetition and allow them to log time easier.</p>
+        </div>
+    </div>
+</section>
+
+<section class="my-5">
+    <h4 section>
+        Final solution
+    </h4>
+    <div class="row mt-3">
+        <div class="col-12 col-md-5">
+            <figure>
+                <img class="border" style="width: 100%" src="{{ imgFolder + 'main_dashboard.png' }}" alt="">
+            </figure>
+        </div>
+
+        <div class="col-12 col-md-7">
+            <h5>Main page</h5>
+            <p>This is the main page of the application. From here users are able to select and search from
+                the list of available projects on the left. Users found the labels unidentifiable, so we
+                introduced the concept of a description area below the label.</p>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-12 col-md-5">
+            <figure>
+                <img class="border" style="width: 100%" src="{{ imgFolder + 'presets.png' }}" alt="">
+            </figure>
+        </div>
+
+        <div class="col-12 col-md-7">
+            <h5>Presets</h5>
+            <p>Users found it annoying when they had to add items repetitively. We added a template/preset
+                section to auto-populate their dashboard with their self-defined projects. This allowed them
+                to focus on inputting their time and mitigate time spent searching.</p>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-12 col-md-5">
+            <figure>
+                <img class="border" style="width: 100%" src="{{ imgFolder + 'Replace.png' }}" alt="">
+            </figure>
+        </div>
+
+        <div class="col-12 col-md-7">
+            <h5>Optional replace</h5>
+            <p>To prevent issues and offer flexibility, users liked having the ability to add presets to
+                their current selection. This way users can add items prior to using their presets.</p>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-12">
+            <h5>View the complete prototype</h5>
+            <p>Click to view the provided prototype delivered for their teams to use for testing and
+                development.</p>
+            <a class="btn btn-primary" target="_blank"
+                href="https://dlsocn.axshare.com/time_tracking_application.html#Username=John&amp;CSUM=1">View
+                Axure Prototype</a>
+        </div>
+    </div>
+</section>

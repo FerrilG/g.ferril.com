@@ -36,6 +36,17 @@ export class PrjAcctMgrComponent {
 }
 
 @Component({
+    templateUrl: './project-pages/html-files/timeTracker.component.html',
+    styleUrls: ['./project-pages/html-files/project-pages.component.scss']
+})
+export class PrjTimeTrackerComponent {
+    public readonly content: ProjectProperties = this.projectService.renderContent();
+    public readonly imgFolder: string = this.content.cover + this.content.folder + '/';
+
+    constructor(private projectService: ProjectTemplateService) { }
+}
+
+@Component({
     templateUrl: './project-pages/html-files/medical.component.html',
     styleUrls: ['./project-pages/html-files/project-pages.component.scss']
 })

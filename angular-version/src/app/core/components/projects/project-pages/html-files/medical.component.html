@@ -1,9 +1,191 @@
 <!-- BackbackEMR -->
+<h5>Project Role: {{ content.role }}</h5>
 <section class="my-5">
     <h4 section>
         Overview
     </h4>
-    <p>To verify if the initial business goals were in line with the users’ challenges, I spoke with users and
-        walked them through the site to gather their initial thoughts. Their response indicated a completely
-        different reason for not being interested in the site.</p>
+    <div class="my-3">
+        <h5>Problem</h5>
+        <p>BackpackEMR required a metrics module to be developed to allow volunteers, administration, and
+            financial supporters to gauge the operational efficiency during and after medical mission trips.</p>
+    </div>
+    <div class="my-3">
+        <h5>Challenge</h5>
+        <p>The primary challenge I had was the lack of direct access to the users. The client's users were rather
+            specific, and any
+            type of communication required the client to be transparent with their customers.</p>
+    </div>
+    <div class="my-3">
+        <h5>Solution</h5>
+        <p>I identified the minimum viable experience (MVE) required that would allow users to evaluate the
+            operational efficiency of their mission trip. This included patient’s condition and status, medical
+            inventory tracking, and exportable trip metrics.</p>
+    </div>
+</section>
+<section class="my-5">
+    <h4 section>
+        Research
+    </h4>
+    <p>At this point, I had to generalize different types of users and their pain points based on my initial
+        ramp-up. I created personas for each of the users and combined the overlap of goals into a journey
+        map. I then used it as a map to highlight the areas that needed the most help for the concepts.</p>
+    <figure>
+        <img class="border w-100" src="{{ imgFolder + 'journey_map_updated.png' }}" alt="Picture of Journey Map">
+    </figure>
+</section>
+
+<section class="my-5">
+    <h4 section>
+        Concepts
+    </h4>
+    <p>I chose to utilize a kano approach to try and get the most information from the users due to limited
+        access. I created multiple low fidelity mockups of features to share with users to have them respond
+        with their feedback and ratings. This allowed me to get insight into how they would expect these
+        features to function.</p>
+    <div class="mt-5">
+        <h5>Scratchpad Ideas</h5>
+        <p>....</p>
+        <div class="row">
+            <div class="col-12 col-md-5">
+                <figure>
+                    <img class="border w-100" src="{{ imgFolder + 'rough_concepts.jpg' }}" alt="Picture of Sketch Book">
+                </figure>
+            </div>
+            <div class="col-12 col-md-7">
+                <h5>Design Sketches</h5>
+                <p>I sketched a few rough concepts to visualize the potential features and functionality.</p>
+            </div>
+        </div>
+        <div class="row mt-3 mb-3">
+            <div class="col-12 col-md-5">
+                <figure>
+                    <img class="border w-100" src="{{ imgFolder + 'survey_images.jpg' }}" alt="Picture of Survey Items">
+                </figure>
+            </div>
+            <div class="col-12 col-md-7">
+                <h5>Survey Image Sketches</h5>
+                <p>Prior to digitizing I sketched a final version of each module that would be included in the
+                    survey.</p>
+            </div>
+        </div>
+    </div>
+    <div class="mt-5">
+        <h5>Digitized versions</h5>
+        <p>I kept the images in a low fidelity state so users would use their imagination to rate the
+            effectiveness.</p>
+        <div class="row">
+            <div class="col-4">
+                <figure>
+                    <img class="border w-100" src="{{ imgFolder + 'inventory.png' }}" alt="inventory module">
+                    <figcaption class="pt-2">Medical Inventory</figcaption>
+                </figure>
+            </div>
+            <div class="col-4">
+                <figure>
+                    <img class="border w-100" src="{{ imgFolder + 'patient_progress.png' }}" alt="progress indicator">
+                    <figcaption class="pt-2">Patient's History</figcaption>
+                </figure>
+            </div>
+            <div class="col-4">
+                <figure>
+                    <img class="border w-100" src="{{ imgFolder + 'xray_module.png' }}" alt="x-ray module">
+                    <figcaption class="pt-2">X-ray Module</figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="my-5">
+    <h4 section>
+        Survey findings
+    </h4>
+    <p>I received the feedback from users and then compared their ratings of the various features. I used
+        these ratings to drive which items I should focus on. I then added definition to the designs and had
+        development provide rough estimates.</p>
+    <div class="row mt-3">
+        <div class="col-12 col-md-4">
+            <figure>
+                <img class="border w-100" src="{{ imgFolder + 'Kano_chart.jpg' }}" alt="Kano Survey Rating chart">
+            </figure>
+        </div>
+        <div class="col-12 col-md-4">
+            <figure>
+                <img class="border w-100" src="{{ imgFolder + 'finding_dev_hours.jpg' }}" alt="Picture of Survey Items">
+            </figure>
+        </div>
+        <div class="col-12 col-md-4">
+            <h5>Rating Results</h5>
+            <div>Top Modules</div>
+            <ol>
+                <li>Reporting Module</li>
+                <li>Patient Progress</li>
+                <li>X-Ray Module</li>
+            </ol>
+            <div>Lowest Modules</div>
+            <ol>
+                <li>Clock-In Module</li>
+                <li>Alternative Solutions</li>
+                <li>Operation Metrics</li>
+            </ol>
+        </div>
+        <div class="row mt-3 justify-content-center">
+            <div class="col-12 col-md-8">
+                <figure>
+                    <img class="border w-100" src="{{ imgFolder + 'kano_graph.png' }}" alt="Kano Survey Rating chart">
+                </figure>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="my-5">
+    <h4 section>
+        Final solution
+    </h4>
+    <div class="mt-4 mt-md-0">
+        <div class="row mt-3">
+            <div class="col-12 col-md-7">
+                <figure>
+                    <img class="border w-100" src="{{ imgFolder + 'progress.jpg' }}" alt="Final Progress Modual">
+                </figure>
+            </div>
+            <div class="col-12 col-md-5">
+                <h5>Patient Progress</h5>
+                <p>Development Time: <b>6 hours</b>
+                    <br>
+                    This module provides the staff with the ability to modify patient progress and update their
+                    status.</p>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-12 col-md-7">
+            <figure>
+                <img class="border w-100" src="{{ imgFolder + 'daily_metrics.jpg' }}" alt="Final Daily Metrics Modual">
+            </figure>
+        </div>
+        <div class="col-12 col-md-5">
+            <h5>Daily Metrics</h5>
+            <p>Development Time: <b>24 hours</b>
+                <br>
+                Allows the administration to view metrics about the patients seen, bottlenecks and surgeries
+                performed. This would allow them to manage inventory better.</p>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-12 col-md-7">
+            <figure>
+                <img class="border w-100" src="{{ imgFolder + 'annual_metrics.jpg' }}"
+                    alt="Final Annual Metrics Modual">
+            </figure>
+        </div>
+        <div class="col-12 col-md-5">
+            <h5>Annual Metrics</h5>
+            <p>Development Time: <b>24 hours</b>
+                <br>
+                Allows the administration to compare their efforts at a year-to-date or previous year level.
+                This will allow staff to accurately plan future campaigns.</p>
+        </div>
+    </div>
 </section>

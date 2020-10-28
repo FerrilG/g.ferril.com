@@ -1,4 +1,5 @@
 import { DelAnnotationsComponent } from './deliverable-pages/annotations/annotations.component';
+import { DelUserFlowsComponent } from './deliverable-pages/user-flows/user-flows.component';
 import { AuthGuard } from 'src/app/security/auth.guard';
 import { DelSitemapsComponent } from './deliverable-pages/sitemaps/sitemaps.component';
 import { RouterModule, Routes } from '@angular/router';
@@ -23,7 +24,7 @@ const deliverableRoutes: Routes = [
     },
     {
         path: 'user-flows',
-        component: DelSitemapsComponent,
+        component: DelUserFlowsComponent,
         canActivate: [AuthGuard],
         data: {
             pageTitle: 'User Flows | Geoff\u0027s Deliverables',
@@ -55,6 +56,7 @@ const deliverableRoutes: Routes = [
         DeliverablesComponent,
         DelSitemapsComponent,
         DelAnnotationsComponent,
+        DelUserFlowsComponent,
     ],
     imports: [
         CommonModule,

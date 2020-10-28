@@ -68,7 +68,6 @@ export class DeliverableTemplateService {
         // console.log('other');
         break;
     }
-    console.log(openProj);
     return openProj;
   }
 }
