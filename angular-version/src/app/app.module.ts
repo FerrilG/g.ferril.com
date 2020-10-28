@@ -14,6 +14,7 @@ import { HomeComponent } from './modules/pages/home/home.component';
 import { SubHeaderComponent } from './core/_sub-header/sub-header.component';
 import { BreadcrumbComponent } from './modules/components/breadcrumb/breadcrumb.component';
 import { CardModule } from './modules/components/card/card.module';
+import { BlogComponent } from './core/components/blog/blog.component';
 
 // import { GDesignLibModule } from 'g-design-lib';
 @NgModule({
@@ -22,6 +23,7 @@ import { CardModule } from './modules/components/card/card.module';
     HomeComponent,
     SubHeaderComponent,
     BreadcrumbComponent,
+    BlogComponent,
   ],
   imports: [
     BrowserModule,

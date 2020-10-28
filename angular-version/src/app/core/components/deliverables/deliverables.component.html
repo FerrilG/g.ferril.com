@@ -1,15 +1,5 @@
-<!-- <div class="row m-0">
-    <ng-container *ngFor='let item of deliverables, let i = index'>
-        <div *ngIf="item.enabled" class="col-12 col-xl-6">
-            <ng-container [ngTemplateOutlet]="item.lock && !securityObject.isAuthenticated === true ?locked : unlocked"
-                [ngTemplateOutletContext]="{item:item}">
-            </ng-container>
-        </div>
-    </ng-container>
-</div> -->
 <div class="row m-0">
     <ng-container *ngFor='let item of deliverables, let i = index'>
-        <!-- <span>{{item.name}}</span> -->
         <div *ngIf="item.enabled" class="col-12 col-xl-6">
             <ng-container [ngTemplateOutlet]="item.lock && !securityObject.isAuthenticated === true ?locked : unlocked"
                 [ngTemplateOutletContext]="{item:item}">
@@ -22,7 +12,7 @@
     <a routerLink="./{{ item.folder }}" class="row no-gutters card" ondragstart="return false;">
         <div class="hoverOverlay"></div>
         <ng-container *ngIf="item.cover !== 'none'">
-            <!-- <img class="projectCover" src="{{ item.cover + item.folder + '/cover.' + item.coverFormat}}"> -->
+            <img class="deliverableCover" src="{{ item.cover + item.folder + '/cover.' + item.coverFormat}}">
         </ng-container>
         <div class="col-11 col-md col-xl-11 content-items">
             <div>
@@ -41,7 +31,7 @@
         </div>
         <div class="hoverOverlay"></div>
         <ng-container *ngIf="item.cover !== 'none'">
-            <!-- <img class="projectCover" src="{{ item.cover + item.folder + '/cover.' + item.coverFormat}}"> -->
+            <img class="deliverableCover" src="{{ item.cover + item.folder + '/cover.' + item.coverFormat}}">
         </ng-container>
         <div class="col-11 col-md col-xl-11 content-items">
             <div>

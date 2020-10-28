@@ -48,11 +48,10 @@
     }
 
     // .coverContainer {
-    .projectCover {
+    .deliverableCover {
         // max-height: 250px;
-        // max-width: 175px;
-        height: 175px;
-        width: auto;
+        width: 100%;
+        max-width: 575px;
         // width: 250px;
         margin-top: 1rem;
 

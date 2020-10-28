@@ -1,12 +1,12 @@
 [
     {
         "name": "Sitemaps",
-        "enabled": false,
+        "enabled": true,
         "lock": false,
         "folder": "sitemaps",
-        "cover": "./../../../assets/images/project_imgs/",
-        "coverFormat": "jpg",
-        "overview": "Keeping a design portfolio up to date is critical when marketing yourself in a competitive field. I regularly evaluate my portfolio against other designers and blogs to compare the presentation of work.",
+        "cover": "./../../../assets/images/deliverable_imgs/",
+        "coverFormat": "png",
+        "overview": "",
         "content": []
     },
     {
@@ -14,7 +14,7 @@
         "enabled": false,
         "lock": false,
         "folder": "annotations",
-        "cover": "./../../../assets/images/project_imgs/",
+        "cover": "./../../../assets/images/deliverable_imgs/",
         "coverFormat": "jpg",
         "overview": "Keeping a design portfolio up to date is critical when marketing yourself in a competitive field. I regularly evaluate my portfolio against other designers and blogs to compare the presentation of work.",
         "content": []
@@ -24,7 +24,7 @@
         "enabled": false,
         "lock": true,
         "folder": "user-flows",
-        "cover": "./../../../assets/images/project_imgs/",
+        "cover": "./../../../assets/images/deliverable_imgs/",
         "coverFormat": "jpg",
         "overview": "Keeping a design portfolio up to date is critical when marketing yourself in a competitive field. I regularly evaluate my portfolio against other designers and blogs to compare the presentation of work.",
         "content": []
@@ -34,7 +34,7 @@
         "enabled": false,
         "lock": false,
         "folder": "prototypes",
-        "cover": "./../../../assets/images/project_imgs/",
+        "cover": "./../../../assets/images/deliverable_imgs/",
         "coverFormat": "jpg",
         "overview": "Keeping a design portfolio up to date is critical when marketing yourself in a competitive field. I regularly evaluate my portfolio against other designers and blogs to compare the presentation of work.",
         "content": []
@@ -44,9 +44,18 @@
         "enabled": false,
         "lock": false,
         "folder": "design-libraries",
-        "cover": "./../../../assets/images/project_imgs/",
+        "cover": "./../../../assets/images/deliverable_imgs/",
         "coverFormat": "jpg",
         "overview": "Keeping a design portfolio up to date is critical when marketing yourself in a competitive field. I regularly evaluate my portfolio against other designers and blogs to compare the presentation of work.",
+        "content": []
+    },
+    {
+        "name": "And soon to be more...",
+        "enabled": true,
+        "lock": false,
+        "folder": "",
+        "cover": "none",
+        "overview": "Additional projects and content are in the process of being reworked and added.",
         "content": []
     }
 ]

@@ -131,7 +131,7 @@
         "name": "And soon to be more...",
         "date": "Set",
         "number": 9,
-        "enabled": false,
+        "enabled": true,
         "lock": false,
         "folder": "",
         "role": "UI Developer",
@@ -139,7 +139,7 @@
         "company": "g.ferril.com",
         "cover": "none",
         "coverFormat": "jpg",
-        "overview": "Additional projects and content will be added as soon as the foundational website is finished.",
+        "overview": "Additional projects and content are in the process of being reworked and added.",
         "content": []
     }
 ]
