@@ -50,6 +50,7 @@ header button.hamburger {
     background: none;
     border: none;
     border-radius: 0;
+    user-select: none;
 }
 
 header button.hamburger:focus {

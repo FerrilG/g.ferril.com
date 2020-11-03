@@ -1,9 +1,9 @@
-<header class="row no-gutters flex-nowrap align-items-center">
-    <!-- <a id="homeLink" class="" (click)="navigateTo('')">g.ferril.com</a> -->
+<!-- <header class="row no-gutters flex-nowrap align-items-center"> -->
+<header class="row no-gutters align-items-center flex-nowrap">
     <g-header-tab id="homeLink" [isLink]="false" [navLink]="'home'" [navTitle]="'Home'">
         g.ferril.com</g-header-tab>
 
-    <nav id="siteNav" class="col-auto d-flex">
+    <nav id="siteNav" class="d-flex col-auto">
         <ng-container *ngFor="let headerTab of headerNavTabs; let i = index;">
             <g-header-tab *ngIf="headerTab.Visible" [isActive]="currentRoute === headerTab.Path"
                 [navLink]="headerTab.Path" [navTitle]="headerTab.Text">
@@ -12,8 +12,10 @@
         </ng-container>
     </nav>
 
-    <!-- <button g-button class="px-3 hamburger g-button d-flex align-items-center" data-toggle="collapse"
-        data-target="#sidePanel" (click)="toggleSidePanel()">
-        <span class="material-icons">menu</span>
-    </button> -->
+    <div class="col pr-2">
+        <!-- <button g-button class="px-3 hamburger g-button d-flex align-items-center"> -->
+        <button g-button class="d-none p-2 float-right hamburger" data-toggle="collapse" data-target="#sidePanel" (click)="toggleSidePanel()">
+            <span class="material-icons">menu</span>
+        </button>
+    </div>
 </header>

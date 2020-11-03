@@ -21,7 +21,7 @@ const projectRoutes: Routes = [
         canActivate: [AuthGuard],
         data: {
             pageTitle: 'Design Portfolio | Geoff\u0027s Projects',
-            gaPage: 'Project - Portfolio',
+            gaPage: 'Projects/Portfolio',
             sidePanel: true,
             sidePanelType: 'overview',
             pageScroller: true,
@@ -34,7 +34,7 @@ const projectRoutes: Routes = [
         canActivate: [AuthGuard],
         data: {
             pageTitle: 'eCommerce Rewards | Geoff\u0027s Projects',
-            gaPage: 'Projects - MyCompany',
+            gaPage: 'Projects/MyCompany',
             sidePanel: true,
             sidePanelType: 'overview',
             pageScroller: true,
@@ -48,7 +48,7 @@ const projectRoutes: Routes = [
         canActivate: [AuthGuard],
         data: {
             pageTitle: 'eCommerce Account Manager | Geoff\u0027s Projects',
-            gaPage: 'Projects - AccountMgr',
+            gaPage: 'Projects/AccountMgr',
             sidePanel: true,
             sidePanelType: 'overview',
             pageScroller: true,
@@ -62,7 +62,7 @@ const projectRoutes: Routes = [
         canActivate: [AuthGuard],
         data: {
             pageTitle: 'Billable Time Entry | Geoff\u0027s Projects',
-            gaPage: 'Projects - Time Entry',
+            gaPage: 'Projects/Time Entry',
             sidePanel: true,
             sidePanelType: 'overview',
             pageScroller: true,
@@ -76,7 +76,7 @@ const projectRoutes: Routes = [
         canActivate: [AuthGuard],
         data: {
             pageTitle: 'Handheld Medical Records | Geoff\u0027s Projects',
-            gaPage: 'Projects - Medical',
+            gaPage: 'Projects/Medical',
             sidePanel: true,
             sidePanelType: 'overview',
             pageScroller: true,
@@ -90,7 +90,7 @@ const projectRoutes: Routes = [
         canActivate: [AuthGuard],
         data: {
             pageTitle: 'Mobile In-Flight Incentives | Geoff\u0027s Projects',
-            gaPage: 'Projects - MotivEngine',
+            gaPage: 'Projects/MotivEngine',
             sidePanel: true,
             sidePanelType: 'overview',
             pageScroller: true,
@@ -104,7 +104,7 @@ const projectRoutes: Routes = [
         canActivate: [AuthGuard],
         data: {
             pageTitle: 'Sales Inventory Management | Geoff\u0027s Projects',
-            gaPage: 'Projects - Recreogo',
+            gaPage: 'Projects/Recreogo',
             sidePanel: true,
             sidePanelType: 'overview',
             pageScroller: true,
@@ -117,8 +117,8 @@ const projectRoutes: Routes = [
         component: PrjDesignSystemComponent,
         canActivate: [AuthGuard],
         data: {
-            pageTitle: 'Custom Design System | Geoff\u0027s Projects',
-            gaPage: 'Projects - Design System | cx Loyalty',
+            pageTitle: 'PHP Design System | Geoff\u0027s Projects',
+            gaPage: 'Projects/Design System/cxLoyalty',
             sidePanel: true,
             sidePanelType: 'overview',
             pageScroller: true,
@@ -132,7 +132,7 @@ const projectRoutes: Routes = [
         canActivate: [AuthGuard],
         data: {
             // pageTitle: 'Custom Design System | Geoff\u0027s Projects',
-            // gaPage: 'Projects - Design System | cx Loyalty',
+            // gaPage: 'Projects/Design System | cx Loyalty',
             sidePanel: true,
             sidePanelType: 'overview',
             pageScroller: true,

@@ -6,7 +6,7 @@ import { UnlockModalComponent } from './../unlock-modal/unlock-modal.component';
 import { ProjectsModule } from 'src/app/core/components/projects/projects.module';
 import { SectionConstructorComponent } from './../_section-constructor/section-constructor.component';
 
-import { SidepanelComponent } from './../../../core/sidepanel/sidepanel.component';
+import { SidePanelComponent } from './../../../core/sidepanel/sidepanel.component';
 import { AppRoutingModule } from './../../../app-routing.module';
 import { PageTemplateComponent } from './page-template.component';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
@@ -19,7 +19,7 @@ import { ProjectTemplateService } from 'src/app/core/services/projects.service';
 @NgModule({
     declarations: [
         PageTemplateComponent,
-        SidepanelComponent,
+        SidePanelComponent,
         SectionConstructorComponent,
         HomepageComponent,
         AboutMeComponent,
@@ -36,7 +36,7 @@ import { ProjectTemplateService } from 'src/app/core/services/projects.service';
     // providers: [ProjectService],
     exports: [
         PageTemplateComponent,
-        SidepanelComponent,
+        SidePanelComponent,
         SectionConstructorComponent,
         HomepageComponent,
         AboutMeComponent,

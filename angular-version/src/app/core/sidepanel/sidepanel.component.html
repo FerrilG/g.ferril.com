@@ -1,22 +1,24 @@
 <!-- Toggle Panel -->
+<div class="d-block sticky-top" id="panelWrapper">
 <!-- <ng-container *ngIf="setSidePanel()"> -->
 <!-- <div class="sticky-top"> -->
 <!-- <div g-sidepanel id="sidePanel" class="d-none d-lg-block collapse show sticky-top"> -->
-<div class="" id="gf-ply-card">
-    <img src="./../../../assets/images/general/profile-img.jpg" alt="Image of Geoffrey Ferril" id="gf-ply-img">
-    <div id="gf-ply-name">Geoffrey Ferril</div>
-    <div id="gf-ply-title">UX / UI Designer</div>
-</div>
+    <div class="" id="gf-ply-card">
+        <img src="./../../../assets/images/general/profile-img.jpg" alt="Image of Geoffrey Ferril" id="gf-ply-img">
+        <div id="gf-ply-name">Geoffrey Ferril</div>
+        <div id="gf-ply-title">UX / UI Designer</div>
+    </div>
 
-<nav id="g-nav">
-    <ng-container *ngFor="let item of categories">
-        <ng-container *ngIf="item.Visible === true">
-            <ng-container [ngTemplateOutlet]="item.Directory === true ?directory : page"
-                [ngTemplateOutletContext]="{item:item}">
+    <nav id="g-nav">
+        <ng-container *ngFor="let item of categories">
+            <ng-container *ngIf="item.Visible === true">
+                <ng-container [ngTemplateOutlet]="item.Directory === true ?directory : page"
+                    [ngTemplateOutletContext]="{item:item}">
+                </ng-container>
             </ng-container>
         </ng-container>
-    </ng-container>
-</nav>
+    </nav>
+</div>
 
 <ng-template #page let-item="item">
     <div class="g-nav-item">
@@ -31,37 +33,33 @@
         <a routerLink="{{item.Path}}" class="g-nav-link" [ngClass]="{'active': isActive === item.Path}">
             <span>{{item.Text}}</span>
         </a>
-        <ng-container *ngIf="item.Path === 'projects'">
-            <ul class="nav g-sidenav" id="navProjects" *ngFor="let n of projects">
-                <ng-container *ngIf="n.cover !== 'none'">
-                    <li *ngIf="n.enabled" [ngClass]="{'active': isActive === n.folder}">
-                        <a routerLink="projects/{{ n.folder }}" id="project-{{ n.number }}">
-                            <ng-container *ngIf="n.lock && !securityObject.isAuthenticated">
-                                <ng-container *ngTemplateOutlet="locked; context: {n:n}"></ng-container>
-                            </ng-container>
-                            <span class="">{{n.navName === undefined? n.name : n.navName}}</span>
-                        </a>
-                    </li>
-                </ng-container>
-            </ul>
-        </ng-container>
-        <ng-container *ngIf="item.Path === 'deliverables'">
-            <ul class="nav g-sidenav" id="navDeliverables" *ngFor="let n of deliverables">
-                <ng-container *ngIf="n.cover !== 'none'">
-                    <li *ngIf="n.enabled" [ngClass]="{'active': isActive === n.folder}">
-                        <a routerLink="deliverables/{{ n.folder }}">
-                            <ng-container *ngIf="n.lock && !securityObject.isAuthenticated">
-                                <ng-container *ngTemplateOutlet="locked; context: {n:n}"></ng-container>
-                            </ng-container>
-                            <span class="">{{n.navName === undefined? n.name : n.navName}}</span>
-                        </a>
-                    </li>
-                </ng-container>
-            </ul>
+        <ng-container [ngTemplateOutlet]="item.Path === 'projects' ?projectList : deliverableList">
         </ng-container>
     </div>
 </ng-template>
 
-<ng-template #locked>
-    <i class="material-icons-outlined">lock</i>
+<ng-template #projectList>
+    <ul class="nav g-sidenav" id="navProjects">
+        <ng-container *ngFor="let n of projects">
+            <li *ngIf="n.enabled && n.cover !== 'none'" [ngClass]="{'active': isActive === n.folder}">
+                <a routerLink="projects/{{ n.folder }}" id="project-{{ n.number }}">
+                    <i *ngIf="n.lock && !securityObject.isAuthenticated" class="material-icons-outlined">lock</i>
+                    <span class="">{{n.navName === undefined? n.name : n.navName}}</span>
+                </a>
+            </li>
+        </ng-container>
+    </ul>
+</ng-template>
+
+<ng-template #deliverableList>
+    <ul class="nav g-sidenav" id="navDeliverables">
+        <ng-container *ngFor="let n of deliverables">
+            <li *ngIf="n.enabled && n.cover !== 'none'" [ngClass]="{'active': isActive === n.folder}">
+                <a routerLink="deliverables/{{ n.folder }}">
+                    <i *ngIf="n.lock && !securityObject.isAuthenticated" class="material-icons-outlined">lock</i>
+                    <span class="">{{n.navName === undefined? n.name : n.navName}}</span>
+                </a>
+            </li>
+        </ng-container>
+    </ul>
 </ng-template>

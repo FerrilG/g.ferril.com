@@ -13,6 +13,35 @@
     }
 }
 
+g-sidepanel {
+    &.collapsing {
+        height: inherit;
+        overflow: inherit;
+        margin-left: -214.12px !important;
+        margin-left: -13.3825rem !important;
+        transition: margin-left .15s ease;
+    }
+    &.collapse.show {
+        margin-left: 0px !important;
+        transition: margin-left .15s ease;
+    }
+    &.collapse:not(.show) {
+
+    }
+    position: sticky;
+    z-index: 1099;
+
+
+    // Medium
+    @media (min-width: 768px) {
+    }
+
+    // Large
+    @media (min-width: 992px) {
+        position: sticky;
+    }
+}
+
 g-page-scroller {
     padding-top: 38.4px;
     padding-top: 2.4rem;

@@ -16,7 +16,7 @@ import { LoginModalService } from 'src/app/services/login-modal.service';
   templateUrl: './sidepanel.component.html',
   styleUrls: ['./sidepanel.component.scss']
 })
-export class SidepanelComponent implements OnInit, OnDestroy {
+export class SidePanelComponent implements OnInit, OnDestroy {
 
   private routeChangeListener$: Subscription;
   public isActive: string = this.navigationService.routeInfo.path;

@@ -50,7 +50,7 @@ const appRoutes: Routes = [
     component: BlogComponent,
     data: {
       pageTitle: 'Blog',
-      gaPage: 'About Me',
+      gaPage: 'Blog',
       sidePanel: true,
       sidePanelType: 'overview',
       pageScroller: true,
